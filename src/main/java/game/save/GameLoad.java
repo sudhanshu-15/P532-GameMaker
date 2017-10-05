@@ -9,6 +9,10 @@ import java.util.ArrayList;
 import javax.swing.JFileChooser;
 import javax.swing.filechooser.FileSystemView;
 
+import game.helper.BallVariable;
+import game.helper.BrickVariable;
+import game.helper.PaddleVariable;
+
 public class GameLoad {
 
 	private ArrayList<BallVariable> ballDataArray;

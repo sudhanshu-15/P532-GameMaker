@@ -11,14 +11,14 @@ import game.controller.AssignController;
 import game.controller.AutoCtrl;
 import game.controller.CommandCtrl;
 import game.controller.CreateSprites;
-import game.create.SelectPanel;
-import game.modal.AutoSprite;
-import game.modal.CommandSprite;
-import game.save.BallVariable;
-import game.save.BrickVariable;
-import game.save.GameVariable;
-import game.save.PaddleVariable;
+import game.helper.BallVariable;
+import game.helper.BrickVariable;
+import game.helper.GameVariable;
+import game.helper.PaddleVariable;
+import game.model.AutoSprite;
+import game.model.CommandSprite;
 import game.view.GameView;
+import game.view.SelectPanel;
 
 public class StartGame {
 

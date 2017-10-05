@@ -7,8 +7,8 @@ import java.awt.Graphics2D;
 import java.awt.Rectangle;
 import java.awt.event.KeyEvent;
 
-import game.modal.CommandSprite;
-import game.modal.Constants;
+import game.helper.Constants;
+import game.model.CommandSprite;
 import game.view.GameView;
 
 /**

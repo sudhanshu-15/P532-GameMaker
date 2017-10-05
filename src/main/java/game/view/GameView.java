@@ -19,10 +19,10 @@ import game.controller.AutoCtrl;
 import game.controller.CollisionCtrl;
 import game.controller.CommandCtrl;
 import game.controller.CreateSprites;
-import game.modal.AutoSprite;
-import game.modal.CommandSprite;
-import game.modal.Constants;
-import game.save.GameVariable;
+import game.helper.Constants;
+import game.helper.GameVariable;
+import game.model.AutoSprite;
+import game.model.CommandSprite;
 
 /**
  * @author shubham it will be the view that will capture movement and request

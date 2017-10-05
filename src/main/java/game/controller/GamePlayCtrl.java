@@ -7,9 +7,9 @@ import java.util.List;
 
 import javax.swing.Timer;
 
-import game.modal.AutoSprite;
-import game.modal.CommandSprite;
-import game.save.GameVariable;
+import game.helper.GameVariable;
+import game.model.AutoSprite;
+import game.model.CommandSprite;
 import game.view.GameView;
 
 public class GamePlayCtrl {

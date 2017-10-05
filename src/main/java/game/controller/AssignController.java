@@ -3,8 +3,8 @@ package game.controller;
 import java.util.LinkedList;
 import java.util.List;
 
-import game.modal.AutoSprite;
-import game.modal.CommandSprite;
+import game.model.AutoSprite;
+import game.model.CommandSprite;
 import game.view.GameView;
 
 public class AssignController {

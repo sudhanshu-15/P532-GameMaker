@@ -9,8 +9,8 @@ package game.controller;
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
 
-import game.modal.AutoSprite;
-import game.modal.Constants;
+import game.helper.Constants;
+import game.model.AutoSprite;
 import game.view.GameView;
 
 public class AutoCtrl {

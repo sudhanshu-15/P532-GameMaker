@@ -3,13 +3,13 @@ package game.controller;
 import java.util.ArrayList;
 import java.util.List;
 
-import game.modal.AutoSprite;
-import game.modal.CommandSprite;
-import game.modal.Constants;
-import game.save.BallVariable;
-import game.save.BrickVariable;
-import game.save.GameVariable;
-import game.save.PaddleVariable;
+import game.helper.BallVariable;
+import game.helper.BrickVariable;
+import game.helper.Constants;
+import game.helper.GameVariable;
+import game.helper.PaddleVariable;
+import game.model.AutoSprite;
+import game.model.CommandSprite;
 
 /**
  * @author shubham 
