@@ -1,0 +1,192 @@
+2017-10-01 21:38:12,077  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 207 - comboBoxChanged
+2017-10-01 21:38:12,093 ERROR [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 268 - java.lang.NullPointerException
+2017-10-01 21:38:18,194  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 207 - ADD
+2017-10-01 21:38:18,194  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 210 - index: 2
+2017-10-01 21:38:18,194  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 246 - Add clicked
+2017-10-01 21:38:22,379  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 207 - comboBoxChanged
+2017-10-01 21:38:22,380 ERROR [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 268 - java.lang.NullPointerException
+2017-10-01 21:38:34,795  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 207 - ADD
+2017-10-01 21:38:34,795  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 210 - index: 2
+2017-10-01 21:38:34,795  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 246 - Add clicked
+2017-10-01 21:38:34,795  INFO [AWT-EventQueue-0] - game.create.SelectPanel.addPaddleToList 381 - game.save.PaddleVariable@74dd9906
+2017-10-01 21:38:37,027  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 207 - comboBoxChanged
+2017-10-01 21:38:37,027 ERROR [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 268 - java.lang.NullPointerException
+2017-10-01 21:38:44,791  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 207 - ADD
+2017-10-01 21:38:44,791  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 210 - index: 2
+2017-10-01 21:38:44,791  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 246 - Add clicked
+2017-10-01 21:38:44,791  INFO [AWT-EventQueue-0] - game.create.SelectPanel.addBrickToList 325 - game.save.BrickVariable@36e11a83
+2017-10-01 21:38:46,341  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 207 - PLAY
+2017-10-01 21:38:46,341  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 210 - index: 4
+2017-10-01 21:38:46,341  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 257 - play clicked
+2017-10-01 21:38:46,341  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 260 - game.save.GameVariable@6ba48d72game variable
+2017-10-01 21:42:14,386  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 207 - comboBoxChanged
+2017-10-01 21:42:14,402 ERROR [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 268 - java.lang.NullPointerException
+2017-10-01 21:42:27,604  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 207 - ADD
+2017-10-01 21:42:27,604  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 210 - index: 2
+2017-10-01 21:42:27,604  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 246 - Add clicked
+2017-10-01 21:42:29,811  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 207 - comboBoxChanged
+2017-10-01 21:42:29,811 ERROR [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 268 - java.lang.NullPointerException
+2017-10-01 21:42:42,608  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 207 - ADD
+2017-10-01 21:42:42,608  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 210 - index: 2
+2017-10-01 21:42:42,608  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 246 - Add clicked
+2017-10-01 21:42:42,608  INFO [AWT-EventQueue-0] - game.create.SelectPanel.addPaddleToList 381 - game.save.PaddleVariable@5e153dd4
+2017-10-01 21:42:45,390  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 207 - comboBoxChanged
+2017-10-01 21:42:45,390 ERROR [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 268 - java.lang.NullPointerException
+2017-10-01 21:42:51,342  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 207 - ADD
+2017-10-01 21:42:51,342  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 210 - index: 2
+2017-10-01 21:42:51,342  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 246 - Add clicked
+2017-10-01 21:42:51,342  INFO [AWT-EventQueue-0] - game.create.SelectPanel.addBrickToList 325 - game.save.BrickVariable@65ff9b27
+2017-10-01 21:42:53,531  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 207 - PLAY
+2017-10-01 21:42:53,531  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 210 - index: 4
+2017-10-01 21:42:53,531  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 257 - play clicked
+2017-10-01 21:42:53,531  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 260 - game.save.GameVariable@7942d439game variable
+2017-10-01 21:43:38,850  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 207 - comboBoxChanged
+2017-10-01 21:43:38,866 ERROR [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 268 - java.lang.NullPointerException
+2017-10-01 21:43:49,369  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 207 - ADD
+2017-10-01 21:43:49,369  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 210 - index: 2
+2017-10-01 21:43:49,369  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 246 - Add clicked
+2017-10-01 21:43:51,788  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 207 - PLAY
+2017-10-01 21:43:51,788  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 210 - index: 4
+2017-10-01 21:43:51,788  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 257 - play clicked
+2017-10-01 21:43:51,788  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 260 - game.save.GameVariable@18a7917fgame variable
+2017-10-01 21:44:03,578  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 207 - comboBoxChanged
+2017-10-01 21:44:03,593 ERROR [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 268 - java.lang.NullPointerException
+2017-10-01 21:44:24,361  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 207 - ADD
+2017-10-01 21:44:24,361  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 210 - index: 2
+2017-10-01 21:44:24,361  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 246 - Add clicked
+2017-10-01 21:44:26,629  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 207 - comboBoxChanged
+2017-10-01 21:44:26,629 ERROR [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 268 - java.lang.NullPointerException
+2017-10-01 21:44:35,942  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 207 - ADD
+2017-10-01 21:44:35,942  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 210 - index: 2
+2017-10-01 21:44:35,942  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 246 - Add clicked
+2017-10-01 21:44:39,076  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 207 - comboBoxChanged
+2017-10-01 21:44:39,076 ERROR [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 268 - java.lang.NullPointerException
+2017-10-01 21:44:52,808  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 207 - ADD
+2017-10-01 21:44:52,808  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 210 - index: 2
+2017-10-01 21:44:52,808  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 246 - Add clicked
+2017-10-01 21:44:52,808  INFO [AWT-EventQueue-0] - game.create.SelectPanel.addPaddleToList 381 - game.save.PaddleVariable@7b33849b
+2017-10-01 21:44:55,084  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 207 - comboBoxChanged
+2017-10-01 21:44:55,084 ERROR [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 268 - java.lang.NullPointerException
+2017-10-01 21:45:04,866  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 207 - ADD
+2017-10-01 21:45:04,866  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 210 - index: 2
+2017-10-01 21:45:04,866  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 246 - Add clicked
+2017-10-01 21:45:04,866  INFO [AWT-EventQueue-0] - game.create.SelectPanel.addPaddleToList 381 - game.save.PaddleVariable@3e59f09f
+2017-10-01 21:45:09,624  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 207 - comboBoxChanged
+2017-10-01 21:45:09,624 ERROR [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 268 - java.lang.NullPointerException
+2017-10-01 21:45:14,771  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 207 - ADD
+2017-10-01 21:45:14,771  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 210 - index: 2
+2017-10-01 21:45:14,771  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 246 - Add clicked
+2017-10-01 21:45:14,771  INFO [AWT-EventQueue-0] - game.create.SelectPanel.addBrickToList 325 - game.save.BrickVariable@65f2c248
+2017-10-01 21:45:16,877  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 207 - PLAY
+2017-10-01 21:45:16,877  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 210 - index: 4
+2017-10-01 21:45:16,877  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 257 - play clicked
+2017-10-01 21:45:16,877  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 260 - game.save.GameVariable@29c3547game variable
+2017-10-01 21:46:16,609  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 207 - comboBoxChanged
+2017-10-01 21:46:16,617 ERROR [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 268 - java.lang.NullPointerException
+2017-10-01 21:46:26,081  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 207 - ADD
+2017-10-01 21:46:26,081  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 210 - index: 2
+2017-10-01 21:46:26,081  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 246 - Add clicked
+2017-10-01 21:46:30,189  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 207 - comboBoxChanged
+2017-10-01 21:46:30,189 ERROR [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 268 - java.lang.NullPointerException
+2017-10-01 21:46:40,948  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 207 - ADD
+2017-10-01 21:46:40,948  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 210 - index: 2
+2017-10-01 21:46:40,948  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 246 - Add clicked
+2017-10-01 21:46:40,948  INFO [AWT-EventQueue-0] - game.create.SelectPanel.addPaddleToList 381 - game.save.PaddleVariable@7452ad4d
+2017-10-01 21:46:43,332  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 207 - comboBoxChanged
+2017-10-01 21:46:43,332 ERROR [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 268 - java.lang.NullPointerException
+2017-10-01 21:46:48,520  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 207 - ADD
+2017-10-01 21:46:48,520  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 210 - index: 2
+2017-10-01 21:46:48,520  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 246 - Add clicked
+2017-10-01 21:46:48,520  INFO [AWT-EventQueue-0] - game.create.SelectPanel.addBrickToList 325 - game.save.BrickVariable@71a1bd52
+2017-10-01 21:46:50,229  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 207 - PLAY
+2017-10-01 21:46:50,229  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 210 - index: 4
+2017-10-01 21:46:50,229  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 257 - play clicked
+2017-10-01 21:46:50,229  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 260 - game.save.GameVariable@575a2e8game variable
+2017-10-01 22:16:22,666  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 214 - comboBoxChanged
+2017-10-01 22:16:22,682 ERROR [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 275 - java.lang.NullPointerException
+2017-10-01 22:25:38,648  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 221 - comboBoxChanged
+2017-10-01 22:25:38,664 ERROR [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 282 - java.lang.NullPointerException
+2017-10-01 22:25:42,538  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 221 - comboBoxChanged
+2017-10-01 22:25:42,538 ERROR [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 282 - java.lang.NullPointerException
+2017-10-01 22:25:48,044  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 221 - ADD
+2017-10-01 22:25:48,044  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 224 - index: 2
+2017-10-01 22:25:48,044  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 260 - Add clicked
+2017-10-01 22:25:49,970  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 221 - comboBoxChanged
+2017-10-01 22:25:49,970 ERROR [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 282 - java.lang.NullPointerException
+2017-10-01 22:25:57,296  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 221 - ADD
+2017-10-01 22:25:57,296  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 224 - index: 2
+2017-10-01 22:25:57,296  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 260 - Add clicked
+2017-10-01 22:25:59,867  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 221 - comboBoxChanged
+2017-10-01 22:25:59,867 ERROR [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 282 - java.lang.NullPointerException
+2017-10-01 22:26:10,566  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 221 - ADD
+2017-10-01 22:26:10,566  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 224 - index: 2
+2017-10-01 22:26:10,566  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 260 - Add clicked
+2017-10-01 22:26:10,566  INFO [AWT-EventQueue-0] - game.create.SelectPanel.addPaddleToList 395 - game.save.PaddleVariable@184d59db
+2017-10-01 22:26:12,005  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 221 - PLAY
+2017-10-01 22:26:12,005  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 224 - index: 4
+2017-10-01 22:26:12,005  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 271 - play clicked
+2017-10-01 22:26:12,005  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 274 - game.save.GameVariable@64a5da9dgame variable
+2017-10-01 22:26:41,868  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 221 - comboBoxChanged
+2017-10-01 22:26:41,884 ERROR [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 282 - java.lang.NullPointerException
+2017-10-01 22:26:48,780  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 221 - ADD
+2017-10-01 22:26:48,780  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 224 - index: 2
+2017-10-01 22:26:48,780  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 260 - Add clicked
+2017-10-01 22:26:50,753  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 221 - comboBoxChanged
+2017-10-01 22:26:50,753 ERROR [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 282 - java.lang.NullPointerException
+2017-10-01 22:26:53,341  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 221 - comboBoxChanged
+2017-10-01 22:26:53,341 ERROR [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 282 - java.lang.NullPointerException
+2017-10-01 22:27:00,624  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 221 - ADD
+2017-10-01 22:27:00,624  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 224 - index: 2
+2017-10-01 22:27:00,625  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 260 - Add clicked
+2017-10-01 22:27:00,627  INFO [AWT-EventQueue-0] - game.create.SelectPanel.addPaddleToList 395 - game.save.PaddleVariable@64f773b2
+2017-10-01 22:27:05,448  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 221 - comboBoxChanged
+2017-10-01 22:27:05,448 ERROR [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 282 - java.lang.NullPointerException
+2017-10-01 22:27:10,845  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 221 - PLAY
+2017-10-01 22:27:10,845  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 224 - index: 4
+2017-10-01 22:27:10,845  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 271 - play clicked
+2017-10-01 22:27:10,845  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 274 - game.save.GameVariable@fe46bc8game variable
+2017-10-01 22:50:55,466  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 221 - comboBoxChanged
+2017-10-01 22:50:55,468 ERROR [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 282 - java.lang.NullPointerException
+2017-10-01 22:51:00,409  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 221 - ADD
+2017-10-01 22:51:00,410  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 224 - index: 2
+2017-10-01 22:51:00,410  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 260 - Add clicked
+2017-10-01 22:51:02,929  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 221 - comboBoxChanged
+2017-10-01 22:51:02,930 ERROR [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 282 - java.lang.NullPointerException
+2017-10-01 22:51:10,915  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 221 - ADD
+2017-10-01 22:51:10,915  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 224 - index: 2
+2017-10-01 22:51:10,915  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 260 - Add clicked
+2017-10-01 22:51:10,915  INFO [AWT-EventQueue-0] - game.create.SelectPanel.addPaddleToList 395 - game.save.PaddleVariable@59aaa43e
+2017-10-01 22:51:13,596  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 221 - comboBoxChanged
+2017-10-01 22:51:13,596 ERROR [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 282 - java.lang.NullPointerException
+2017-10-01 22:51:17,507  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 221 - ADD
+2017-10-01 22:51:17,507  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 224 - index: 2
+2017-10-01 22:51:17,507  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 260 - Add clicked
+2017-10-01 22:51:17,508  INFO [AWT-EventQueue-0] - game.create.SelectPanel.addBrickToList 339 - game.save.BrickVariable@239b2dd9
+2017-10-01 22:51:18,342  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 221 - PLAY
+2017-10-01 22:51:18,343  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 224 - index: 4
+2017-10-01 22:51:18,343  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 271 - play clicked
+2017-10-01 22:51:18,343  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 274 - game.save.GameVariable@6d196bc5game variable
+2017-10-01 22:56:25,193  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 208 - comboBoxChanged
+2017-10-01 22:56:25,196 ERROR [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 290 - java.lang.NullPointerException
+2017-10-01 22:56:30,418  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 208 - ADD
+2017-10-01 22:56:30,418  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 211 - index: 2
+2017-10-01 22:56:30,418  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 266 - Add clicked
+2017-10-01 22:56:33,353  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 208 - comboBoxChanged
+2017-10-01 22:56:33,353 ERROR [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 290 - java.lang.NullPointerException
+2017-10-01 22:56:42,671  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 208 - ADD
+2017-10-01 22:56:42,672  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 211 - index: 2
+2017-10-01 22:56:42,672  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 266 - Add clicked
+2017-10-01 22:56:42,672  INFO [AWT-EventQueue-0] - game.create.SelectPanel.addPaddleToList 403 - game.save.PaddleVariable@3ea8db09
+2017-10-01 22:56:45,249  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 208 - comboBoxChanged
+2017-10-01 22:56:45,249 ERROR [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 290 - java.lang.NullPointerException
+2017-10-01 22:56:49,835  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 208 - ADD
+2017-10-01 22:56:49,835  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 211 - index: 2
+2017-10-01 22:56:49,835  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 266 - Add clicked
+2017-10-01 22:56:49,837  INFO [AWT-EventQueue-0] - game.create.SelectPanel.addBrickToList 347 - game.save.BrickVariable@6373a33c
+2017-10-01 22:56:53,631  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 208 - SAVE
+2017-10-01 22:56:53,631  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 211 - index: 0
+2017-10-01 22:56:53,632  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 217 - save clicked
+2017-10-01 22:57:14,963  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 208 - LOAD
+2017-10-01 22:57:14,965  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 211 - index: 1
+2017-10-01 22:57:14,965  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 242 - Load clicked
+2017-10-01 22:57:20,368  INFO [AWT-EventQueue-0] - game.create.SelectPanel.actionPerformed 258 - game.save.GameVariable@270e827bgame variable
