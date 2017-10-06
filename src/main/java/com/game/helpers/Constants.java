@@ -17,9 +17,12 @@ public class Constants {
 	public static int MOVEMENT_AUTO_X = 10;
 	public static int MOVEMENT_AUTO_Y = 10;
 	
+	//Default KeyCode
+	public static final int DEFAULT_KEY = 1000;
+	
 	//speed of command sprite
-	public static int MOVEMENT_CMD_X = 5;
-	public static int MOVEMENT_CMD_Y = 5;
+	public static int MOVE_PLAYER_X = 5;
+	public static int MOVE_PLAYER_Y = 5;
 	
 	//size for paddle sprite
 	public static int PADDLE_HEIGHT = 50;

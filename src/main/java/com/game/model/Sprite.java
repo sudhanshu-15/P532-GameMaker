@@ -30,13 +30,14 @@ public class Sprite implements Serializable{
 	private int height;
 	private int width;
 	private int vel_X, vel_Y;
+	private int keyCode;
 	private ActionInterface actionInterface;
 	private boolean horizontal;
 	private boolean vertical;
 	private boolean random;
 	private boolean collidable;
 	private boolean visible;
-
+	private boolean shooter;
 	  
 	
 	public Sprite() {
@@ -49,7 +50,9 @@ public class Sprite implements Serializable{
 		this.vertical = false;
 		this.random = false;
 		this.collidable = false;
+		this.shooter = false;
 		this.visible = true;
+		this.keyCode = Constants.DEFAULT_KEY;
 	}
 	
 	public Sprite(Sprite sprite){
@@ -64,6 +67,8 @@ public class Sprite implements Serializable{
 		this.random = sprite.random;
 		this.collidable = sprite.collidable;
 		this.visible = sprite.visible;
+		this.keyCode = sprite.keyCode;
+		this.shooter = sprite.shooter;
 	}
 	
 	public void draw(Graphics g){
@@ -181,6 +186,22 @@ public class Sprite implements Serializable{
 
 	public void setVisible(boolean visible) {
 		this.visible = visible;
+	}
+
+	public int getKeyCode() {
+		return keyCode;
+	}
+
+	public void setKeyCode(int keyCode) {
+		this.keyCode = keyCode;
+	}
+
+	public boolean isShooter() {
+		return shooter;
+	}
+
+	public void setShooter(boolean shooter) {
+		this.shooter = shooter;
 	}
   
 }
