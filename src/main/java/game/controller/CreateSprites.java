@@ -3,9 +3,10 @@ package game.controller;
 import java.util.ArrayList;
 import java.util.List;
 
-import game.modal.AutoSprite;
-import game.modal.CommandSprite;
-import game.modal.Constants;
+import com.game.helpers.Constants;
+import com.game.model.AutoSprite;
+import com.game.model.CommandSprite;
+
 import game.save.BallVariable;
 import game.save.BrickVariable;
 import game.save.GameVariable;

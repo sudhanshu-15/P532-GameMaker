@@ -1,13 +1,17 @@
 /**
  * 
  */
-package game.modal;
+package com.game.helpers;
 
 /**
  * @author shubh
  *
  */
 public class Constants {
+	
+	//Default location of Sprite
+	public static final int DEFAULT_X = 300;
+	public static final int DEFAULT_Y = 300;
     
 	//speed of the auto sprite
 	public static int MOVEMENT_AUTO_X = 15;

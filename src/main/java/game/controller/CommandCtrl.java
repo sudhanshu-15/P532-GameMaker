@@ -7,8 +7,9 @@ import java.awt.Graphics2D;
 import java.awt.Rectangle;
 import java.awt.event.KeyEvent;
 
-import game.modal.CommandSprite;
-import game.modal.Constants;
+import com.game.helpers.Constants;
+import com.game.model.CommandSprite;
+
 import game.view.GameView;
 
 /**
@@ -52,7 +53,7 @@ public class CommandCtrl {
 			break;
 		case KeyEvent.VK_LEFT:
 			if (sprite.isMoveLeft() == true) {
-				location_X = sprite.getLocation_X() - Constants.MOVEMENT_CMD_X;
+				location_X = sprite.getPosition_X() - Constants.MOVEMENT_CMD_X;
 				sprite.setLocation_X(location_X);
 			}
 			
@@ -60,7 +61,7 @@ public class CommandCtrl {
 			break;
 		case KeyEvent.VK_RIGHT:
 			if (sprite.isMoveRight() == true) {
-				location_X = sprite.getLocation_X() + Constants.MOVEMENT_CMD_X;
+				location_X = sprite.getPosition_X() + Constants.MOVEMENT_CMD_X;
 				sprite.setLocation_X(location_X);
 			}
 			
@@ -71,10 +72,10 @@ public class CommandCtrl {
 	}
 	
 	public Rectangle getBound() {
-		return new Rectangle(sprite.getLocation_X(), sprite.getLocation_Y(), sprite.getWidth(), sprite.getHeight());
+		return new Rectangle(sprite.getPosition_X(), sprite.getLocation_Y(), sprite.getWidth(), sprite.getHeight());
 	}
 	
 	public void draw(Graphics2D g2d, GameView gameView) {
-		g2d.drawImage(sprite.getSpriteImage(), sprite.getLocation_X(), sprite.getLocation_Y(), sprite.getWidth(), sprite.getHeight(), gameView);
+		g2d.drawImage(sprite.getSpriteImage(), sprite.getPosition_X(), sprite.getLocation_Y(), sprite.getWidth(), sprite.getHeight(), gameView);
 	}
 }

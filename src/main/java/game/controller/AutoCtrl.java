@@ -9,8 +9,9 @@ package game.controller;
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
 
-import game.modal.AutoSprite;
-import game.modal.Constants;
+import com.game.helpers.Constants;
+import com.game.model.AutoSprite;
+
 import game.view.GameView;
 
 public class AutoCtrl {
@@ -35,7 +36,7 @@ public class AutoCtrl {
 		 
 		// XXX change logic to check if the sprite can move horizontal & vertical before actual move
 		if (sprite.isHorizontalMove()) {
-			location_X = sprite.getLocation_X() + dirX * Constants.MOVEMENT_AUTO_X;
+			location_X = sprite.getPosition_X() + dirX * Constants.MOVEMENT_AUTO_X;
 			sprite.setLocation_X(location_X);
 		}
 		if (sprite.isVerticalMove()) {
@@ -69,11 +70,11 @@ public class AutoCtrl {
 	}
 	
 	public Rectangle getBound() {
-		return new Rectangle(sprite.getLocation_X(), sprite.getLocation_Y(), sprite.getWidth(), sprite.getHeight());
+		return new Rectangle(sprite.getPosition_X(), sprite.getLocation_Y(), sprite.getWidth(), sprite.getHeight());
 	}
 	
 	public void draw(Graphics2D g2d, GameView gameView) {
-		g2d.drawImage(sprite.getSpriteImage(), sprite.getLocation_X(), sprite.getLocation_Y(), sprite.getWidth(), sprite.getHeight(), gameView);
+		g2d.drawImage(sprite.getSpriteImage(), sprite.getPosition_X(), sprite.getLocation_Y(), sprite.getWidth(), sprite.getHeight(), gameView);
 	}
 	
 	public boolean isDestroyed() {
