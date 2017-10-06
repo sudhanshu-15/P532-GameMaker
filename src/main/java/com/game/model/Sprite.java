@@ -5,6 +5,7 @@ package com.game.model;
 
 import java.awt.Graphics;
 import java.awt.Image;
+import java.io.Serializable;
 
 import javax.swing.ImageIcon;
 
@@ -14,7 +15,9 @@ import com.game.helpers.Constants;
  * @author shubham
  *the parent sprite it will have the variables and business logic common to all sprite
  */
-public class Sprite {
+public class Sprite implements Serializable{
+	
+	private static final long serialVersionUID = 1L;
 	   
     // all sprites going to have a location on the screen
 	private int position_X;
