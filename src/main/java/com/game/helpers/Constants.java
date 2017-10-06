@@ -14,8 +14,8 @@ public class Constants {
 	public static final int DEFAULT_Y = 300;
     
 	//speed of the auto sprite
-	public static int MOVEMENT_AUTO_X = 15;
-	public static int MOVEMENT_AUTO_Y = 15;
+	public static int MOVEMENT_AUTO_X = 10;
+	public static int MOVEMENT_AUTO_Y = 10;
 	
 	//speed of command sprite
 	public static int MOVEMENT_CMD_X = 5;

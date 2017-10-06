@@ -5,11 +5,13 @@ package com.game.model;
 
 import java.awt.Graphics;
 import java.awt.Image;
+import java.awt.Rectangle;
 import java.io.Serializable;
 
 import javax.swing.ImageIcon;
 
 import com.game.helpers.Constants;
+import com.game.strategy.ActionInterface;
 
 /**
  * @author shubham
@@ -41,6 +43,8 @@ public class Sprite implements Serializable{
 		this.position_X = Constants.DEFAULT_X;
 		this.position_Y = Constants.DEFAULT_Y;
 		this.spriteImage = new ImageIcon("resources/Questionmark.png");
+		this.vel_X = Constants.MOVEMENT_AUTO_X;
+		this.vel_Y = Constants.MOVEMENT_AUTO_Y;
 		this.horizontal = false;
 		this.vertical = false;
 		this.random = false;
@@ -52,6 +56,8 @@ public class Sprite implements Serializable{
 		this.position_X = sprite.position_X;
 		this.position_Y = sprite.position_Y;
 		this.spriteImage = sprite.spriteImage;
+		this.vel_X = sprite.vel_X;
+		this.vel_Y = sprite.vel_Y;
 		this.actionInterface = sprite.actionInterface;
 		this.horizontal = sprite.horizontal;
 		this.vertical = sprite.vertical;
@@ -64,6 +70,14 @@ public class Sprite implements Serializable{
 		Image tempImage = spriteImage.getImage();
 		g.drawImage(tempImage, position_X, position_Y, null);
 	}
+	
+	public Rectangle createCollider(){
+		int width = spriteImage.getIconWidth();
+		int height = spriteImage.getIconHeight();
+		return new Rectangle(position_X, position_Y, width, height);
+	}
+	
+	//TODO: Implement Checkbounds
 
 	public int getHeight() {
 		return height;
