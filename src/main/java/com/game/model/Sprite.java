@@ -5,11 +5,14 @@ package com.game.model;
 
 import java.awt.Graphics;
 import java.awt.Image;
+import java.awt.Rectangle;
 import java.io.Serializable;
 
 import javax.swing.ImageIcon;
 
 import com.game.helpers.Constants;
+import com.game.strategy.ActionInterface;
+import com.game.strategy.ShootAction;
 
 /**
  * @author shubham
@@ -28,42 +31,61 @@ public class Sprite implements Serializable{
 	private int height;
 	private int width;
 	private int vel_X, vel_Y;
+	private int keyCode;
 	private ActionInterface actionInterface;
+	private ShootAction shootAction;
 	private boolean horizontal;
 	private boolean vertical;
 	private boolean random;
 	private boolean collidable;
 	private boolean visible;
-
+	private boolean shooter;
 	  
 	
 	public Sprite() {
 		this.position_X = Constants.DEFAULT_X;
 		this.position_Y = Constants.DEFAULT_Y;
 		this.spriteImage = new ImageIcon("resources/Questionmark.png");
+		this.vel_X = Constants.MOVEMENT_AUTO_X;
+		this.vel_Y = Constants.MOVEMENT_AUTO_Y;
 		this.horizontal = false;
 		this.vertical = false;
 		this.random = false;
 		this.collidable = false;
+		this.shooter = false;
 		this.visible = true;
+		this.keyCode = Constants.DEFAULT_KEY;
 	}
 	
 	public Sprite(Sprite sprite){
 		this.position_X = sprite.position_X;
 		this.position_Y = sprite.position_Y;
 		this.spriteImage = sprite.spriteImage;
+		this.vel_X = sprite.vel_X;
+		this.vel_Y = sprite.vel_Y;
 		this.actionInterface = sprite.actionInterface;
 		this.horizontal = sprite.horizontal;
 		this.vertical = sprite.vertical;
 		this.random = sprite.random;
 		this.collidable = sprite.collidable;
 		this.visible = sprite.visible;
+		this.keyCode = sprite.keyCode;
+		this.shooter = sprite.shooter;
+		this.shootAction = sprite.shootAction;
 	}
 	
 	public void draw(Graphics g){
 		Image tempImage = spriteImage.getImage();
 		g.drawImage(tempImage, position_X, position_Y, null);
 	}
+	
+	public Rectangle createCollider(){
+		int width = spriteImage.getIconWidth();
+		int height = spriteImage.getIconHeight();
+		return new Rectangle(position_X, position_Y, width, height);
+	}
+	
+	//TODO: Implement Checkbounds
 
 	public int getHeight() {
 		return height;
@@ -167,6 +189,30 @@ public class Sprite implements Serializable{
 
 	public void setVisible(boolean visible) {
 		this.visible = visible;
+	}
+
+	public int getKeyCode() {
+		return keyCode;
+	}
+
+	public void setKeyCode(int keyCode) {
+		this.keyCode = keyCode;
+	}
+
+	public boolean isShooter() {
+		return shooter;
+	}
+
+	public void setShooter(boolean shooter) {
+		this.shooter = shooter;
+	}
+
+	public ShootAction getShootAction() {
+		return shootAction;
+	}
+
+	public void setShootAction(ShootAction shootAction) {
+		this.shootAction = shootAction;
 	}
   
 }

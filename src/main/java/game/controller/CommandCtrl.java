@@ -37,7 +37,7 @@ public class CommandCtrl {
 		switch (keyCode) {
 		case KeyEvent.VK_UP:
 			if (sprite.isMoveUp() == true) {
-				location_Y = sprite.getLocation_Y() - Constants.MOVEMENT_CMD_Y;
+				location_Y = sprite.getLocation_Y() - Constants.MOVE_PLAYER_Y;
 				sprite.setLocation_Y(location_Y);
 			}
 			
@@ -45,7 +45,7 @@ public class CommandCtrl {
 			break;
 		case KeyEvent.VK_DOWN:
 			if (sprite.isMoveDown() == true) {
-				location_Y = sprite.getLocation_Y() + Constants.MOVEMENT_CMD_Y;
+				location_Y = sprite.getLocation_Y() + Constants.MOVE_PLAYER_Y;
 				sprite.setLocation_Y(location_Y);
 			}
 			
@@ -53,7 +53,7 @@ public class CommandCtrl {
 			break;
 		case KeyEvent.VK_LEFT:
 			if (sprite.isMoveLeft() == true) {
-				location_X = sprite.getPosition_X() - Constants.MOVEMENT_CMD_X;
+				location_X = sprite.getPosition_X() - Constants.MOVE_PLAYER_X;
 				sprite.setLocation_X(location_X);
 			}
 			
@@ -61,7 +61,7 @@ public class CommandCtrl {
 			break;
 		case KeyEvent.VK_RIGHT:
 			if (sprite.isMoveRight() == true) {
-				location_X = sprite.getPosition_X() + Constants.MOVEMENT_CMD_X;
+				location_X = sprite.getPosition_X() + Constants.MOVE_PLAYER_X;
 				sprite.setLocation_X(location_X);
 			}
 			
