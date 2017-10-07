@@ -17,7 +17,7 @@ import javax.swing.JRadioButton;
 import javax.swing.JSeparator;
 import javax.swing.SwingConstants;
 
-import com.game.helper.Constants;
+import com.game.helpers.Constants;
 
 public class GameMakerPanel extends JPanel {
 

@@ -14,15 +14,15 @@ import java.util.List;
 
 import javax.swing.Timer;
 
+import com.game.controller.AssignController;
+import com.game.controller.AutoCtrl;
+import com.game.controller.CollisionCtrl;
+import com.game.controller.CommandCtrl;
+import com.game.controller.CreateSprites;
 import com.game.helpers.Constants;
 import com.game.model.AutoSprite;
 import com.game.model.CommandSprite;
 
-import game.controller.AssignController;
-import game.controller.AutoCtrl;
-import game.controller.CollisionCtrl;
-import game.controller.CommandCtrl;
-import game.controller.CreateSprites;
 import game.save.GameVariable;
 
 /**

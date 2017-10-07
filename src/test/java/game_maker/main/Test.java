@@ -8,10 +8,10 @@ import static org.junit.Assert.assertEquals;
 
 import java.awt.Image;
 
+import com.game.controller.AutoCtrl;
 import com.game.model.AutoSprite;
 import com.game.view.GameView;
 
-import game.controller.AutoCtrl;
 import game.create.SelectPanel;
 
 public class Test {
