@@ -2,6 +2,10 @@ package com.game.controller;
 
 import org.apache.log4j.Logger;
 
+import com.game.helpers.ActionButtonListener;
+import com.game.helpers.DragEventListener;
+import com.game.helpers.EventButtonListener;
+import com.game.helpers.GameButtonListener;
 import com.game.helpers.ImageButtonListener;
 import com.game.model.GameModel;
 import com.game.model.Sprite;
@@ -13,6 +17,7 @@ public class GameController {
 	private GameMakerPanel gameMakerPanel;
 	private GamePlayPanel gamePlayPanel;
 	private GameModel gameModel;
+	private DragEventListener dragListener;
 	
 	private boolean gamePlay = false;
 	
@@ -22,7 +27,14 @@ public class GameController {
 		this.gameModel = gameModel;
 		this.gameMakerPanel = gameMakerPanel;
 		this.gamePlayPanel = gamePlayPanel;
+		this.dragListener = new DragEventListener(this);
 		this.gameMakerPanel.addImageButtonListener(new ImageButtonListener(gameModel, gameMakerPanel));
+		this.gameMakerPanel.addEventButtonListener(new EventButtonListener(gameModel));
+		this.gameMakerPanel.addActionButtonListener(new ActionButtonListener(gameModel));
+		this.gameMakerPanel.addGameButtonListener(new GameButtonListener(this));
+		this.gamePlayPanel.addMouseListener(this.dragListener);
+		this.gamePlayPanel.addMouseMotionListener(this.dragListener);
+		gameLoop();
 	}
 	
 	public void gameLoop(){

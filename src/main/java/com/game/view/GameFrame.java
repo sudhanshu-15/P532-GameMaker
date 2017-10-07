@@ -38,8 +38,8 @@ public class GameFrame extends JFrame {
 		scrollPane = new JScrollPane(gameMakerPanel);
 		scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
 		
-		gamePlayPanel = new GamePlayPanel();
 		gameModel = new GameModel();
+		gamePlayPanel = new GamePlayPanel(gameModel);
 		gameControl = new GameController(gameModel, gameMakerPanel, gamePlayPanel);
 		
 		JSplitPane splitPane = new JSplitPane();
