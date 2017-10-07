@@ -12,12 +12,12 @@ public class Constants {
 
 		
 		//size of frame
-		public static int GAMEFRAME_WIDTH=1400;
-		public static int GAMEFRAME_HEIGHT=700;
-		public static final String GAMEFRAME_TITLE ="GAME MAKER";
+		public static int GAMEFRAME_WIDTH = 1400;
+		public static int GAMEFRAME_HEIGHT = 700;
+		public static final String GAMEFRAME_TITLE = "GAME MAKER";
 		
 		//SplitPane
-		public static int SPLITPANE_LOCATION= 200;
+		public static int SPLITPANE_LOCATION = 200;
 		public static int SPLITPANE_SIZE = 5;
 				
 		//Ball sprite image size
