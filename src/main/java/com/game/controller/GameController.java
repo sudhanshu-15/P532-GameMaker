@@ -2,6 +2,7 @@ package com.game.controller;
 
 import org.apache.log4j.Logger;
 
+import com.game.helpers.EventButtonListener;
 import com.game.helpers.ImageButtonListener;
 import com.game.model.GameModel;
 import com.game.model.Sprite;
@@ -23,6 +24,7 @@ public class GameController {
 		this.gameMakerPanel = gameMakerPanel;
 		this.gamePlayPanel = gamePlayPanel;
 		this.gameMakerPanel.addImageButtonListener(new ImageButtonListener(gameModel, gameMakerPanel));
+		this.gameMakerPanel.addEventButtonListener(new EventButtonListener(gameModel));
 	}
 	
 	public void gameLoop(){
