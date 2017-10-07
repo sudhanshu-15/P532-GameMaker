@@ -31,15 +31,15 @@ public class Constants {
 		
 		//Frog sprite image size
 		public static final int FROG_WIDTH = 40;
-		public static final int FROG_HEIGHT = 20;
+		public static final int FROG_HEIGHT = 40;
 		
 		//Car sprite image size
 		public static final int CAR_WIDTH = 40;
-		public static final int CAR_HEIGHT = 20;
+		public static final int CAR_HEIGHT = 40;
 		
 		//Space Invader sprite image size
 		public static final int SPACEINVADER_WIDTH = 40;
-		public static final int SPACEINVADER_HEIGHT = 20;
+		public static final int SPACEINVADER_HEIGHT = 40;
 		
 		//Shooter sprite image size
 		public static final int SHOOTER_WIDTH = 40;
