@@ -86,7 +86,19 @@ public class Sprite implements Serializable{
 	}
 	
 	//TODO: Implement Checkbounds
-
+	// Function to check for boundary of the game panel window
+		public void checkBounds(){
+			if(position_Y <= 0){
+				vel_Y = -vel_Y;
+			}
+			if(position_Y >= Constants.BOUND_HEIGHT){
+				vel_Y = -vel_Y;
+			}
+			if(position_X >= Constants.BOUND_WIDTH  || position_X <= 0){
+				vel_X = -vel_X;
+			}
+		}
+	
 	public int getHeight() {
 		return height;
 	}

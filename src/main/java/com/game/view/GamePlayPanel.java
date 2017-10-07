@@ -6,6 +6,7 @@ import javax.swing.JPanel;
 
 import org.apache.log4j.Logger;
 
+import com.game.helpers.Constants;
 import com.game.model.GameModel;
 import com.game.model.Sprite;
 
@@ -17,6 +18,7 @@ public class GamePlayPanel extends JPanel {
 	
 	
 	public GamePlayPanel(GameModel gameModel){
+		this.setSize(Constants.GAME_PANEL_DIMENSION);
 		this.gameModel = gameModel;
 		this.setFocusable(true);
 		this.requestFocusInWindow();
