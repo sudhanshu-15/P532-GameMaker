@@ -10,6 +10,7 @@ import com.game.helpers.EventButtonListener;
 import com.game.helpers.GameButtonListener;
 import com.game.helpers.ImageButtonListener;
 import com.game.helpers.SoundButtonListener;
+import com.game.helpers.UserKeyListener;
 import com.game.model.GameModel;
 import com.game.model.Sprite;
 import com.game.view.GameMakerPanel;
@@ -39,6 +40,7 @@ public class GameController {
 		this.gameMakerPanel.addBackGroundMusicButtonListener(new SoundButtonListener());
 		this.gamePlayPanel.addMouseListener(this.dragListener);
 		this.gamePlayPanel.addMouseMotionListener(this.dragListener);
+		this.gamePlayPanel.addKeyListener(new UserKeyListener(gameModel));
 		gameLoop();
 	}
 	
