@@ -29,8 +29,8 @@ public class GameFrame extends JFrame {
 		this.setLocationRelativeTo(null);
 		this.setResizable(false);
 		gameMakerPanel = new GameMakerPanel();
-		gamePlayPanel = new GamePlayPanel();
 		gameModel = new GameModel();
+		gamePlayPanel = new GamePlayPanel(gameModel);
 		gameControl = new GameController(gameModel, gameMakerPanel, gamePlayPanel);
 		
 		JSplitPane splitPane = new JSplitPane();
