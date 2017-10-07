@@ -12,6 +12,7 @@ import javax.swing.ImageIcon;
 
 import com.game.helpers.Constants;
 import com.game.strategy.ActionInterface;
+import com.game.strategy.ShootAction;
 
 /**
  * @author shubham
@@ -32,6 +33,7 @@ public class Sprite implements Serializable{
 	private int vel_X, vel_Y;
 	private int keyCode;
 	private ActionInterface actionInterface;
+	private ShootAction shootAction;
 	private boolean horizontal;
 	private boolean vertical;
 	private boolean random;
@@ -69,6 +71,7 @@ public class Sprite implements Serializable{
 		this.visible = sprite.visible;
 		this.keyCode = sprite.keyCode;
 		this.shooter = sprite.shooter;
+		this.shootAction = sprite.shootAction;
 	}
 	
 	public void draw(Graphics g){
@@ -202,6 +205,14 @@ public class Sprite implements Serializable{
 
 	public void setShooter(boolean shooter) {
 		this.shooter = shooter;
+	}
+
+	public ShootAction getShootAction() {
+		return shootAction;
+	}
+
+	public void setShootAction(ShootAction shootAction) {
+		this.shootAction = shootAction;
 	}
   
 }

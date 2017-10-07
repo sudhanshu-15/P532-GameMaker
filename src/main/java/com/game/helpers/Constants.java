@@ -20,6 +20,12 @@ public class Constants {
 	//Default KeyCode
 	public static final int DEFAULT_KEY = 1000;
 	
+	//Default Rocket Size
+	public static final int DEFAULT_ROCKETSIZE = 10;
+	
+	//Default Rocket speed
+	public static final int DEFAULT_ROCKET_SPEED = -8;
+	
 	//speed of command sprite
 	public static int MOVE_PLAYER_X = 5;
 	public static int MOVE_PLAYER_Y = 5;
