@@ -1,6 +1,7 @@
 package com.game.strategy;
 
 import java.awt.Image;
+import java.awt.event.KeyEvent;
 import java.io.Serializable;
 
 import javax.swing.ImageIcon;
@@ -19,7 +20,7 @@ public class ShootAction implements ActionInterface, Serializable {
 
 	@Override
 	public void performAction(Sprite gameSprite) {
-		if(gameSprite.isShooter()){
+		if(gameSprite.isShooter() && gameSprite.getKeyCode() == KeyEvent.VK_SPACE){
 			Sprite projectile = createProjectile(gameSprite.getPosition_X(), gameSprite.getPosition_Y());
 			projectile.setActionInterface(new AutomoveAction(gameModel));
 			gameModel.getSpriteList().add(projectile);
