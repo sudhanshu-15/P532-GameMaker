@@ -1,4 +1,4 @@
-package game.controller;
+package com.game.controller;
 
 import java.awt.Rectangle;
 
