@@ -2,6 +2,7 @@ package com.game.controller;
 
 import org.apache.log4j.Logger;
 
+import com.game.command.SpriteCommand;
 import com.game.helpers.ActionButtonListener;
 import com.game.helpers.DragEventListener;
 import com.game.helpers.EventButtonListener;
@@ -43,7 +44,8 @@ public class GameController {
 				while(true){
 					if(gamePlay){
 						for(Sprite sprite : gameModel.getSpriteList()){
-							//TODO Add logic for command
+							SpriteCommand spriteCommand = new SpriteCommand(sprite);
+							spriteCommand.execute();
 							gamePlayPanel.repaint();
 						}
 					}

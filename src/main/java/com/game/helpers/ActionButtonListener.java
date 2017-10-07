@@ -29,12 +29,15 @@ public class ActionButtonListener implements ActionListener {
 		switch(actionCommand){
 		case Constants.AUTOMOVE:
 			actionLog.info("Auto-Move selected");
+			automoveInterface();
 			break;
 		case Constants.MOVE:
 			actionLog.info("Move selected");
+			playermoveInterface();
 			break;
 		case Constants.BLOWUP:
 			actionLog.info("Disappear selected");
+			disappearInterface();
 			break;
 		}
 		
