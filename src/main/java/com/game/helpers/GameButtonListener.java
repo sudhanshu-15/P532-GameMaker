@@ -31,21 +31,35 @@ public class GameButtonListener implements ActionListener {
 		case Constants.DRAW:
 			buttonLog.info("Draw button clicked");
 			gameModel.addSprite();
+			gamePlayPanel.repaint();
 			break;
 		case Constants.PLAY:
 			buttonLog.info("Play button clicked");
+			gamePlayPanel.repaint();
+			gameController.setGamePlay(true);
 			break;
 		case Constants.PAUSE:
 			buttonLog.info("Pause button clicked");
+			gameController.setGamePlay(false);
 			break;
 		case Constants.SAVE:
 			buttonLog.info("Save button clicked");
+			performSave();
 			break;
 		case Constants.LOAD:
 			buttonLog.info("Load button clicked");
+			performLoad();
 			break;
 		}
 
+	}
+	
+	public void performSave(){
+		//TODO Write code to handle save
+	}
+	
+	public void performLoad(){
+		//TODO Write code to handle load
 	}
 
 }
