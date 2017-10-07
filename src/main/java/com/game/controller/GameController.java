@@ -4,10 +4,12 @@ import org.apache.log4j.Logger;
 
 import com.game.command.SpriteCommand;
 import com.game.helpers.ActionButtonListener;
+import com.game.helpers.BackgroundButtonListener;
 import com.game.helpers.DragEventListener;
 import com.game.helpers.EventButtonListener;
 import com.game.helpers.GameButtonListener;
 import com.game.helpers.ImageButtonListener;
+import com.game.helpers.SoundButtonListener;
 import com.game.model.GameModel;
 import com.game.model.Sprite;
 import com.game.view.GameMakerPanel;
@@ -33,6 +35,8 @@ public class GameController {
 		this.gameMakerPanel.addEventButtonListener(new EventButtonListener(gameModel));
 		this.gameMakerPanel.addActionButtonListener(new ActionButtonListener(gameModel));
 		this.gameMakerPanel.addGameButtonListener(new GameButtonListener(this));
+		this.gameMakerPanel.addBackGroundButtonListener(new BackgroundButtonListener(this));
+		this.gameMakerPanel.addBackGroundMusicButtonListener(new SoundButtonListener());
 		this.gamePlayPanel.addMouseListener(this.dragListener);
 		this.gamePlayPanel.addMouseMotionListener(this.dragListener);
 		gameLoop();
