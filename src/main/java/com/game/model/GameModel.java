@@ -18,7 +18,7 @@ public class GameModel implements Serializable{
 		this.spriteList = new ArrayList<Sprite>();
 	}
 	
-	private void addSprite(){
+	public void addSprite(){
 		spriteList.add(new Sprite(gameSprite));
 	}
 	
