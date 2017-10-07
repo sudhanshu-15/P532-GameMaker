@@ -9,9 +9,9 @@ import javax.swing.Timer;
 
 import com.game.model.AutoSprite;
 import com.game.model.CommandSprite;
+import com.game.view.GameView;
 
 import game.save.GameVariable;
-import game.view.GameView;
 
 public class GamePlayCtrl {
 	GameView gameView;

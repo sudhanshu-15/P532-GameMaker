@@ -5,8 +5,7 @@ import java.util.List;
 
 import com.game.model.AutoSprite;
 import com.game.model.CommandSprite;
-
-import game.view.GameView;
+import com.game.view.GameView;
 
 public class AssignController {
 	GameView gameView;

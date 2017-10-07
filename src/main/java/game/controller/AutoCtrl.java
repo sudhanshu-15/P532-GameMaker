@@ -11,8 +11,7 @@ import java.awt.Rectangle;
 
 import com.game.helpers.Constants;
 import com.game.model.AutoSprite;
-
-import game.view.GameView;
+import com.game.view.GameView;
 
 public class AutoCtrl {
 	GameView view;

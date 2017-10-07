@@ -1,4 +1,4 @@
-package game.main;
+package com.game.main;
 
 import java.awt.GridLayout;
 import java.util.ArrayList;
@@ -9,6 +9,7 @@ import javax.swing.JFrame;
 
 import com.game.model.AutoSprite;
 import com.game.model.CommandSprite;
+import com.game.view.GameView;
 
 import game.controller.AssignController;
 import game.controller.AutoCtrl;
@@ -19,7 +20,6 @@ import game.save.BallVariable;
 import game.save.BrickVariable;
 import game.save.GameVariable;
 import game.save.PaddleVariable;
-import game.view.GameView;
 
 public class StartGame {
 

@@ -20,10 +20,11 @@ import javax.swing.JPanel;
 
 import org.apache.log4j.Logger;
 
-import game.main.StartGame;
+import com.game.main.StartGame;
+import com.game.view.GameView;
+
 import game.play.PlayPanel;
 import game.save.*;
-import game.view.GameView;
 
 public class SelectPanel extends JPanel implements ActionListener,Serializable {
 

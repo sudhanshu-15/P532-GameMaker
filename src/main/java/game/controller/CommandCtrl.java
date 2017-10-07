@@ -9,8 +9,7 @@ import java.awt.event.KeyEvent;
 
 import com.game.helpers.Constants;
 import com.game.model.CommandSprite;
-
-import game.view.GameView;
+import com.game.view.GameView;
 
 /**
  * @author shubham control the command sprite view read user input and when
