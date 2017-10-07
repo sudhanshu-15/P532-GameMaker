@@ -1,5 +1,8 @@
 package com.game.view;
 
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.GridLayout;
 import java.awt.Image;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -17,7 +20,7 @@ import javax.swing.JRadioButton;
 import javax.swing.JSeparator;
 import javax.swing.SwingConstants;
 
-import com.game.helper.Constants;
+import com.game.helpers.Constants;
 
 public class GameMakerPanel extends JPanel {
 
@@ -35,7 +38,14 @@ public class GameMakerPanel extends JPanel {
 	private ButtonGroup bgBackgroundMusic;
 	
 	public GameMakerPanel(){
-	this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+		
+	
+	this.setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));
+	this.setAlignmentY(0);
+	/*this.setLayout(new GridBagLayout());
+	 GridBagConstraints gBC = new GridBagConstraints();
+     gBC.fill = GridBagConstraints.HORIZONTAL;*/
+	//new GridBagLayout()
 	
 	previewIcon = new ImageIcon("drawable/Questionmark.png");
 	Image tempImg = previewIcon.getImage();
@@ -69,9 +79,9 @@ public void initSpriteButtons(){
 	tempImg = tempImg.getScaledInstance(Constants.BALL_RADIUS, Constants.BALL_RADIUS, java.awt.Image.SCALE_SMOOTH);
 	spriteImage = new ImageIcon(tempImg);
 	
-	JRadioButton spriteRadioButton = new JRadioButton("Aqua Ball",spriteImage, true);
+	JRadioButton spriteRadioButton = new JRadioButton("Football",spriteImage, true);
 	spriteRadioButton.setFocusable(false);
-	spriteRadioButton.setActionCommand(Constants.AQUA);
+	spriteRadioButton.setActionCommand(Constants.FOOT);
 	this.add(spriteRadioButton);
 	
 	spriteImage = new ImageIcon("drawable/paddle1.png");
@@ -84,7 +94,7 @@ public void initSpriteButtons(){
 	spriteRadioButtonPaddle.setActionCommand(Constants.PADDLE);
 	this.add(spriteRadioButtonPaddle);
 	
-	spriteImage = new ImageIcon("drawable/Bricks1.png");
+	spriteImage = new ImageIcon("drawable/brick.png");
 	tempImg = spriteImage.getImage();
 	tempImg = tempImg.getScaledInstance(Constants.BRICK_WIDTH, Constants.BRICK_HEIGHT, java.awt.Image.SCALE_SMOOTH);
 	spriteImage = new ImageIcon(tempImg);
@@ -96,20 +106,74 @@ public void initSpriteButtons(){
 	
 	spriteImage = new ImageIcon("drawable/frog.png");
 	tempImg = spriteImage.getImage();
-	tempImg = tempImg.getScaledInstance(Constants.BALL_RADIUS, Constants.BALL_RADIUS, java.awt.Image.SCALE_SMOOTH);
+	tempImg = tempImg.getScaledInstance(Constants.FROG_WIDTH, Constants.FROG_HEIGHT, java.awt.Image.SCALE_SMOOTH);
 	spriteImage = new ImageIcon(tempImg);
 	
-	JRadioButton spriteRbFrog = new JRadioButton("Football", spriteImage, false);
+	JRadioButton spriteRbFrog = new JRadioButton("Frog", spriteImage, false);
 	spriteRbFrog.setFocusable(false);
-	spriteRbFrog.setActionCommand(Constants.FOOT);
+	spriteRbFrog.setActionCommand(Constants.FROG);
 	this.add(spriteRbFrog);
+	
+	spriteImage = new ImageIcon("drawable/car1.png");
+	tempImg = spriteImage.getImage();
+	tempImg = tempImg.getScaledInstance(Constants.CAR_WIDTH, Constants.CAR_HEIGHT, java.awt.Image.SCALE_SMOOTH);
+	spriteImage = new ImageIcon(tempImg);
+	
+	JRadioButton spriteRbSportsCar = new JRadioButton("Sportscar", spriteImage, false);
+	spriteRbSportsCar.setFocusable(false);
+	spriteRbSportsCar.setActionCommand(Constants.SPORTSCAR);
+	this.add(spriteRbSportsCar);
+	
+	spriteImage = new ImageIcon("drawable/car2.png");
+	tempImg = spriteImage.getImage();
+	tempImg = tempImg.getScaledInstance(Constants.CAR_WIDTH, Constants.CAR_HEIGHT, java.awt.Image.SCALE_SMOOTH);
+	spriteImage = new ImageIcon(tempImg);
+	
+	JRadioButton spriteRbTaxi = new JRadioButton("Taxi", spriteImage, false);
+	spriteRbTaxi.setFocusable(false);
+	spriteRbTaxi.setActionCommand(Constants.TAXI);
+	this.add(spriteRbTaxi);
+	
+	spriteImage = new ImageIcon("drawable/space-invaders.png");
+	tempImg = spriteImage.getImage();
+	tempImg = tempImg.getScaledInstance(Constants.SPACEINVADER_WIDTH, Constants.SPACEINVADER_HEIGHT, java.awt.Image.SCALE_SMOOTH);
+	spriteImage = new ImageIcon(tempImg);
+	
+	JRadioButton spriteRbSpaceInvader = new JRadioButton("SpaceInvader", spriteImage, false);
+	spriteRbSpaceInvader.setFocusable(false);
+	spriteRbSpaceInvader.setActionCommand(Constants.SPACEINVADER);
+	this.add(spriteRbSpaceInvader);
+	
+	spriteImage = new ImageIcon("drawable/shooter.png");
+	tempImg = spriteImage.getImage();
+	tempImg = tempImg.getScaledInstance(Constants.SHOOTER_WIDTH, Constants.SHOOTER_HEIGHT, java.awt.Image.SCALE_SMOOTH);
+	spriteImage = new ImageIcon(tempImg);
+	
+	JRadioButton spriteRbShooter = new JRadioButton("Shooter", spriteImage, false);
+	spriteRbShooter.setFocusable(false);
+	spriteRbShooter.setActionCommand(Constants.SHOOTER);
+	this.add(spriteRbShooter);
+	
+	spriteImage = new ImageIcon("drawable/Asteriod.png");
+	tempImg = spriteImage.getImage();
+	tempImg = tempImg.getScaledInstance(Constants.ASTERIOD_WIDTH, Constants.ASTERIOD_HEIGHT, java.awt.Image.SCALE_SMOOTH);
+	spriteImage = new ImageIcon(tempImg);
+	
+	JRadioButton spriteRbAsteriod = new JRadioButton("Asteriod", spriteImage, false);
+	spriteRbShooter.setFocusable(false);
+	spriteRbShooter.setActionCommand(Constants.ASTERIOD);
+	this.add(spriteRbShooter);
 	
 	bgSprites = new ButtonGroup();
 	bgSprites.add(spriteRadioButton);
 	bgSprites.add(spriteRadioButtonPaddle);
 	bgSprites.add(spriteRadioButtonBrick);
 	bgSprites.add(spriteRbFrog);
-	
+	bgSprites.add(spriteRbFrog);
+	bgSprites.add(spriteRbFrog);
+	bgSprites.add(spriteRbFrog);
+	bgSprites.add(spriteRbFrog);
+	bgSprites.add(spriteRbFrog);
 	
 }
 

@@ -5,7 +5,7 @@ import java.awt.Color;
 import javax.swing.JFrame;
 import javax.swing.JSplitPane;
 
-import com.game.helper.Constants;
+import com.game.helpers.Constants;
 
 
 
