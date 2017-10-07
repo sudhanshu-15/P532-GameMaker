@@ -32,7 +32,7 @@ public class Constants {
 	
 	//size of frame
 	public static int GAMEFRAME_WIDTH=1400;
-	public static int GAMEFRAME_HEIGHT=1000;
+	public static int GAMEFRAME_HEIGHT=700;
 	public static final String GAMEFRAME_TITLE ="GAME MAKER";
 	
 	//SplitPane
