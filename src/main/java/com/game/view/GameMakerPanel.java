@@ -18,6 +18,7 @@ import javax.swing.JCheckBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
+import javax.swing.JScrollPane;
 import javax.swing.JSeparator;
 import javax.swing.SwingConstants;
 
@@ -38,16 +39,14 @@ public class GameMakerPanel extends JPanel {
 	private ButtonGroup bgReadouts;
 	private ButtonGroup bgBackgroundMusic;
 	private JPanel imagePanel;
+
 	
 	public GameMakerPanel(){
 		
 	
 	this.setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));
 	this.setAlignmentY(0);
-	/*this.setLayout(new GridBagLayout());
-	 GridBagConstraints gBC = new GridBagConstraints();
-     gBC.fill = GridBagConstraints.HORIZONTAL;*/
-	//new GridBagLayout()
+	
 	
 	previewIcon = new ImageIcon("drawable/Questionmark.png");
 	Image tempImg = previewIcon.getImage();
