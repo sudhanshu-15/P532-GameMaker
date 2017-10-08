@@ -9,6 +9,7 @@ import org.apache.log4j.Logger;
 import com.game.helpers.Constants;
 import com.game.model.GameModel;
 import com.game.model.Sprite;
+import com.game.model.TimerReadout;
 
 public class GamePlayPanel extends JPanel {
 	
@@ -33,6 +34,10 @@ public class GamePlayPanel extends JPanel {
 				if(sprite.isVisible()){
 					sprite.draw(g);
 				}
+			}
+			if(TimerReadout.isTimerSet)
+			{
+				TimerReadout.draw(g);
 			}
 		}catch(NullPointerException e){
 			gamePlayPanelLog.error("Failed to get array " + e.getLocalizedMessage());

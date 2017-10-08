@@ -1,8 +1,5 @@
 package com.game.view;
 
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
-import java.awt.GridLayout;
 import java.awt.Image;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -18,7 +15,6 @@ import javax.swing.JCheckBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
-import javax.swing.JScrollPane;
 import javax.swing.JSeparator;
 import javax.swing.SwingConstants;
 
@@ -212,7 +208,8 @@ public void initSpriteButtons(){
 
 public void initActionButtons(){
 	JLabel actionTitle = new JLabel("Attach Action");
-this.add(actionTitle);
+	this.add(actionTitle);
+	
 	JRadioButton actionRbMove = new JRadioButton("Move", false);
 	JRadioButton actionRbBounce = new JRadioButton("Auto-Move", false);
 	JRadioButton actionRbBlowUp = new JRadioButton("Blow Up", false);
@@ -316,6 +313,8 @@ public void initControlReadouts() {
 	readoutClock.setFocusable(false);
 	//readoutScore.setFocusable(false);
 	//readoutLives.setFocusable(false);
+	
+	readoutClock.setActionCommand(Constants.CLOCK);
 	
 	bgReadouts = new ButtonGroup();
 	bgReadouts.add(readoutClock);

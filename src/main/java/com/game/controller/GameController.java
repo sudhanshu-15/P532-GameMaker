@@ -1,6 +1,7 @@
 package com.game.controller;
 
 import org.apache.log4j.Logger;
+import org.omg.CosNaming.IstringHelper;
 
 import com.game.command.SpriteCommand;
 import com.game.helpers.ActionButtonListener;
@@ -13,6 +14,7 @@ import com.game.helpers.SoundButtonListener;
 import com.game.helpers.UserKeyListener;
 import com.game.model.GameModel;
 import com.game.model.Sprite;
+import com.game.model.TimerReadout;
 import com.game.view.GameMakerPanel;
 import com.game.view.GamePlayPanel;
 
@@ -53,7 +55,7 @@ public class GameController {
 							SpriteCommand spriteCommand = new SpriteCommand(sprite);
 							spriteCommand.execute();
 							gamePlayPanel.repaint();
-						}
+						}					
 					}
 					try {
 						java.lang.Thread.sleep(30);
