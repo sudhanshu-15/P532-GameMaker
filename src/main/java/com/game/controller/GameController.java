@@ -3,6 +3,7 @@ package com.game.controller;
 import java.util.ArrayList;
 
 import org.apache.log4j.Logger;
+import org.omg.CosNaming.IstringHelper;
 
 import com.game.command.SpriteCommand;
 import com.game.helpers.ActionButtonListener;
@@ -12,10 +13,12 @@ import com.game.helpers.EventButtonListener;
 import com.game.helpers.GameButtonListener;
 import com.game.helpers.ImageButtonListener;
 import com.game.helpers.ShootButtonListener;
+import com.game.helpers.ReadoutButtonListener;
 import com.game.helpers.SoundButtonListener;
 import com.game.helpers.UserKeyListener;
 import com.game.model.GameModel;
 import com.game.model.Sprite;
+import com.game.model.TimerReadout;
 import com.game.view.GameMakerPanel;
 import com.game.view.GamePlayPanel;
 
@@ -42,6 +45,7 @@ public class GameController {
 		this.gameMakerPanel.addBackGroundButtonListener(new BackgroundButtonListener(this));
 		this.gameMakerPanel.addBackGroundMusicButtonListener(new SoundButtonListener());
 		this.gameMakerPanel.addShooterListener(new ShootButtonListener(gameModel));
+		this.gameMakerPanel.addReadoutButtonListener(new ReadoutButtonListener());
 		this.gamePlayPanel.addMouseListener(this.dragListener);
 		this.gamePlayPanel.addMouseMotionListener(this.dragListener);
 		this.gamePlayPanel.addKeyListener(new UserKeyListener(gameModel));

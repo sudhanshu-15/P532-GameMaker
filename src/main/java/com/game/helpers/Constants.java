@@ -191,6 +191,6 @@ public class Constants {
 	public static int BALL_HEIGHT = 40;
 	public static int BALL_WIDTH = 40;
 	
-
+	public static final String CLOCK = "clock";
 	
 }

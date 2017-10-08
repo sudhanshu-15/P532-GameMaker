@@ -7,6 +7,7 @@ import org.apache.log4j.Logger;
 
 import com.game.controller.GameController;
 import com.game.model.GameModel;
+import com.game.model.TimerReadout;
 import com.game.view.GamePlayPanel;
 
 public class GameButtonListener implements ActionListener {
@@ -14,6 +15,7 @@ public class GameButtonListener implements ActionListener {
 	private GameController gameController;
 	private GameModel gameModel;
 	private GamePlayPanel gamePlayPanel;
+	private TimerReadout timerReadout;
 	
 	private static Logger buttonLog = Logger.getLogger("buttonLogger");
 	
@@ -21,6 +23,7 @@ public class GameButtonListener implements ActionListener {
 		this.gameController = gameController;
 		this.gameModel = gameController.getGameModel();
 		this.gamePlayPanel = gameController.getGamePlayPanel();
+		this.timerReadout = new TimerReadout();
 	}
 
 	@Override
@@ -37,10 +40,21 @@ public class GameButtonListener implements ActionListener {
 			buttonLog.info("Play button clicked");
 			gamePlayPanel.repaint();
 			gameController.setGamePlay(true);
+			
+			if(TimerReadout.isTimerSet)
+			{
+				timerReadout.startTimer();
+			}
 			break;
 		case Constants.PAUSE:
 			buttonLog.info("Pause button clicked");
 			gameController.setGamePlay(false);
+			
+			if(TimerReadout.isTimerSet)
+			{
+				timerReadout.stopTimer();
+			}
+						
 			break;
 		case Constants.SAVE:
 			buttonLog.info("Save button clicked");
