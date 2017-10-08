@@ -8,19 +8,26 @@ import org.junit.Test;
 import org.mockito.Mockito;
 
 import com.game.model.GameModel;
+import com.game.helpers.EventButtonListener;
 
 public class EventButtonListenerTest {
 		
 	private GameModel gameModel = new GameModel();
-	ActionListener EventButtonListener = new EventButtonListener(gameModel);
+	EventButtonListener EventButtonListener = new EventButtonListener(gameModel);
 	ActionListener spy;
 	ActionEvent e;
+	private boolean horizontalMotion = false;
+	private boolean verticalMotion = false;
+	private boolean collision = false;
 	
 	@Before
 	public void setUp() {
 		String actionCommand = "Constants.SIDES";
 		ActionEvent e = new ActionEvent(0, 0, actionCommand);
 		spy = Mockito.spy(EventButtonListener);
+		EventButtonListener.setHorizontalMotion(horizontalMotion);
+		EventButtonListener.setVerticalMotion(verticalMotion);
+		EventButtonListener.setCollision(collision);
 	}
 	
 	@Test
