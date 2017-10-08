@@ -32,6 +32,10 @@ public class AutomoveAction implements ActionInterface, Serializable {
 			}
 		}
 		
+		if(!gameSprite.isProjectile()){
+			gameSprite.checkBounds();
+		}
+		
 		//If the sprite has automove set to horizontal then move horizontally
 		if(gameSprite.isHorizontal()){
 			gameSprite.setPosition_X(gameSprite.getPosition_X() + gameSprite.getVel_X());

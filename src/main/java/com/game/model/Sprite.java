@@ -41,6 +41,7 @@ public class Sprite implements Serializable{
 	private boolean visible;
 	private boolean shooter;
 	private boolean projectile;
+	private boolean disintegrate;
 	  
 	
 	public Sprite() {
@@ -56,6 +57,7 @@ public class Sprite implements Serializable{
 		this.shooter = false;
 		this.visible = true;
 		this.projectile = false;
+		this.disintegrate = false;
 		this.keyCode = Constants.DEFAULT_KEY;
 	}
 	
@@ -74,6 +76,7 @@ public class Sprite implements Serializable{
 		this.keyCode = sprite.keyCode;
 		this.shooter = sprite.shooter;
 		this.projectile = sprite.projectile;
+		this.disintegrate = sprite.disintegrate;
 		this.shootAction = sprite.shootAction;
 	}
 	
@@ -236,6 +239,14 @@ public class Sprite implements Serializable{
 
 	public void setProjectile(boolean projectile) {
 		this.projectile = projectile;
+	}
+
+	public boolean isDisintegrate() {
+		return disintegrate;
+	}
+
+	public void setDisintegrate(boolean disintegrate) {
+		this.disintegrate = disintegrate;
 	}
   
 }
