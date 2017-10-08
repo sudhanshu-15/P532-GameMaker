@@ -26,9 +26,9 @@
 		<sonar.jacoco.itReportPath>${jacoco.outputDir}/${jacoco.out.it.file}</sonar.jacoco.itReportPath>
 
 		<!-- webstart and getdown properties -->
-		<base.project.name>fall2017_a5_team1</base.project.name>
+		<base.project.name>fall2017_a6_team1</base.project.name>
 		<base.project.name.friendly>team1</base.project.name.friendly>
-		<assignment.name>fall2017/a5 </assignment.name>
+		<assignment.name>fall2017/a6 </assignment.name>
 		<code-root>.</code-root>
 		<wwwroot>/u/kspace/www/fluency</wwwroot>
 	</properties>
