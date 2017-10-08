@@ -3,6 +3,8 @@
  */
 package com.game.helpers;
 
+import java.awt.Dimension;
+
 /**
  * @author shubh
  *
@@ -38,6 +40,17 @@ public class Constants {
 	//SplitPane
 	public static int SPLITPANE_LOCATION= 200;
 	public static int SPLITPANE_SIZE = 5;
+	
+	/*//Sprite Panel Dimensions
+		protected static final int SPRITE_PANEL_HEIGHT = 760;
+		protected static final int SPRITE_PANEL_WIDTH = 250;
+		public static final Dimension SPRITE_PANEL_DIMENSION = new Dimension(SPRITE_PANEL_WIDTH, SPRITE_PANEL_HEIGHT);*/
+		
+		//Game Panel Dimensions
+		public static final int GAME_PANEL_HEIGHT = 700;
+		public static final int GAME_PANEL_WIDTH = 1200;
+		public static final Dimension GAME_PANEL_DIMENSION = new Dimension(GAME_PANEL_WIDTH, GAME_PANEL_HEIGHT);
+		
 			
 	//Ball sprite image size
 		public static final int BALL_RADIUS = 30;
@@ -120,10 +133,10 @@ public class Constants {
 		public static final String GREEN = "Green";
 		public static final String YELLOW = "Yellow";
 		
-		/*//Game Bound dimension
+		
 		public static final int BOUND_WIDTH = GAME_PANEL_WIDTH+100;
 		public static final int BOUND_HEIGHT = GAME_PANEL_HEIGHT-40;
-		*/
+		
 		//background sound music 
 		public static final String MARIOMUSIC = "Mario";
 		public static final String TICKTOCK = "Tick Tock";
