@@ -13,7 +13,7 @@ public class BackgroundButtonListener implements ActionListener {
 	
 	private GameController gameController;
 	private GamePlayPanel gamePlayPanel;
-	private Image image;
+	private ImageIcon image;
 	
 	public BackgroundButtonListener(GameController gameController){
 		this.gameController = gameController;

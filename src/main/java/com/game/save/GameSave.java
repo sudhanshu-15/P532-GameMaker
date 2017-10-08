@@ -1,25 +1,31 @@
 package com.game.save;
-import java.awt.Image;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
+import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.filechooser.FileSystemView;
 
+import com.game.controller.GameController;
+import com.game.model.Sprite;
+import com.game.strategy.Music;
+
 public class GameSave{
 
-	private ArrayList spriteList;
-	private Image background;
+	private ArrayList<Sprite> spriteList;
+	private ImageIcon background;
 	private GameSavable gameSavable;
+	private GameController gameController;
+	private Music music;
 
-	public GameSave(ArrayList list) 
+	public GameSave(GameController gameController) 
 	{
-		this.spriteList = list;
-		this.background = background;
+		this.spriteList = gameController.getGameModel().getSpriteList();
+		this.background = gameController.getGameModel().getBackgroundImage();
 		
-		gameSavable = new GameSavable(this.spriteList, this.background);
+		gameSavable = new GameSavable(this.spriteList, this.background, this.music);
 	}
 
 	public boolean serialize() {

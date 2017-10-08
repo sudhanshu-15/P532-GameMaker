@@ -12,7 +12,7 @@ public class GameModel implements Serializable{
 	
 	private Sprite gameSprite;
 	private ArrayList<Sprite> spriteList;
-	private Image backgroundImage;
+	private ImageIcon backgroundImage;
 	
 	public GameModel(){
 		this.gameSprite = new Sprite();
@@ -46,7 +46,7 @@ public class GameModel implements Serializable{
 		this.spriteList = spriteList;
 	}
 
-	public Image getBackgroundImage() {
+	public ImageIcon getBackgroundImage() {
 		return backgroundImage;
 	}
 
@@ -54,7 +54,7 @@ public class GameModel implements Serializable{
 		this.backgroundImage = backgroundImage;
 	}
 */
-	public void setBackgroundImage(Image backgroundImage) {
+	public void setBackgroundImage(ImageIcon backgroundImage) {
 		this.backgroundImage = backgroundImage;
 	}
 	
