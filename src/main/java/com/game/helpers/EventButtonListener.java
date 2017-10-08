@@ -36,6 +36,10 @@ public class EventButtonListener implements ActionListener {
 			eventLog.info("Collision selected");
 			setCollision(((JCheckBox) (e.getSource())).isSelected());
 			break;
+		case Constants.NOBOUND:
+			eventLog.info("No Bounds selected");
+			setNoBoundsMotion(((JCheckBox) (e.getSource())).isSelected());
+			break;
 		}
 
 	}
@@ -50,6 +54,10 @@ public class EventButtonListener implements ActionListener {
 	
 	public void setCollision(boolean collision){
 		gameModel.getGameSprite().setCollidable(collision);
+	}
+	
+	public void setNoBoundsMotion(boolean noBounds){
+		gameModel.getGameSprite().setNoBounds(noBounds);
 	}
 
 }

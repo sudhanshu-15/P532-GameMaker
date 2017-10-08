@@ -47,6 +47,9 @@ public class AutomoveAction implements ActionInterface, Serializable {
 			gameSprite.setPosition_Y(gameSprite.getPosition_Y() + gameSprite.getVel_Y());
 		}
 		
+		if(gameSprite.isNoBounds()){
+			gameSprite.setPosition_X(gameSprite.getPosition_X() + gameSprite.getVel_X());
+		}
 		//TODO Determine if Random is required or not. Horizontal and Vertical together will take care of Random
 		
 	}
