@@ -25,6 +25,7 @@ public class ImageButtonListener implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
+		gameMakerPanel.setButtonEnabled();
 		ImageIcon tempIcon = (ImageIcon)((JRadioButton) e.getSource()).getIcon();
 		try{
 			gameModel.getGameSprite().setSpriteImage(tempIcon);

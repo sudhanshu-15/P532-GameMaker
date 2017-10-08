@@ -1,5 +1,6 @@
 package com.game.model;
 
+import java.awt.Image;
 import java.io.Serializable;
 import java.util.ArrayList;
 
@@ -11,7 +12,7 @@ public class GameModel implements Serializable{
 	
 	private Sprite gameSprite;
 	private ArrayList<Sprite> spriteList;
-	private ImageIcon backgroundImage;
+	private Image backgroundImage;
 	
 	public GameModel(){
 		this.gameSprite = new Sprite();
@@ -45,11 +46,15 @@ public class GameModel implements Serializable{
 		this.spriteList = spriteList;
 	}
 
-	public ImageIcon getBackgroundImage() {
+	public Image getBackgroundImage() {
 		return backgroundImage;
 	}
 
-	public void setBackgroundImage(ImageIcon backgroundImage) {
+	/*public void setBackgroundImage(ImageIcon backgroundImage) {
+		this.backgroundImage = backgroundImage;
+	}
+*/
+	public void setBackgroundImage(Image backgroundImage) {
 		this.backgroundImage = backgroundImage;
 	}
 	
