@@ -158,7 +158,7 @@ public class Constants {
 	public static final int DEFAULT_KEY = 1000;
 	
 	//Default Rocket Size
-	public static final int DEFAULT_ROCKETSIZE = 10;
+	public static final int DEFAULT_ROCKETSIZE = 15;
 	
 	//Default Rocket speed
 	public static final int DEFAULT_ROCKET_SPEED = -8;

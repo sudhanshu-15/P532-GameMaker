@@ -16,7 +16,6 @@ public class SpriteCommand implements Command {
 		this.initX = sprite.getPosition_X();
 		this.initY = sprite.getPosition_Y();
 		this.actionInterface = sprite.getActionInterface();
-		this.shootAction = sprite.getShootAction();
 	}
 	
 
@@ -24,6 +23,7 @@ public class SpriteCommand implements Command {
 	public void execute() {
 		actionInterface.performAction(sprite);
 		if(sprite.isShooter()){
+			shootAction = sprite.getShootAction();
 			shootAction.performAction(sprite);
 		}
 	}
