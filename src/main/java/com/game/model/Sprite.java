@@ -40,6 +40,7 @@ public class Sprite implements Serializable{
 	private boolean collidable;
 	private boolean visible;
 	private boolean shooter;
+	private boolean projectile;
 	  
 	
 	public Sprite() {
@@ -54,6 +55,7 @@ public class Sprite implements Serializable{
 		this.collidable = false;
 		this.shooter = false;
 		this.visible = true;
+		this.projectile = false;
 		this.keyCode = Constants.DEFAULT_KEY;
 	}
 	
@@ -71,6 +73,7 @@ public class Sprite implements Serializable{
 		this.visible = sprite.visible;
 		this.keyCode = sprite.keyCode;
 		this.shooter = sprite.shooter;
+		this.projectile = sprite.projectile;
 		this.shootAction = sprite.shootAction;
 	}
 	
@@ -225,6 +228,14 @@ public class Sprite implements Serializable{
 
 	public void setShootAction(ShootAction shootAction) {
 		this.shootAction = shootAction;
+	}
+
+	public boolean isProjectile() {
+		return projectile;
+	}
+
+	public void setProjectile(boolean projectile) {
+		this.projectile = projectile;
 	}
   
 }

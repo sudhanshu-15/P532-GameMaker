@@ -1,5 +1,7 @@
 package com.game.controller;
 
+import java.util.ArrayList;
+
 import org.apache.log4j.Logger;
 
 import com.game.command.SpriteCommand;
@@ -51,11 +53,12 @@ public class GameController {
 			public void run(){
 				while(true){
 					if(gamePlay){
-						for(Sprite sprite : gameModel.getSpriteList()){
+						ArrayList<Sprite> playList = new ArrayList<Sprite>(gameModel.getSpriteList());
+						for(Sprite sprite : playList){
 							SpriteCommand spriteCommand = new SpriteCommand(sprite);
 							spriteCommand.execute();
-							gamePlayPanel.repaint();
 						}
+						gamePlayPanel.repaint();
 					}
 					try {
 						java.lang.Thread.sleep(30);

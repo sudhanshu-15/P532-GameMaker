@@ -29,8 +29,11 @@ public class DisappearAction implements ActionInterface, Serializable {
 				
 				if(listSpriteCollider.intersects(currentSpriteCollider) && !listSprite.equals(gameSprite)){
 					//TODO Logic for changing Velocity?
-					
+
 					gameSprite.setVisible(false);
+					if(listSprite.isProjectile()){
+						listSprite.setVisible(false);
+					}
 					
 					//Logic for Sound effect
 				}
