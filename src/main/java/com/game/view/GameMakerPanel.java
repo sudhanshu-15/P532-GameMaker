@@ -266,23 +266,26 @@ public void initEventButtons(){
 
 public void initBackgroundButtons() {
 	JLabel backGroundTitle = new JLabel("Backgrounds");
-	JRadioButton backGroundBlue = new JRadioButton("Blue", false);
-	JRadioButton backGroundGreen = new JRadioButton("Green", false);
-	JRadioButton backGroundYellow = new JRadioButton("Yellow", false);
+	JRadioButton backGroundSpace = new JRadioButton("space", false);
+	JRadioButton backGroundRoad = new JRadioButton("road", false);
+	//JRadioButton backGroundYellow = new JRadioButton("Yellow", false);
 	
-	backGroundBlue.setFocusable(false);
-	backGroundGreen.setFocusable(false);
-	backGroundYellow.setFocusable(false);
+	backGroundSpace.setFocusable(false);
+	backGroundRoad.setFocusable(false);
+	//backGroundYellow.setFocusable(false);
+	
+	backGroundSpace.setActionCommand("Space");
+	backGroundRoad.setActionCommand("Road");
 	
 	bgBackgrounds = new ButtonGroup();
-	bgBackgrounds.add(backGroundBlue);
-	bgBackgrounds.add(backGroundGreen);
-	bgBackgrounds.add(backGroundYellow);
+	bgBackgrounds.add(backGroundSpace);
+	bgBackgrounds.add(backGroundRoad);
+	//bgBackgrounds.add(backGroundYellow);
 	
 	this.add(backGroundTitle);
-	this.add(backGroundBlue);
-	this.add(backGroundGreen);
-	this.add(backGroundYellow);
+	this.add(backGroundSpace);
+	this.add(backGroundRoad);
+	//this.add(backGroundYellow);
 	
 }
 

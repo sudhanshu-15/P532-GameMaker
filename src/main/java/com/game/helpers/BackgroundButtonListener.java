@@ -1,7 +1,10 @@
 package com.game.helpers;
 
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
+import javax.swing.ImageIcon;
 
 import com.game.controller.GameController;
 import com.game.view.GamePlayPanel;
@@ -10,6 +13,7 @@ public class BackgroundButtonListener implements ActionListener {
 	
 	private GameController gameController;
 	private GamePlayPanel gamePlayPanel;
+	private Image image;
 	
 	public BackgroundButtonListener(GameController gameController){
 		this.gameController = gameController;
@@ -18,8 +22,28 @@ public class BackgroundButtonListener implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
+		String actionCommand = e.getActionCommand();
+		switch(actionCommand) {
+        case ("Select Background"):break;
+        
+        case "Road":
+        	this.image = new ImageIcon("drawable/road.png").getImage();
+        	gameController.getGameModel().setBackgroundImage(image);
+        	gamePlayPanel.setBackGroundImage(image);
+        	gamePlayPanel.revalidate();
+        	gamePlayPanel.repaint();
+            break;
+            
+        case "Space":
+        	this.image = new ImageIcon("drawable/space.png").getImage();
+        	gameController.getGameModel().setBackgroundImage(image);
+        	gamePlayPanel.setBackGroundImage(image);
+        	gamePlayPanel.revalidate();
+            gamePlayPanel.repaint();
+    		break;
 
 	}
+
+}
 
 }
