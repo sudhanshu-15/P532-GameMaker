@@ -1,8 +1,5 @@
 package com.game.view;
 
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
-import java.awt.GridLayout;
 import java.awt.Image;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -18,7 +15,6 @@ import javax.swing.JCheckBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
-import javax.swing.JScrollPane;
 import javax.swing.JSeparator;
 import javax.swing.SwingConstants;
 
@@ -39,6 +35,7 @@ public class GameMakerPanel extends JPanel {
 	private ButtonGroup bgReadouts;
 	private ButtonGroup bgBackgroundMusic;
 	private JPanel imagePanel;
+	private JCheckBox actionShooter;
 
 	
 	public GameMakerPanel(){
@@ -216,6 +213,9 @@ this.add(actionTitle);
 	JRadioButton actionRbMove = new JRadioButton("Move", false);
 	JRadioButton actionRbBounce = new JRadioButton("Auto-Move", false);
 	JRadioButton actionRbBlowUp = new JRadioButton("Blow Up", false);
+	actionShooter = new JCheckBox("Shooter", false);
+	
+	actionShooter.setFocusable(false);
 	actionRbMove.setFocusable(false);
 	actionRbBounce.setFocusable(false);
 	actionRbBlowUp.setFocusable(false);
@@ -232,6 +232,7 @@ this.add(actionTitle);
 	this.add(actionRbMove);
 	this.add(actionRbBounce);
 	this.add(actionRbBlowUp);
+	this.add(actionShooter);
 	
 }
 
@@ -342,9 +343,9 @@ public void initGameButtons(){
 	buttonLoad.setFocusable(false);
 
 	//disable the buttons
-	buttonDraw.setEnabled(false);
-	buttonPlay.setEnabled(false);
-	buttonPause.setEnabled(false);
+	buttonDraw.setEnabled(true);
+	buttonPlay.setEnabled(true);
+	buttonPause.setEnabled(true);
 	buttonSave.setEnabled(false);
 	
 	buttonDraw.setActionCommand(Constants.DRAW);
@@ -438,6 +439,10 @@ public void addBackGroundMusicButtonListener(ActionListener backgroundMusicButto
 		AbstractButton button = buttons.nextElement();
 		button.addActionListener(backgroundMusicButtonListener);
 	}
+}
+
+public void addShooterListener(ActionListener shooterListener){
+	actionShooter.addActionListener(shooterListener);
 }
 
 public JPanel getImagePanel() {

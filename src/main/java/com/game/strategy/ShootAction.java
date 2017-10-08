@@ -20,10 +20,11 @@ public class ShootAction implements ActionInterface, Serializable {
 
 	@Override
 	public void performAction(Sprite gameSprite) {
-		if(gameSprite.isShooter() && gameSprite.getKeyCode() == KeyEvent.VK_SPACE){
+		if(gameSprite.getKeyCode() == 32){
 			Sprite projectile = createProjectile(gameSprite.getPosition_X(), gameSprite.getPosition_Y());
 			projectile.setActionInterface(new AutomoveAction(gameModel));
 			gameModel.getSpriteList().add(projectile);
+			gameSprite.setKeyCode(Constants.DEFAULT_KEY);
 			// TODO Decide on 2 different arrayList for Game
 		}
 	}
