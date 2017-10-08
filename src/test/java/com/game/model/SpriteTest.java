@@ -1,12 +1,20 @@
 package com.game.model;
 
 import static org.junit.Assert.assertEquals;
+import java.awt.Rectangle;
 
 import org.junit.Test;
 
 public class SpriteTest {
 	
 	private Sprite sprite = new Sprite();
+	
+	@Test
+	public void testCreateCollider() {
+		sprite.createCollider();
+		Rectangle rectangle = new Rectangle(500, 500, 256, 256);
+		assertEquals("They are not equal", sprite.createCollider(), rectangle);
+	}
 	
 	@Test
 	public void testTheGetterAndSetter() {
@@ -37,6 +45,10 @@ public class SpriteTest {
 		assertEquals("They are not equal", sprite.getKeyCode(), 1000);
 		
 		assertEquals("They are not equal", sprite.isShooter(), false);
+		
+		assertEquals("They are not equal", sprite.isProjectile(), false);
+		
+		assertEquals("They are not equal", sprite.isDisintegrate(), false);
 	}
 
 }
