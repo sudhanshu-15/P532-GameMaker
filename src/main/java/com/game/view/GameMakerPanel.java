@@ -22,9 +22,7 @@ import com.game.helpers.Constants;
 
 public class GameMakerPanel extends JPanel {
 
-	/*this.setSize(Constants.SPRITE_PANEL_DIMENSION);
-	//this.setBackground(Color.WHITE);
-	*/
+	
 	private ImageIcon previewIcon;
 	private JLabel previewLabel;
 	private ButtonGroup bgActions;
@@ -51,7 +49,6 @@ public class GameMakerPanel extends JPanel {
 	tempImg = tempImg.getScaledInstance(Constants.BALL_RADIUS, Constants.BALL_RADIUS, java.awt.Image.SCALE_SMOOTH);
 	previewIcon = new ImageIcon(tempImg);
 	previewLabel = new JLabel();
-	//previewLabel.setIcon(previewIcon);
 	previewLabel = new JLabel("Selected", previewIcon, JLabel.CENTER);
 	initSpriteButtons();
 	this.add(previewLabel);
@@ -81,7 +78,6 @@ public void initSpriteButtons(){
 	JRadioButton spriteRbBall = new JRadioButton(spriteImage, true);
 	spriteRbBall.setFocusable(false);
 	spriteRbBall.setActionCommand(Constants.FOOT);
-	//this.add(spriteRbBall);
 	
 	spriteImage = new ImageIcon("drawable/paddle1.png");
 	tempImg = spriteImage.getImage();
@@ -91,7 +87,6 @@ public void initSpriteButtons(){
 	JRadioButton spriteRbPaddle = new JRadioButton(spriteImage, true);
 	spriteRbPaddle.setFocusable(false);
 	spriteRbPaddle.setActionCommand(Constants.PADDLE);
-	//this.add(spriteRbPaddle);
 	
 	spriteImage = new ImageIcon("drawable/brick.png");
 	tempImg = spriteImage.getImage();
@@ -101,7 +96,6 @@ public void initSpriteButtons(){
 	JRadioButton spriteRbBrick = new JRadioButton(spriteImage, true);
 	spriteRbBrick.setFocusable(false);
 	spriteRbBrick.setActionCommand(Constants.BRICK);
-	//this.add(spriteRbBrick);
 	
 	spriteImage = new ImageIcon("drawable/frog.png");
 	tempImg = spriteImage.getImage();
@@ -111,7 +105,6 @@ public void initSpriteButtons(){
 	JRadioButton spriteRbFrog = new JRadioButton( spriteImage, false);
 	spriteRbFrog.setFocusable(false);
 	spriteRbFrog.setActionCommand(Constants.FROG);
-	//this.add(spriteRbFrog);
 	
 	spriteImage = new ImageIcon("drawable/car1.png");
 	tempImg = spriteImage.getImage();
@@ -121,7 +114,6 @@ public void initSpriteButtons(){
 	JRadioButton spriteRbSportsCar = new JRadioButton( spriteImage, false);
 	spriteRbSportsCar.setFocusable(false);
 	spriteRbSportsCar.setActionCommand(Constants.SPORTSCAR);
-	//this.add(spriteRbSportsCar);
 	
 	spriteImage = new ImageIcon("drawable/car2.png");
 	tempImg = spriteImage.getImage();
@@ -131,7 +123,6 @@ public void initSpriteButtons(){
 	JRadioButton spriteRbTaxi = new JRadioButton( spriteImage, false);
 	spriteRbTaxi.setFocusable(false);
 	spriteRbTaxi.setActionCommand(Constants.TAXI);
-	//this.add(spriteRbTaxi);
 	
 	spriteImage = new ImageIcon("drawable/space-invaders.png");
 	tempImg = spriteImage.getImage();
@@ -141,7 +132,6 @@ public void initSpriteButtons(){
 	JRadioButton spriteRbSpaceInvader = new JRadioButton( spriteImage, false);
 	spriteRbSpaceInvader.setFocusable(false);
 	spriteRbSpaceInvader.setActionCommand(Constants.SPACEINVADER);
-	//this.add(spriteRbSpaceInvader);
 	
 	spriteImage = new ImageIcon("drawable/shooter.png");
 	tempImg = spriteImage.getImage();
@@ -151,7 +141,6 @@ public void initSpriteButtons(){
 	JRadioButton spriteRbShooter = new JRadioButton( spriteImage, false);
 	spriteRbShooter.setFocusable(false);
 	spriteRbShooter.setActionCommand(Constants.SHOOTER);
-	//this.add(spriteRbShooter);
 	
 	spriteImage = new ImageIcon("drawable/Asteroid.png");
 	tempImg = spriteImage.getImage();
@@ -161,7 +150,6 @@ public void initSpriteButtons(){
 	JRadioButton spriteRbAsteriod = new JRadioButton(spriteImage, false);
 	spriteRbAsteriod.setFocusable(false);
 	spriteRbAsteriod.setActionCommand(Constants.ASTERIOD);
-	//this.add(spriteRbAsteriod);
 	
 	
 	
@@ -272,11 +260,9 @@ public void initBackgroundButtons() {
 	JLabel backGroundTitle = new JLabel("Backgrounds");
 	JRadioButton backGroundSpace = new JRadioButton("space", false);
 	JRadioButton backGroundRoad = new JRadioButton("road", false);
-	//JRadioButton backGroundYellow = new JRadioButton("Yellow", false);
 	
 	backGroundSpace.setFocusable(false);
 	backGroundRoad.setFocusable(false);
-	//backGroundYellow.setFocusable(false);
 	
 	backGroundSpace.setActionCommand("Space");
 	backGroundRoad.setActionCommand("Road");
@@ -284,12 +270,10 @@ public void initBackgroundButtons() {
 	bgBackgrounds = new ButtonGroup();
 	bgBackgrounds.add(backGroundSpace);
 	bgBackgrounds.add(backGroundRoad);
-	//bgBackgrounds.add(backGroundYellow);
 	
 	this.add(backGroundTitle);
 	this.add(backGroundSpace);
 	this.add(backGroundRoad);
-	//this.add(backGroundYellow);
 	
 }
 
@@ -318,22 +302,14 @@ public void initBackgroundMusicButtons() {
 public void initControlReadouts() {
 	JLabel readoutTitle = new JLabel("Control Readouts");
 	JRadioButton readoutClock = new JRadioButton("Clock", false);
-	//JRadioButton readoutScore = new JRadioButton("Score", false);
-	//JRadioButton readoutLives = new JRadioButton("Lives", false);
 	
 	readoutClock.setFocusable(false);
-	//readoutScore.setFocusable(false);
-	//readoutLives.setFocusable(false);
 	
 	bgReadouts = new ButtonGroup();
 	bgReadouts.add(readoutClock);
-	//bgReadouts.add(readoutScore);
-	//bgReadouts.add(readoutLives);
 	
 	this.add(readoutTitle);
 	this.add(readoutClock);
-	//this.add(readoutScore);
-	//this.add(readoutLives);
 }
 
 public void initGameButtons(){
@@ -407,11 +383,6 @@ public void addEventButtonListener(ActionListener eventButtonListener){
 	for(JCheckBox checkBox: bgEvents){
 		checkBox.addActionListener(eventButtonListener);
 	}
-//	Enumeration<AbstractButton> buttons = bgEvents.getElements();
-//	while(buttons.hasMoreElements()){
-//		AbstractButton button = buttons.nextElement();
-//		button.addActionListener(eventButtonListener);
-//	}
 }
 
 public void addBackGroundButtonListener(ActionListener backgroundButtonListener) {

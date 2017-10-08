@@ -11,7 +11,6 @@ import com.game.strategy.Music;
 import javazoom.jl.player.Player;
 
 public class SoundButtonListener implements ActionListener, Serializable {
-	private Player player;
 	String fileName;
 
 	private static Logger backgroundMusicRbLog = Logger.getLogger("backgroundMusicRbLogger");
@@ -26,14 +25,17 @@ public class SoundButtonListener implements ActionListener, Serializable {
 			fileName = "sound/mario.mp3";
 			stopMusic();
 			playMusic(fileName);
+			backgroundMusicRbLog.info("Mario selected");
 			break;
 		case Constants.TICKTOCK:
 			fileName = "sound/Tick.mp3";
 			stopMusic();
 			playMusic(fileName);
+			backgroundMusicRbLog.info("Ticktock selected");
 			break;
 		case Constants.NOMUSIC:
 			stopMusic();
+			backgroundMusicRbLog.info("No music selected");
 			break;
 		}
 	}

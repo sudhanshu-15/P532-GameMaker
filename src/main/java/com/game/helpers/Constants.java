@@ -10,41 +10,17 @@ import java.awt.Dimension;
  *
  */
 public class Constants {
-
-
 		
-		
-			
-			/*//Game Bound dimension
-			public static final int BOUND_WIDTH = GAME_PANEL_WIDTH+100;
-			public static final int BOUND_HEIGHT = GAME_PANEL_HEIGHT-40;
-			*/
-		
-	/*	
-	    //default size of panel
-		public static int PANEL_WIDTH = 700;
-		public static int PANEL_HEIGTH = 700;
-		
-		public static int BALL_HEIGHT = 40;
-		public static int BALL_WIDTH = 40;*/
-		
-
-	
-
 	
 	//size of frame
-	public static int GAMEFRAME_WIDTH=1400;
-	public static int GAMEFRAME_HEIGHT=700;
+	public static final int GAMEFRAME_WIDTH=1400;
+	public static final int GAMEFRAME_HEIGHT=700;
 	public static final String GAMEFRAME_TITLE ="GAME MAKER";
 	
 	//SplitPane
-	public static int SPLITPANE_LOCATION= 200;
-	public static int SPLITPANE_SIZE = 5;
+	public static final int SPLITPANE_LOCATION= 200;
+	public static final int SPLITPANE_SIZE = 5;
 	
-	/*//Sprite Panel Dimensions
-		protected static final int SPRITE_PANEL_HEIGHT = 760;
-		protected static final int SPRITE_PANEL_WIDTH = 250;
-		public static final Dimension SPRITE_PANEL_DIMENSION = new Dimension(SPRITE_PANEL_WIDTH, SPRITE_PANEL_HEIGHT);*/
 		
 		//Game Panel Dimensions
 		public static final int GAME_PANEL_HEIGHT = 700;
@@ -104,14 +80,14 @@ public class Constants {
 		public static final String LOAD = "Load";
 		
 		//Default Draw position
-		public static int DEFAULT_X = 500;
-		public static int DEFAULT_Y = 500;
+		public static final int DEFAULT_X = 500;
+		public static final int DEFAULT_Y = 500;
 		
 		//Default Move value
-		public static int DEFAULT_MOVE = 20;
+		public static final int DEFAULT_MOVE = 20;
 		
 		//Non Move Value
-		public static int NO_MOVE = 1000;
+		public static final int NO_MOVE = 1000;
 		
 		//Strings for Images
 		public static final String AQUA = "Aqua";
@@ -126,8 +102,8 @@ public class Constants {
 		public static final String ASTERIOD = "Asteriod";
 		
 		//Move speed for the ball
-		public static int BALL_SPEED_X = 5;
-		public static int BALL_SPEED_Y = 5;
+		public static final int BALL_SPEED_X = 5;
+		public static final int BALL_SPEED_Y = 5;
 		
 		public static final String BLUE = "Blue";
 		public static final String GREEN = "Green";
@@ -142,30 +118,15 @@ public class Constants {
 		public static final String TICKTOCK = "Tick Tock";
 		public static final String NOMUSIC = "No Music";
     
-	/*//speed of the auto sprite
-	public static int MOVEMENT_AUTO_X = 15;
-	public static int MOVEMENT_AUTO_Y = 15;
-	*/
+	
 	//speed of command sprite
-	public static int MOVEMENT_CMD_X = 5;
-	public static int MOVEMENT_CMD_Y = 5;
+	public static final int MOVEMENT_CMD_X = 5;
+	public static final int MOVEMENT_CMD_Y = 5;
 	
-
-	
-   /* //default size of panel
-	public static int PANEL_WIDTH = 700;
-	public static int PANEL_HEIGTH = 700;
-	
-	public static int BALL_HEIGHT = 40;
-	public static int BALL_WIDTH = 40;
-	
-	//Default location of Sprite
-	public static final int DEFAULT_X = 300;
-	public static final int DEFAULT_Y = 300;*/
     
 	//speed of the auto sprite
-	public static int MOVEMENT_AUTO_X = 10;
-	public static int MOVEMENT_AUTO_Y = 10;
+	public static final int MOVEMENT_AUTO_X = 10;
+	public static final int MOVEMENT_AUTO_Y = 10;
 	
 	//Default KeyCode
 	public static final int DEFAULT_KEY = 1000;
@@ -173,23 +134,27 @@ public class Constants {
 	//Default Rocket Size
 	public static final int DEFAULT_ROCKETSIZE = 15;
 	
+	//Default Rocket distance
+	public static final int ROCKET_DISTANCEX = 10;
+	public static final int ROCKET_DISTANCEY = 20;
+	
 	//Default Rocket speed
 	public static final int DEFAULT_ROCKET_SPEED = -8;
 	
 	//speed of command sprite
-	public static int MOVE_PLAYER_X = 5;
-	public static int MOVE_PLAYER_Y = 5;
+	public static final int MOVE_PLAYER_X = 5;
+	public static final int MOVE_PLAYER_Y = 5;
 
 	//size of frame
-	public static int FRAME_WIDTH=1400;
-	public static int FRAME_HEIGHT=700;
+	public static final int FRAME_WIDTH=1400;
+	public static final int FRAME_HEIGHT=700;
 	
 	//default size of panel
-	public static int PANEL_WIDTH = 700;
-	public static int PANEL_HEIGTH = 700;
+	public static final int PANEL_WIDTH = 700;
+	public static final int PANEL_HEIGTH = 700;
 	
-	public static int BALL_HEIGHT = 40;
-	public static int BALL_WIDTH = 40;
+	public static final int BALL_HEIGHT = 40;
+	public static final int BALL_WIDTH = 40;
 	
 	//Default projectile size
 	public static final int PROJECTILE_SIZE = 20;
@@ -202,8 +167,11 @@ public class Constants {
 	public static final int MAXLIMIT = 3;
 	
 	//Default projectile distance limits
-	public static final int MINDIS = 50;
-	public static final int MAXDIS = 150;
+	public static final int MINDIS = -150;
+	public static final int MAXDIS = 151;
+	
+	//Default frame rate
+	public static final int SLEEP = 30;
 	
 
 	
