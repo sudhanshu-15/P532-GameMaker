@@ -158,7 +158,7 @@
 
 				<configuration>
 					<jnlp>
-						<mainClass>game.main.Main</mainClass>
+						<mainClass>com.game.main.Main</mainClass>
 					</jnlp>
 					<sign>
 						<keystore>${project.basedir}/src/main/jnlp/foo1.jks</keystore>
