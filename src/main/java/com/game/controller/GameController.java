@@ -7,6 +7,7 @@ import org.apache.log4j.Logger;
 import com.game.command.SpriteCommand;
 import com.game.helpers.ActionButtonListener;
 import com.game.helpers.BackgroundButtonListener;
+import com.game.helpers.DisintegrateButtonListener;
 import com.game.helpers.DragEventListener;
 import com.game.helpers.EventButtonListener;
 import com.game.helpers.GameButtonListener;
@@ -42,6 +43,7 @@ public class GameController {
 		this.gameMakerPanel.addBackGroundButtonListener(new BackgroundButtonListener(this));
 		this.gameMakerPanel.addBackGroundMusicButtonListener(new SoundButtonListener());
 		this.gameMakerPanel.addShooterListener(new ShootButtonListener(gameModel));
+		this.gameMakerPanel.addDisintegrateListener(new DisintegrateButtonListener(gameModel));
 		this.gamePlayPanel.addMouseListener(this.dragListener);
 		this.gamePlayPanel.addMouseMotionListener(this.dragListener);
 		this.gamePlayPanel.addKeyListener(new UserKeyListener(gameModel));

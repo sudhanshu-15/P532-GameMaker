@@ -191,6 +191,20 @@ public class Constants {
 	public static int BALL_HEIGHT = 40;
 	public static int BALL_WIDTH = 40;
 	
+	//Default projectile size
+	public static final int PROJECTILE_SIZE = 20;
+	
+	//Default projectile speed
+	public static final int PROJECTILE_SPEED = 5;
+	
+	//Default max and min limits
+	public static final int MINLIMIT = -2;
+	public static final int MAXLIMIT = 3;
+	
+	//Default projectile distance limits
+	public static final int MINDIS = 50;
+	public static final int MAXDIS = 150;
+	
 
 	
 }
