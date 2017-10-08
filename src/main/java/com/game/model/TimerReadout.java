@@ -1,5 +1,7 @@
 package com.game.model;
 
+import java.awt.Color;
+import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -41,17 +43,11 @@ public class TimerReadout implements ActionListener
 		this.timer.stop();
 	}
 	
-	public int getTimerSeconds() {
-		return timerSeconds;
-	}
-	
-	public void setTimerSeconds(int timerSeconds) {
-		this.timerSeconds = timerSeconds;
-	}
-	
 	public static void draw(Graphics g)
 	{
-		g.drawString(timerMinutes + " : " + timerSeconds, Constants.GAME_PANEL_WIDTH-40, Constants.GAME_PANEL_HEIGHT-20);
+		g.setFont(new Font(Font.SERIF, Font.BOLD, 24));
+		g.setColor(Color.RED);
+		g.drawString(timerMinutes + " : " + timerSeconds, Constants.GAME_PANEL_WIDTH-70, 20);
 	}
 
 }

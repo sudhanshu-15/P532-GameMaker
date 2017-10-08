@@ -341,10 +341,10 @@ public void initGameButtons(){
 	buttonLoad.setFocusable(false);
 
 	//disable the buttons
-	buttonDraw.setEnabled(false);
-	buttonPlay.setEnabled(false);
-	buttonPause.setEnabled(false);
-	buttonSave.setEnabled(false);
+	//buttonDraw.setEnabled(false);
+	//buttonPlay.setEnabled(false);
+	//buttonPause.setEnabled(false);
+	//buttonSave.setEnabled(false);
 	
 	buttonDraw.setActionCommand(Constants.DRAW);
 	buttonPlay.setActionCommand(Constants.PLAY);
