@@ -12,6 +12,7 @@ import com.game.helpers.DragEventListener;
 import com.game.helpers.EventButtonListener;
 import com.game.helpers.GameButtonListener;
 import com.game.helpers.ImageButtonListener;
+import com.game.helpers.ReadoutButtonListener;
 import com.game.helpers.ShootButtonListener;
 import com.game.helpers.SoundButtonListener;
 import com.game.helpers.UserKeyListener;
@@ -44,6 +45,8 @@ public class GameController {
 		this.gameMakerPanel.addBackGroundMusicButtonListener(new SoundButtonListener());
 		this.gameMakerPanel.addShooterListener(new ShootButtonListener(gameModel));
 		this.gameMakerPanel.addDisintegrateListener(new DisintegrateButtonListener(gameModel));
+		this.gameMakerPanel.addReadoutButtonListener(new ReadoutButtonListener());
+
 		this.gamePlayPanel.addMouseListener(this.dragListener);
 		this.gamePlayPanel.addMouseMotionListener(this.dragListener);
 		this.gamePlayPanel.addKeyListener(new UserKeyListener(gameModel));

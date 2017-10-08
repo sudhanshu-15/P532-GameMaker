@@ -10,8 +10,7 @@ import org.mockito.Mockito;
 import com.game.model.GameModel;
 
 public class EventButtonListenerTest {
-	
-	
+		
 	private GameModel gameModel = new GameModel();
 	ActionListener EventButtonListener = new EventButtonListener(gameModel);
 	ActionListener spy;

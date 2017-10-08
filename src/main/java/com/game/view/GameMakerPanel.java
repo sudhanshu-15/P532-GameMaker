@@ -325,6 +325,8 @@ public void initControlReadouts() {
 	//readoutScore.setFocusable(false);
 	//readoutLives.setFocusable(false);
 	
+	readoutClock.setActionCommand(Constants.CLOCK);
+	
 	bgReadouts = new ButtonGroup();
 	bgReadouts.add(readoutClock);
 	//bgReadouts.add(readoutScore);
