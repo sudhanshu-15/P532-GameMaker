@@ -10,10 +10,8 @@ import javax.swing.JFileChooser;
 import javax.swing.filechooser.FileSystemView;
 
 public class GameLoad {
-
-	private ArrayList savedList;
 	
-	public GameSavable loadGame() {
+	public GameSavable deserialize() {
 		try {
 			JFileChooser jfc = new JFileChooser(FileSystemView.getFileSystemView().getHomeDirectory());
 			jfc.setApproveButtonText("Open");
@@ -25,9 +23,9 @@ public class GameLoad {
 				FileInputStream fileIn = new FileInputStream(file);
 				ObjectInputStream in = new ObjectInputStream(fileIn);
 
-				GameSavable savedList = (GameSavable) in.readObject();
-				if(savedList != null) {
-					return savedList;
+				GameSavable gameSavable = (GameSavable) in.readObject();
+				if(gameSavable != null) {
+					return gameSavable;
 				}
 				in.close();
 				fileIn.close();

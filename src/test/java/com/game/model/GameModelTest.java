@@ -5,6 +5,8 @@ import static org.junit.Assert.*;
 import java.awt.Image;
 import java.util.ArrayList;
 
+import javax.swing.ImageIcon;
+
 import org.junit.Before;
 import org.junit.Test;
 

@@ -3,11 +3,16 @@ package com.game.helpers;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.JOptionPane;
+
 import org.apache.log4j.Logger;
 
 import com.game.controller.GameController;
 import com.game.model.GameModel;
 import com.game.model.TimerReadout;
+import com.game.save.GameLoad;
+import com.game.save.GameSavable;
+import com.game.save.GameSave;
 import com.game.view.GamePlayPanel;
 
 public class GameButtonListener implements ActionListener {
@@ -69,11 +74,32 @@ public class GameButtonListener implements ActionListener {
 	}
 	
 	public void performSave(){
-		//TODO Write code to handle save
+		GameSave gameSave = new GameSave(gameController);
+		if(gameSave.serialize()){
+			JOptionPane.showMessageDialog(null,
+					"Save Successful",
+					"Save",
+					JOptionPane.INFORMATION_MESSAGE);
+		}else{
+			JOptionPane.showMessageDialog(null,
+					"Error Saving File",
+					"Save",
+					JOptionPane.ERROR_MESSAGE);
+		}
 	}
 	
 	public void performLoad(){
-		//TODO Write code to handle load
+		GameLoad gameLoad = new GameLoad();
+		try {
+			GameSavable loadSavable = gameLoad.deserialize();
+			gameController.getGameModel().setSpriteList(loadSavable.spriteList);
+			gameController.getGameModel().setBackgroundImage(loadSavable.background);
+			gamePlayPanel.repaint();
+			
+		}catch(Exception e){
+			buttonLog.error("Loading Failed" + e.getLocalizedMessage());
+		}
+		
 	}
 
 }
