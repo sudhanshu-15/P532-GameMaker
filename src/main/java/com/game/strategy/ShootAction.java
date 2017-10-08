@@ -20,7 +20,7 @@ public class ShootAction implements ActionInterface, Serializable {
 
 	@Override
 	public void performAction(Sprite gameSprite) {
-		if(gameSprite.getKeyCode() == 32){
+		if(gameSprite.getKeyCode() == KeyEvent.VK_SPACE){
 			Sprite projectile = createProjectile(gameSprite.getPosition_X(), gameSprite.getPosition_Y());
 			projectile.setActionInterface(new AutomoveAction(gameModel));
 			gameModel.getSpriteList().add(projectile);
@@ -39,8 +39,8 @@ public class ShootAction implements ActionInterface, Serializable {
 		projectileSprite.setCollidable(true);
 		projectileSprite.setVertical(true);
 		projectileSprite.setVel_Y(Constants.DEFAULT_ROCKET_SPEED);
-		projectileSprite.setPosition_X(posX);
-		projectileSprite.setPosition_Y(posY + 5);
+		projectileSprite.setPosition_X(posX + Constants.ROCKET_DISTANCEX);
+		projectileSprite.setPosition_Y(posY - Constants.ROCKET_DISTANCEY);
 		projectileSprite.setProjectile(true);
 		return projectileSprite;
 	}

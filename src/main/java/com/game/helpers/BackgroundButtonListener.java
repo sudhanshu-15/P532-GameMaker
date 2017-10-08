@@ -24,7 +24,8 @@ public class BackgroundButtonListener implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		String actionCommand = e.getActionCommand();
 		switch(actionCommand) {
-        case ("Select Background"):break;
+        case "Select Background":
+        	break;
         
         case "Road":
         	this.image = new ImageIcon("drawable/road.png").getImage();

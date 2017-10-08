@@ -7,6 +7,7 @@ import org.apache.log4j.Logger;
 import com.game.command.SpriteCommand;
 import com.game.helpers.ActionButtonListener;
 import com.game.helpers.BackgroundButtonListener;
+import com.game.helpers.Constants;
 import com.game.helpers.DisintegrateButtonListener;
 import com.game.helpers.DragEventListener;
 import com.game.helpers.EventButtonListener;
@@ -63,7 +64,7 @@ public class GameController {
 						gamePlayPanel.repaint();
 					}
 					try {
-						java.lang.Thread.sleep(30);
+						java.lang.Thread.sleep(Constants.SLEEP);
 					} catch (InterruptedException e) {
 						gameControlLog.error("Error in thread" + e.getLocalizedMessage());
 					}
