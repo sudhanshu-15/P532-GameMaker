@@ -10,6 +10,7 @@ import javax.swing.JFileChooser;
 import javax.swing.filechooser.FileSystemView;
 
 import com.game.controller.GameController;
+import com.game.model.GameModel;
 import com.game.model.Sprite;
 import com.game.strategy.Music;
 
@@ -17,16 +18,15 @@ public class GameSave{
 
 	private ArrayList<Sprite> spriteList;
 	private Image background;
-	private GameSavable gameSavable;
-	private GameController gameController;
+	public GameSavable gameSavable;
+	private GameModel gameModel;
 	private Music music;
 
-	public GameSave(GameController gameController) 
+	public GameSave(GameModel gameModel) 
 	{
-		this.spriteList = gameController.getGameModel().getSpriteList();
-		this.background = gameController.getGameModel().getBackgroundImage();
-		
-		gameSavable = new GameSavable(this.spriteList, this.background, this.music);
+		this.spriteList = gameModel.getSpriteList();
+		this.background = gameModel.getBackgroundImage();
+		this.gameSavable = new GameSavable(gameModel);
 	}
 
 	public boolean serialize() {

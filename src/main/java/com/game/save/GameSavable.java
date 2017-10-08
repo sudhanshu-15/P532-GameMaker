@@ -1,24 +1,21 @@
 package com.game.save;
-import java.awt.Image;
 import java.io.Serializable;
 import java.util.ArrayList;
 
 import javax.swing.ImageIcon;
 
-import com.game.strategy.Music;
+import com.game.model.GameModel;
 
 public class GameSavable implements Serializable {
 	
 	private static final long serialVersionUID = 027;
 	
 	public ArrayList spriteList;
-	public Image background;
-	public Music music;
+	public ImageIcon imageIcon;
 	
-	public GameSavable(ArrayList spriteList, Image background, Music music) {
-		this.spriteList = spriteList;
-		this.background = background;
-		this.music = music;
+	public GameSavable(GameModel gameModel) {
+		this.spriteList = gameModel.getSpriteList();
+		this.imageIcon = new ImageIcon(gameModel.getBackgroundImage());	
 	}
 	
 }

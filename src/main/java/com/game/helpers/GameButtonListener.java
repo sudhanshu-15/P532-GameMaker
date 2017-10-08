@@ -74,7 +74,7 @@ public class GameButtonListener implements ActionListener {
 	}
 	
 	public void performSave(){
-		GameSave gameSave = new GameSave(gameController);
+		GameSave gameSave = new GameSave(gameModel);
 		if(gameSave.serialize()){
 			JOptionPane.showMessageDialog(null,
 					"Save Successful",
@@ -93,7 +93,8 @@ public class GameButtonListener implements ActionListener {
 		try {
 			GameSavable loadSavable = gameLoad.deserialize();
 			gameController.getGameModel().setSpriteList(loadSavable.spriteList);
-			gameController.getGameModel().setBackgroundImage(loadSavable.background);
+			gameController.getGameModel().setBackgroundImage(loadSavable.imageIcon.getImage());
+			gamePlayPanel.setBackGroundImage(loadSavable.imageIcon.getImage());
 			gamePlayPanel.repaint();
 			
 		}catch(Exception e){
