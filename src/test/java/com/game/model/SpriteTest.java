@@ -14,9 +14,9 @@ public class SpriteTest {
 		
 		assertEquals("They are not equal", sprite.getWidth(), 0);
 		
-		assertEquals("They are not equal", sprite.getPosition_X(), 300);
+		assertEquals("They are not equal", sprite.getPosition_X(), 500);
 		
-		assertEquals("They are not equal", sprite.getPosition_Y(), 300);
+		assertEquals("They are not equal", sprite.getPosition_Y(), 500);
 	
 		assertEquals("They are not equal", sprite.getVel_X(), 10);
 		
