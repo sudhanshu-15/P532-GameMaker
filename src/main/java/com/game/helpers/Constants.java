@@ -156,6 +156,7 @@ public class Constants {
 	public static final int BALL_HEIGHT = 40;
 	public static final int BALL_WIDTH = 40;
 	
+
 	//Default projectile size
 	public static final int PROJECTILE_SIZE = 20;
 	
@@ -167,12 +168,15 @@ public class Constants {
 	public static final int MAXLIMIT = 3;
 	
 	//Default projectile distance limits
+
 	public static final int MINDIS = -150;
 	public static final int MAXDIS = 151;
 	
 	//Default frame rate
 	public static final int SLEEP = 30;
 	
+	public static final String CLOCK = "clock";
+
 
 	
 }
