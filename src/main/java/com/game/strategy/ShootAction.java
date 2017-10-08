@@ -41,6 +41,7 @@ public class ShootAction implements ActionInterface, Serializable {
 		projectileSprite.setVel_Y(Constants.DEFAULT_ROCKET_SPEED);
 		projectileSprite.setPosition_X(posX);
 		projectileSprite.setPosition_Y(posY + 5);
+		projectileSprite.setProjectile(true);
 		return projectileSprite;
 	}
 
