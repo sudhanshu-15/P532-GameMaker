@@ -21,7 +21,6 @@ public class TimerReadout implements ActionListener
 		timer = new Timer(1000, this);
 	}
 
-	
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		timerSeconds++;
