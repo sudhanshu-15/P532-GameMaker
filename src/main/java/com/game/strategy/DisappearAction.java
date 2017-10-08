@@ -17,9 +17,11 @@ public class DisappearAction implements ActionInterface, Serializable {
 	private static final long serialVersionUID = 4L;
 	
 	private GameModel gameModel;
+	private Music soundEffect;
 	
 	public DisappearAction(GameModel gameModel){
 		this.gameModel = gameModel;
+		this.soundEffect = new Music();
 	}
 
 	@Override
@@ -37,15 +39,16 @@ public class DisappearAction implements ActionInterface, Serializable {
 				
 				if(listSpriteCollider.intersects(currentSpriteCollider) && !listSprite.equals(gameSprite)){
 					//TODO Logic for changing Velocity?
-
+					
+					soundEffect.stop();
 					gameSprite.setVisible(false);
+					soundEffect.play(Constants.EXPLODE_SOUND);
 					if(listSprite.isProjectile()){
 						listSprite.setVisible(false);
 					}
 					if(gameSprite.isDisintegrate()){
 						createProjectiles(gameSprite);
 					}
-					//Logic for Sound effect
 				}
 			}
 		}

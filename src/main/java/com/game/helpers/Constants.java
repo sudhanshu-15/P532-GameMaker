@@ -173,6 +173,12 @@ public class Constants {
 	//Default frame rate
 	public static final int SLEEP = 30;
 	
+	//Default Rocket sound
+	public static final String ROCKET_SOUND = "sound/missle_launch.mp3";
+	
+	//Default Explode sound
+	public static final String EXPLODE_SOUND = "sound/explode.mp3";
+	
 
 	
 }

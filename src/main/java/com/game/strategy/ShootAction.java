@@ -13,18 +13,22 @@ import com.game.model.Sprite;
 public class ShootAction implements ActionInterface, Serializable {
 	
 	private GameModel gameModel;
+	private Music soundEffect;
 	
 	public ShootAction(GameModel gameModel){
 		this.gameModel = gameModel;
+		soundEffect = new Music();
 	}
 
 	@Override
 	public void performAction(Sprite gameSprite) {
 		if(gameSprite.getKeyCode() == KeyEvent.VK_SPACE){
+			soundEffect.stop();
 			Sprite projectile = createProjectile(gameSprite.getPosition_X(), gameSprite.getPosition_Y());
 			projectile.setActionInterface(new AutomoveAction(gameModel));
 			gameModel.getSpriteList().add(projectile);
 			gameSprite.setKeyCode(Constants.DEFAULT_KEY);
+			soundEffect.play(Constants.ROCKET_SOUND);
 			// TODO Decide on 2 different arrayList for Game
 		}
 	}
