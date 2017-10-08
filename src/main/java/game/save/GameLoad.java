@@ -11,12 +11,9 @@ import javax.swing.filechooser.FileSystemView;
 
 public class GameLoad {
 
-	private ArrayList<BallVariable> ballDataArray;
-	private ArrayList<PaddleVariable> paddleDataArray;
-	private ArrayList<BrickVariable> brickDataArray;
-
-	@SuppressWarnings("unchecked")
-	public boolean loadGame() throws IOException, ClassNotFoundException {
+	private ArrayList savedList;
+	
+	public GameSavable loadGame() {
 		try {
 			JFileChooser jfc = new JFileChooser(FileSystemView.getFileSystemView().getHomeDirectory());
 			jfc.setApproveButtonText("Open");
@@ -28,61 +25,21 @@ public class GameLoad {
 				FileInputStream fileIn = new FileInputStream(file);
 				ObjectInputStream in = new ObjectInputStream(fileIn);
 
-				this.ballDataArray = (ArrayList<BallVariable>) in.readObject();
-				this.paddleDataArray = (ArrayList<PaddleVariable>) in.readObject();
-				this.brickDataArray = (ArrayList<BrickVariable>) in.readObject();
-				
-				for(int i = 0;i<this.ballDataArray.size();i++) 
-				{
-					this.ballDataArray.get(i).setBallImage();
-				}
-				
-				for(int i = 0;i<this.paddleDataArray.size();i++) 
-				{
-					this.paddleDataArray.get(i).setPaddleImage();
-				}
-				
-				for(int i = 0;i<this.brickDataArray.size();i++) 
-				{
-					this.brickDataArray.get(i).setBrickImage();
+				GameSavable savedList = (GameSavable) in.readObject();
+				if(savedList != null) {
+					return savedList;
 				}
 				in.close();
 				fileIn.close();
-				return true;
 			}
 		} catch (IOException i) {
 			i.printStackTrace();
-			return false;
+			return null;
 		} catch (ClassNotFoundException c) {
 			c.printStackTrace();
-			return false;
+			return null;
 		}
-		return false;
+		return null;
 
 	}
-
-	public ArrayList<BallVariable> getBallDataArray() {
-		return ballDataArray;
-	}
-
-	public void setBallDataArray(ArrayList<BallVariable> ballDataArray) {
-		this.ballDataArray = ballDataArray;
-	}
-
-	public ArrayList<PaddleVariable> getPaddleDataArray() {
-		return paddleDataArray;
-	}
-
-	public void setPaddleDataArray(ArrayList<PaddleVariable> paddleDataArray) {
-		this.paddleDataArray = paddleDataArray;
-	}
-
-	public ArrayList<BrickVariable> getBrickDataArray() {
-		return brickDataArray;
-	}
-
-	public void setBrickDataArray(ArrayList<BrickVariable> brickDataArray) {
-		this.brickDataArray = brickDataArray;
-	}
-
 }
