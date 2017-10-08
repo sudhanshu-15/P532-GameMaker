@@ -156,7 +156,6 @@ public class Constants {
 	public static final int BALL_HEIGHT = 40;
 	public static final int BALL_WIDTH = 40;
 	
-
 	//Default projectile size
 	public static final int PROJECTILE_SIZE = 20;
 	
@@ -168,7 +167,6 @@ public class Constants {
 	public static final int MAXLIMIT = 3;
 	
 	//Default projectile distance limits
-
 	public static final int MINDIS = -150;
 	public static final int MAXDIS = 151;
 	
@@ -178,5 +176,11 @@ public class Constants {
 	public static final String CLOCK = "clock";
 
 
+	
+	//Default Rocket sound
+	public static final String ROCKET_SOUND = "sound/missle_launch.mp3";
+	
+	//Default Explode sound
+	public static final String EXPLODE_SOUND = "sound/explode.mp3";
 	
 }
