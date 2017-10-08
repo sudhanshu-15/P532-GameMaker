@@ -134,7 +134,7 @@ public class Constants {
 		public static final String YELLOW = "Yellow";
 		
 		
-		public static final int BOUND_WIDTH = GAME_PANEL_WIDTH+100;
+		public static final int BOUND_WIDTH = GAME_PANEL_WIDTH-40;
 		public static final int BOUND_HEIGHT = GAME_PANEL_HEIGHT-40;
 		
 		//background sound music 

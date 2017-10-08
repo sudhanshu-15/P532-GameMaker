@@ -153,7 +153,7 @@ public void initSpriteButtons(){
 	spriteRbShooter.setActionCommand(Constants.SHOOTER);
 	//this.add(spriteRbShooter);
 	
-	spriteImage = new ImageIcon("drawable/Asteriod.png");
+	spriteImage = new ImageIcon("drawable/Asteroid.png");
 	tempImg = spriteImage.getImage();
 	tempImg = tempImg.getScaledInstance(Constants.ASTERIOD_WIDTH, Constants.ASTERIOD_HEIGHT, java.awt.Image.SCALE_SMOOTH);
 	spriteImage = new ImageIcon(tempImg);
