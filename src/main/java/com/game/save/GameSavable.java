@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import javax.swing.ImageIcon;
 
 import com.game.model.GameModel;
+import com.game.model.TimerReadout;
 
 public class GameSavable implements Serializable {
 	
@@ -12,10 +13,13 @@ public class GameSavable implements Serializable {
 	
 	public ArrayList spriteList;
 	public ImageIcon imageIcon;
+	public TimerReadout timerReadout;
 	
 	public GameSavable(GameModel gameModel) {
 		this.spriteList = gameModel.getSpriteList();
 		this.imageIcon = new ImageIcon(gameModel.getBackgroundImage());	
+		this.timerReadout = gameModel.getTimerReadout();
+		
 	}
 	
 }

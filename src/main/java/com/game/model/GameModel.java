@@ -13,10 +13,12 @@ public class GameModel implements Serializable{
 	private Sprite gameSprite;
 	private ArrayList<Sprite> spriteList;
 	private ImageIcon backgroundImage;
+	private TimerReadout timerReadout;
 	
 	public GameModel(){
 		this.gameSprite = new Sprite();
 		this.spriteList = new ArrayList<Sprite>();
+		this.timerReadout = new TimerReadout();
 	}
 	
 	public void addSprite(){
@@ -51,13 +53,27 @@ public class GameModel implements Serializable{
 		return background;
 	}
 
-	/*public void setBackgroundImage(ImageIcon backgroundImage) {
-		this.backgroundImage = backgroundImage;
-	}
-*/
 	public void setBackgroundImage(Image backgroundImage) {
 		ImageIcon icon = new ImageIcon(backgroundImage);
 		this.backgroundImage = icon;
+	}
+	
+	public void startTimer()
+	{
+		this.timerReadout.startTimer();
+	}
+	
+	public void stopTimer()
+	{
+		this.timerReadout.stopTimer();
+	}
+
+	public TimerReadout getTimerReadout() {
+		return timerReadout;
+	}
+
+	public void setTimerReadout(TimerReadout timerReadout) {
+		this.timerReadout = timerReadout;
 	}
 	
 }

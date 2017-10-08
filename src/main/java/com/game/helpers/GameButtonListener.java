@@ -20,7 +20,6 @@ public class GameButtonListener implements ActionListener {
 	private GameController gameController;
 	private GameModel gameModel;
 	private GamePlayPanel gamePlayPanel;
-	private TimerReadout timerReadout;
 	
 	private static Logger buttonLog = Logger.getLogger("buttonLogger");
 	
@@ -28,7 +27,6 @@ public class GameButtonListener implements ActionListener {
 		this.gameController = gameController;
 		this.gameModel = gameController.getGameModel();
 		this.gamePlayPanel = gameController.getGamePlayPanel();
-		this.timerReadout = new TimerReadout();
 	}
 
 	@Override
@@ -46,18 +44,18 @@ public class GameButtonListener implements ActionListener {
 			gamePlayPanel.repaint();
 			gameController.setGamePlay(true);
 			
-			if(TimerReadout.isTimerSet)
+			if(gameModel.getTimerReadout().isTimerSet)
 			{
-				timerReadout.startTimer();
+				gameModel.startTimer();
 			}
 			break;
 		case Constants.PAUSE:
 			buttonLog.info("Pause button clicked");
 			gameController.setGamePlay(false);
 			
-			if(TimerReadout.isTimerSet)
+			if(gameModel.getTimerReadout().isTimerSet)
 			{
-				timerReadout.stopTimer();
+				gameModel.stopTimer();
 			}
 						
 			break;
@@ -95,6 +93,11 @@ public class GameButtonListener implements ActionListener {
 			gameController.getGameModel().setSpriteList(loadSavable.spriteList);
 			gameController.getGameModel().setBackgroundImage(loadSavable.imageIcon.getImage());
 			gamePlayPanel.setBackGroundImage(loadSavable.imageIcon.getImage());
+			
+		
+			if(loadSavable.timerReadout.isTimerSet)
+				
+			gameModel.setTimerReadout(loadSavable.timerReadout);			
 			gamePlayPanel.repaint();
 			
 		}catch(Exception e){
