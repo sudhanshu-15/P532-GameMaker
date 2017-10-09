@@ -22,28 +22,29 @@ public class GameModelTest {
 	private GameModel gameModel = new GameModel();
 	private Sprite gameSprite = gameModel.getGameSprite();
 	private ArrayList<Sprite> spriteList = gameModel.getSpriteList();
-	private Image backgroundImage = gameModel.getBackgroundImage();
 	ShootAction shootAction = new ShootAction(gameModel);
 	PlayermoveAction playermoveAction = new PlayermoveAction();
 	ActionListener spy;
+	private TimerReadout timerReadout = new TimerReadout();
 	
 	@Before
 	public void setUp() {
-		gameModel.setBackgroundImage(backgroundImage);
 		gameModel.setGameSprite(gameSprite);
 		gameModel.setSpriteList(spriteList);
 		shootAction.performAction(gameSprite);
 		playermoveAction.performAction(gameSprite);
+		gameModel.setTimerReadout(timerReadout);
+		gameModel.startTimer();
+		gameModel.stopTimer();
+		gameModel.addSprite();
 
 	}
 	
 	@Test
 	public void testGetterAndSetter() {
-	
+		
 		assertEquals("They are not equal", gameModel.getGameSprite(), gameSprite);
 	
 		assertEquals("They are not equal", gameModel.getSpriteList(), spriteList);
-		
-		assertEquals("They are not equal", gameModel.getBackgroundImage(), backgroundImage);
 	}
 }

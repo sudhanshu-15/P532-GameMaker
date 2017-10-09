@@ -5,11 +5,9 @@ import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
-import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.filechooser.FileSystemView;
 
-import com.game.controller.GameController;
 import com.game.model.GameModel;
 import com.game.model.Sprite;
 import com.game.strategy.Music;
@@ -20,7 +18,6 @@ public class GameSave{
 	private Image background;
 	public GameSavable gameSavable;
 	private GameModel gameModel;
-	private Music music;
 
 	public GameSave(GameModel gameModel) 
 	{

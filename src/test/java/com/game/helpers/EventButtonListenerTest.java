@@ -8,7 +8,6 @@ import org.junit.Test;
 import org.mockito.Mockito;
 
 import com.game.model.GameModel;
-import com.game.helpers.EventButtonListener;
 
 public class EventButtonListenerTest {
 		
@@ -19,6 +18,7 @@ public class EventButtonListenerTest {
 	private boolean horizontalMotion = false;
 	private boolean verticalMotion = false;
 	private boolean collision = false;
+	private boolean noBounds = false;
 	
 	@Before
 	public void setUp() {
@@ -28,6 +28,7 @@ public class EventButtonListenerTest {
 		EventButtonListener.setHorizontalMotion(horizontalMotion);
 		EventButtonListener.setVerticalMotion(verticalMotion);
 		EventButtonListener.setCollision(collision);
+		EventButtonListener.setNoBoundsMotion(noBounds);
 	}
 	
 	@Test
