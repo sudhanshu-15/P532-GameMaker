@@ -40,7 +40,7 @@ public class GameSave{
 			int returnValue = jfc.showSaveDialog(null);
 			if (returnValue == JFileChooser.APPROVE_OPTION) {
 				File selectedFile = jfc.getSelectedFile();
-				FileOutputStream fileOut = new FileOutputStream(selectedFile.getPath()+".txt");
+				FileOutputStream fileOut = new FileOutputStream(selectedFile.getPath());
 				ObjectOutputStream out = new ObjectOutputStream(fileOut);
 				out.writeObject(gameSavable);
 				out.close();
