@@ -120,8 +120,8 @@ public class Constants {
     
 	
 	//speed of command sprite
-	public static final int MOVEMENT_CMD_X = 5;
-	public static final int MOVEMENT_CMD_Y = 5;
+	public static final int MOVEMENT_CMD_X = 8;
+	public static final int MOVEMENT_CMD_Y = 8;
 	
     
 	//speed of the auto sprite

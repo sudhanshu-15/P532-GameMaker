@@ -70,6 +70,7 @@ public class DisappearAction implements ActionInterface, Serializable {
 		projectile.setCollidable(true);
 		projectile.setVertical(true);
 		projectile.setHorizontal(true);
+		projectile.setDisappear(true);
 		int random = ThreadLocalRandom.current().nextInt(Constants.MINDIS, Constants.MAXDIS);
 		projectile.setPosition_X(posX+random);
 		random = ThreadLocalRandom.current().nextInt(Constants.MINDIS, Constants.MAXDIS);

@@ -35,6 +35,7 @@ public class GameMakerPanel extends JPanel {
 	private JPanel imagePanel;
 	private JCheckBox actionShooter;
 	private JCheckBox disintegrate;
+	private JCheckBox actionRbBlowUp;
 
 	
 	public GameMakerPanel(){
@@ -201,7 +202,7 @@ public void initActionButtons(){
 this.add(actionTitle);
 	JRadioButton actionRbMove = new JRadioButton("Move", false);
 	JRadioButton actionRbBounce = new JRadioButton("Auto-Move", false);
-	JRadioButton actionRbBlowUp = new JRadioButton("Blow Up", false);
+	actionRbBlowUp = new JCheckBox("Blow Up", false);
 	actionShooter = new JCheckBox("Shooter", false);
 	disintegrate = new JCheckBox("Disintegrate", false);
 	
@@ -218,7 +219,7 @@ this.add(actionTitle);
 	bgActions = new ButtonGroup();
 	bgActions.add(actionRbMove);
 	bgActions.add(actionRbBounce);
-	bgActions.add(actionRbBlowUp);
+//	bgActions.add(actionRbBlowUp);
 	
 	this.add(actionRbMove);
 	this.add(actionRbBounce);
@@ -427,6 +428,10 @@ public void addShooterListener(ActionListener shooterListener){
 
 public void addDisintegrateListener(ActionListener disintegrateListener){
 	disintegrate.addActionListener(disintegrateListener);
+}
+
+public void addBlowUpListener(ActionListener blowupListener){
+	actionRbBlowUp.addActionListener(blowupListener);
 }
 
 public JPanel getImagePanel() {
