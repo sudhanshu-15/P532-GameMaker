@@ -37,6 +37,7 @@ public class Sprite implements Serializable{
 	private boolean horizontal;
 	private boolean vertical;
 	private boolean random;
+	private boolean noBounds;
 	private boolean collidable;
 	private boolean visible;
 	private boolean shooter;
@@ -53,6 +54,7 @@ public class Sprite implements Serializable{
 		this.horizontal = false;
 		this.vertical = false;
 		this.random = false;
+		this.noBounds = false;
 		this.collidable = false;
 		this.shooter = false;
 		this.visible = true;
@@ -71,6 +73,7 @@ public class Sprite implements Serializable{
 		this.horizontal = sprite.horizontal;
 		this.vertical = sprite.vertical;
 		this.random = sprite.random;
+		this.noBounds = sprite.noBounds;
 		this.collidable = sprite.collidable;
 		this.visible = sprite.visible;
 		this.keyCode = sprite.keyCode;
@@ -94,6 +97,8 @@ public class Sprite implements Serializable{
 	//TODO: Implement Checkbounds
 	// Function to check for boundary of the game panel window
 		public void checkBounds(){
+			if(!isNoBounds())
+			{
 			if(position_Y <= 0){
 				vel_Y = -vel_Y;
 			}
@@ -102,6 +107,14 @@ public class Sprite implements Serializable{
 			}
 			if(position_X >= Constants.BOUND_WIDTH  || position_X <= 0){
 				vel_X = -vel_X;
+			}
+			}
+			else
+			{
+				if(position_X >= Constants.BOUND_WIDTH){
+					position_X = 0;
+					//vel_X = -vel_X;
+			}
 			}
 		}
 	
@@ -247,6 +260,14 @@ public class Sprite implements Serializable{
 
 	public void setDisintegrate(boolean disintegrate) {
 		this.disintegrate = disintegrate;
+	}
+
+	public boolean isNoBounds() {
+		return noBounds;
+	}
+
+	public void setNoBounds(boolean noBounds) {
+		this.noBounds = noBounds;
 	}
   
 }

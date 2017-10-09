@@ -3,11 +3,16 @@ package com.game.helpers;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.JOptionPane;
+
 import org.apache.log4j.Logger;
 
 import com.game.controller.GameController;
 import com.game.model.GameModel;
 import com.game.model.TimerReadout;
+import com.game.save.GameLoad;
+import com.game.save.GameSavable;
+import com.game.save.GameSave;
 import com.game.view.GamePlayPanel;
 
 public class GameButtonListener implements ActionListener {
@@ -15,7 +20,6 @@ public class GameButtonListener implements ActionListener {
 	private GameController gameController;
 	private GameModel gameModel;
 	private GamePlayPanel gamePlayPanel;
-	private TimerReadout timerReadout;
 	
 	private static Logger buttonLog = Logger.getLogger("buttonLogger");
 	
@@ -23,7 +27,6 @@ public class GameButtonListener implements ActionListener {
 		this.gameController = gameController;
 		this.gameModel = gameController.getGameModel();
 		this.gamePlayPanel = gameController.getGamePlayPanel();
-		this.timerReadout = new TimerReadout();
 	}
 
 	@Override
@@ -41,18 +44,18 @@ public class GameButtonListener implements ActionListener {
 			gamePlayPanel.repaint();
 			gameController.setGamePlay(true);
 			
-			if(TimerReadout.isTimerSet)
+			if(gameModel.getTimerReadout().isTimerSet)
 			{
-				timerReadout.startTimer();
+				gameModel.startTimer();
 			}
 			break;
 		case Constants.PAUSE:
 			buttonLog.info("Pause button clicked");
 			gameController.setGamePlay(false);
 			
-			if(TimerReadout.isTimerSet)
+			if(gameModel.getTimerReadout().isTimerSet)
 			{
-				timerReadout.stopTimer();
+				gameModel.stopTimer();
 			}
 						
 			break;
@@ -69,11 +72,38 @@ public class GameButtonListener implements ActionListener {
 	}
 	
 	public void performSave(){
-		//TODO Write code to handle save
+		GameSave gameSave = new GameSave(gameModel);
+		if(gameSave.serialize()){
+			JOptionPane.showMessageDialog(null,
+					"Save Successful",
+					"Save",
+					JOptionPane.INFORMATION_MESSAGE);
+		}else{
+			JOptionPane.showMessageDialog(null,
+					"Error Saving File",
+					"Save",
+					JOptionPane.ERROR_MESSAGE);
+		}
 	}
 	
 	public void performLoad(){
-		//TODO Write code to handle load
+		GameLoad gameLoad = new GameLoad();
+		try {
+			GameSavable loadSavable = gameLoad.deserialize();
+			gameController.getGameModel().setSpriteList(loadSavable.spriteList);
+			gameController.getGameModel().setBackgroundImage(loadSavable.imageIcon.getImage());
+			gamePlayPanel.setBackGroundImage(loadSavable.imageIcon.getImage());
+			
+		
+			if(loadSavable.timerReadout.isTimerSet)
+				
+			gameModel.setTimerReadout(loadSavable.timerReadout);			
+			gamePlayPanel.repaint();
+			
+		}catch(Exception e){
+			buttonLog.error("Loading Failed" + e.getLocalizedMessage());
+		}
+		
 	}
 
 }

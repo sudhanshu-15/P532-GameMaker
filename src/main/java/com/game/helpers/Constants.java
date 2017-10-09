@@ -71,6 +71,7 @@ public class Constants {
 		public static final String SIDES = "Side";
 		public static final String UPDOWN = "Up";
 		public static final String COLLISION = "Collision";
+		public static final String NOBOUND = "Nobound";
 		
 		//Strings for Game Buttons
 		public static final String DRAW = "Draw";

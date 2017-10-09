@@ -1,18 +1,25 @@
 package com.game.save;
-import java.awt.Image;
 import java.io.Serializable;
 import java.util.ArrayList;
+
+import javax.swing.ImageIcon;
+
+import com.game.model.GameModel;
+import com.game.model.TimerReadout;
 
 public class GameSavable implements Serializable {
 	
 	private static final long serialVersionUID = 027;
 	
 	public ArrayList spriteList;
-	public Image background;
+	public ImageIcon imageIcon;
+	public TimerReadout timerReadout;
 	
-	public GameSavable(ArrayList spriteList, Image background) {
-		this.spriteList = spriteList;
-		this.background = background;
+	public GameSavable(GameModel gameModel) {
+		this.spriteList = gameModel.getSpriteList();
+		this.imageIcon = new ImageIcon(gameModel.getBackgroundImage());	
+		this.timerReadout = gameModel.getTimerReadout();
+		
 	}
 	
 }

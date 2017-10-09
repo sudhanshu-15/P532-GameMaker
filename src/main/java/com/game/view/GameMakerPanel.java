@@ -234,14 +234,17 @@ public void initEventButtons(){
 	JCheckBox eventRbsides = new JCheckBox("Left-Right", false);
 	JCheckBox eventRbup = new JCheckBox("Up-down", false);
 	JCheckBox eventCollision = new JCheckBox("Collision", false);
+	JCheckBox eventRbnobounds = new JCheckBox("No-Bounds", false);
 	
 	eventRbsides.setFocusable(false);
 	eventRbup.setFocusable(false);
 	eventCollision.setFocusable(false);
+	eventRbnobounds.setFocusable(false);
 	
 	eventRbsides.setActionCommand(Constants.SIDES);
 	eventRbup.setActionCommand(Constants.UPDOWN);
 	eventCollision.setActionCommand(Constants.COLLISION);
+	eventRbnobounds.setActionCommand(Constants.NOBOUND);
 	
 	
 	
@@ -249,11 +252,12 @@ public void initEventButtons(){
 	bgEvents.add(eventRbsides);
 	bgEvents.add(eventRbup);
 	bgEvents.add(eventCollision);
+	bgEvents.add(eventRbnobounds);
 	
 	this.add(eventRbsides);
 	this.add(eventRbup);
 	this.add(eventCollision);
-	
+	this.add(eventRbnobounds);
 }
 
 public void initBackgroundButtons() {
