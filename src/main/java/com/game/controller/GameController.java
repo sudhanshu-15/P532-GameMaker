@@ -46,7 +46,7 @@ public class GameController {
 		this.gameMakerPanel.addBackGroundMusicButtonListener(new SoundButtonListener());
 		this.gameMakerPanel.addShooterListener(new ShootButtonListener(gameModel));
 		this.gameMakerPanel.addDisintegrateListener(new DisintegrateButtonListener(gameModel));
-		this.gameMakerPanel.addReadoutButtonListener(new ReadoutButtonListener());
+		this.gameMakerPanel.addReadoutButtonListener(new ReadoutButtonListener(gameModel));
 
 		this.gamePlayPanel.addMouseListener(this.dragListener);
 		this.gamePlayPanel.addMouseMotionListener(this.dragListener);

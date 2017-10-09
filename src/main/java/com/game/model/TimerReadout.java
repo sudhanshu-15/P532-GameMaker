@@ -5,16 +5,18 @@ import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.Serializable;
+
 import javax.swing.Timer;
 
 import com.game.helpers.Constants;
 
-public class TimerReadout implements ActionListener
+public class TimerReadout implements ActionListener, Serializable
 {
 	private Timer timer;
-	public static int timerSeconds = 0;
-	public static int timerMinutes = 0;
-	public static boolean isTimerSet = false;
+	public int timerSeconds = 0;
+	public int timerMinutes = 0;
+	public boolean isTimerSet = false;
 	
 	public TimerReadout()
 	{
@@ -42,7 +44,7 @@ public class TimerReadout implements ActionListener
 		this.timer.stop();
 	}
 	
-	public static void draw(Graphics g)
+	public void draw(Graphics g)
 	{
 		g.setFont(new Font(Font.SERIF, Font.BOLD, 24));
 		g.setColor(Color.RED);
