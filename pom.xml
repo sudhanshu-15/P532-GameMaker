@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.p532</groupId>
-	<artifactId>fall2017_a6_team1</artifactId>
+	<artifactId>fall2017_a7_team2</artifactId>
 	<version>0.1</version>
 
 	<properties>
@@ -26,9 +26,9 @@
 		<sonar.jacoco.itReportPath>${jacoco.outputDir}/${jacoco.out.it.file}</sonar.jacoco.itReportPath>
 
 		<!-- webstart and getdown properties -->
-		<base.project.name>fall2017_a6_team1</base.project.name>
-		<base.project.name.friendly>team1</base.project.name.friendly>
-		<assignment.name>fall2017/a6 </assignment.name>
+		<base.project.name>fall2017_a7_team2</base.project.name>
+		<base.project.name.friendly>team2</base.project.name.friendly>
+		<assignment.name>fall2017/a7 </assignment.name>
 		<code-root>.</code-root>
 		<wwwroot>/u/kspace/www/fluency</wwwroot>
 	</properties>
@@ -145,6 +145,13 @@
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>webstart-maven-plugin</artifactId>
+				<dependencies>
+					<dependency>
+						<groupId>log4j</groupId>
+						<artifactId>log4j</artifactId>
+						<version>1.2.17</version>
+					</dependency>
+				</dependencies>
 				<executions>
 					<execution>
 					<id>prepare-jnlp</id>
