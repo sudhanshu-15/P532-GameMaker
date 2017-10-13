@@ -15,7 +15,6 @@
   <resources>
     <j2se version="1.6+" />
     <jar href="fall2017_a7_team2-0.1.jar" />
-    $dependencies
   </resources>
  <application-desc main-class="$mainClass">
  </application-desc>
