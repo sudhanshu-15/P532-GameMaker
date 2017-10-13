@@ -15,6 +15,7 @@
   <resources>
     <j2se version="1.6+" />
     <jar href="fall2017_a7_team2-0.1.jar" />
+    <jar href="log4j-1.2.17.jar" />
   </resources>
  <application-desc main-class="$mainClass">
  </application-desc>
