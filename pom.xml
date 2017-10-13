@@ -165,6 +165,13 @@
 					<jnlp>
 						<mainClass>com.game.main.Main</mainClass>
 					</jnlp>
+					<commonJarResources>
+						<jarResource>
+							<groupId>log4j</groupId>
+							<artifactId>log4j</artifactId>
+							<version>1.2.17</version>
+						</jarResource>
+					</commonJarResources>
 					<sign>
 						<keystore>${project.basedir}/src/main/jnlp/foo1.jks</keystore>
 						<keypass>123abc</keypass>
