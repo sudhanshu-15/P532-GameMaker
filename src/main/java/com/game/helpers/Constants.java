@@ -179,9 +179,9 @@ public class Constants {
 
 	
 	//Default Rocket sound
-	public static final String ROCKET_SOUND = "sound/missle_launch.mp3";
+	public static final String ROCKET_SOUND = "missle_launch.mp3";
 	
 	//Default Explode sound
-	public static final String EXPLODE_SOUND = "sound/explode.mp3";
+	public static final String EXPLODE_SOUND = "explode.mp3";
 	
 }
