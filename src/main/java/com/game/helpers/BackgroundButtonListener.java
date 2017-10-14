@@ -28,7 +28,7 @@ public class BackgroundButtonListener implements ActionListener {
         	break;
         
         case "Road":
-        	this.image = new ImageIcon("drawable/road.png").getImage();
+        	this.image = new ImageIcon(ResourcesLoader.class.getClassLoader().getResource("road.png")).getImage();
         	gameController.getGameModel().setBackgroundImage(image);
         	gamePlayPanel.setBackGroundImage(image);
         	gamePlayPanel.revalidate();
@@ -36,7 +36,7 @@ public class BackgroundButtonListener implements ActionListener {
             break;
             
         case "Space":
-        	this.image = new ImageIcon("drawable/space.png").getImage();
+        	this.image = new ImageIcon(ResourcesLoader.class.getClassLoader().getResource("space.png")).getImage();
         	gameController.getGameModel().setBackgroundImage(image);
         	gamePlayPanel.setBackGroundImage(image);
         	gamePlayPanel.revalidate();
