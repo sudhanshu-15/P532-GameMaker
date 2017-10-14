@@ -38,7 +38,7 @@ public class ShootAction implements ActionInterface, Serializable {
 	
 	private Sprite createProjectile(int posX, int posY){
 		Sprite projectileSprite = new Sprite();
-		ImageIcon rocketIcon = new ImageIcon(cl.getResource("resources/rocket.png"));
+		ImageIcon rocketIcon = new ImageIcon(cl.getResource("rocket.png"));
 		Image tempImage = rocketIcon.getImage();
 		tempImage = tempImage.getScaledInstance(Constants.DEFAULT_ROCKETSIZE, Constants.DEFAULT_ROCKETSIZE, java.awt.Image.SCALE_SMOOTH);
 		rocketIcon.setImage(tempImage);

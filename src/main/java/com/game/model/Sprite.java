@@ -50,7 +50,7 @@ public class Sprite implements Serializable{
 	public Sprite() {
 		this.position_X = Constants.DEFAULT_X;
 		this.position_Y = Constants.DEFAULT_Y;
-		this.spriteImage = new ImageIcon(ResourcesLoader.class.getClassLoader().getResource("resources/Questionmark.png"));
+		this.spriteImage = new ImageIcon(ResourcesLoader.class.getClassLoader().getResource("Questionmark.png"));
 		this.vel_X = Constants.MOVEMENT_AUTO_X;
 		this.vel_Y = Constants.MOVEMENT_AUTO_Y;
 		this.horizontal = false;
