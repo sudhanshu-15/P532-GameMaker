@@ -49,30 +49,6 @@ public class GameSave{
 	 */
 	public boolean serialize() {
 		try {
-
-//			JFileChooser jfc = new JFileChooser(FileSystemView.getFileSystemView().getHomeDirectory());
-//			jfc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
-//			jfc.setApproveButtonText("Save");
-//			jfc.setApproveButtonMnemonic('s');
-//			jfc.setApproveButtonToolTipText("Save Game");
-//			int returnValue = jfc.showSaveDialog(null);
-//			if (returnValue == JFileChooser.APPROVE_OPTION) {
-//				File selectedFile = jfc.getSelectedFile();
-//				FileOutputStream fileOut = new FileOutputStream(selectedFile.getPath());
-//				ObjectOutputStream out = new ObjectOutputStream(fileOut);
-//				out.writeObject(gameSavable);
-//				
-//				saveGameToDatabase();
-//				
-//				out.close();
-//				fileOut.close();
-//				return true;
-//			}
-//			else {
-//				return false;
-//			}
-			
-			// TODO pop up panel to enter game name
 			saveGameDialog();
 			return true;
 			
@@ -85,36 +61,29 @@ public class GameSave{
 	
 	private void saveGameDialog() {
 		JPanel saveGamePanel = new JPanel();
-		JLabel gameLabel = new JLabel("Please enter the name of your game: ");
+		JLabel gameLabel = new JLabel("Please Give a name to your game: ");
 		final JTextField userInput = new JTextField();
 		JButton saveGameButton = new JButton("Save");
-//		final JLabel errorMsg = new JLabel("Game name is required");
-//		errorMsg.setForeground(Color.RED);
 		
 		userInput.setPreferredSize(new Dimension(300,30));
 		saveGameButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				String input = userInput.getText();
-//				if (input.isEmpty()) {
-//					errorMsg.setVisible(true);
-//				}	else	  {
-//					errorMsg.setVisible(false);
 					saveGameToDatabase(input);
 					saveDialog.dispose();
 					JOptionPane.showMessageDialog(null,
 							"Save Successful",
 							"Save",
 							JOptionPane.INFORMATION_MESSAGE);					
-//				}
-				
+
 			}
 		});
 		
 		saveGamePanel.add(gameLabel);
 		saveGamePanel.add(userInput);
 		saveGamePanel.add(saveGameButton);
-//		saveGamePanel.add(errorMsg);
+
 		saveDialog.setSize(new Dimension(300,200));
 		saveDialog.add(saveGamePanel);
 		saveDialog.setVisible(true);
