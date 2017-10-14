@@ -13,7 +13,7 @@
         <property name="show_sql">true</property>   
         <property name="connection.pool_size">1</property>  
           
-        <mapping class="com.game.hibernate.UserTest"></mapping>  
+        <mapping class="com.game.pojos.Game"></mapping>  
   
     </session-factory>  
 </hibernate-configuration>  

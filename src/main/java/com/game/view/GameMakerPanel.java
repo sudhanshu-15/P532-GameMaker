@@ -445,5 +445,6 @@ public JPanel getImagePanel() {
 public void setImagePanel(JPanel imagePanel) {
 	this.imagePanel = imagePanel;
 }
+
 }
 

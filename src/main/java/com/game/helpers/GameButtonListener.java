@@ -88,7 +88,9 @@ public class GameButtonListener implements ActionListener {
 	public void performLoad(){
 		GameLoad gameLoad = new GameLoad();
 		try {
-			GameSavable loadSavable = gameLoad.deserialize();
+			GameSavable loadSavable = gameLoad.retrieveFromDatabase();
+			
+			System.out.println(" In listener"+ loadSavable);
 			gameController.getGameModel().setSpriteList(loadSavable.spriteList);
 			gameController.getGameModel().setBackgroundImage(loadSavable.imageIcon.getImage());
 			gamePlayPanel.setBackGroundImage(loadSavable.imageIcon.getImage());

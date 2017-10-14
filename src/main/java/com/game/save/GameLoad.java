@@ -4,13 +4,18 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.swing.JFileChooser;
 import javax.swing.filechooser.FileSystemView;
 
+import com.game.hibernate.RetrieveGamesTable;
+import com.game.pojos.Game;
+
 public class GameLoad {
 	
-	public GameSavable deserialize() {
+	/*public GameSavable deserialize() {
 		try {
 			JFileChooser jfc = new JFileChooser(FileSystemView.getFileSystemView().getHomeDirectory());
 			jfc.setApproveButtonText("Open");
@@ -38,5 +43,19 @@ public class GameLoad {
 		}
 		return null;
 
+	}
+	
+	
+	}
+	*/
+	
+	public GameSavable retrieveFromDatabase(){
+		
+		RetrieveGamesTable retrieveGamesTable = new RetrieveGamesTable();
+		
+		ArrayList<Game> gamesList = retrieveGamesTable.temp();
+		System.out.println(" In listener"+ (gamesList.get(1)).getGameSavable());
+		return (gamesList.get(2)).getGameSavable();			
+		
 	}
 }
