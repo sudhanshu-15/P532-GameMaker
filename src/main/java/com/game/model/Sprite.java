@@ -11,6 +11,7 @@ import java.io.Serializable;
 import javax.swing.ImageIcon;
 
 import com.game.helpers.Constants;
+import com.game.helpers.ResourcesLoader;
 import com.game.strategy.ActionInterface;
 import com.game.strategy.ShootAction;
 
@@ -49,7 +50,7 @@ public class Sprite implements Serializable{
 	public Sprite() {
 		this.position_X = Constants.DEFAULT_X;
 		this.position_Y = Constants.DEFAULT_Y;
-		this.spriteImage = new ImageIcon("resources/Questionmark.png");
+		this.spriteImage = new ImageIcon(ResourcesLoader.class.getClassLoader().getResource("com/game/helpers/Questionmark.png"));
 		this.vel_X = Constants.MOVEMENT_AUTO_X;
 		this.vel_Y = Constants.MOVEMENT_AUTO_Y;
 		this.horizontal = false;
