@@ -7,6 +7,7 @@ import java.io.Serializable;
 import javax.swing.ImageIcon;
 
 import com.game.helpers.Constants;
+import com.game.helpers.ResourcesLoader;
 import com.game.model.GameModel;
 import com.game.model.Sprite;
 
@@ -14,10 +15,12 @@ public class ShootAction implements ActionInterface, Serializable {
 	
 	private GameModel gameModel;
 	private Music soundEffect;
+	private ClassLoader cl;
 	
 	public ShootAction(GameModel gameModel){
 		this.gameModel = gameModel;
 		soundEffect = new Music();
+		this.cl = ResourcesLoader.class.getClassLoader();
 	}
 
 	@Override
@@ -35,7 +38,7 @@ public class ShootAction implements ActionInterface, Serializable {
 	
 	private Sprite createProjectile(int posX, int posY){
 		Sprite projectileSprite = new Sprite();
-		ImageIcon rocketIcon = new ImageIcon("resources/rocket.png");
+		ImageIcon rocketIcon = new ImageIcon(cl.getResource("com/game/helpers/rocket.png"));
 		Image tempImage = rocketIcon.getImage();
 		tempImage = tempImage.getScaledInstance(Constants.DEFAULT_ROCKETSIZE, Constants.DEFAULT_ROCKETSIZE, java.awt.Image.SCALE_SMOOTH);
 		rocketIcon.setImage(tempImage);
