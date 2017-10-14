@@ -48,6 +48,7 @@
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
 			<version>1.2.17</version>
+			<scope>complie</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.codehaus.sonar-plugins.java</groupId>
@@ -165,6 +166,7 @@
 							<groupId>log4j</groupId>
 							<artifactId>log4j</artifactId>
 							<version>1.2.17</version>
+							<scope>complie</scope>
 						</jarResource>
 						<jarResource>
 							<groupId>junit</groupId>
