@@ -9,6 +9,7 @@ import java.util.concurrent.ThreadLocalRandom;
 import javax.swing.ImageIcon;
 
 import com.game.helpers.Constants;
+import com.game.helpers.ResourcesLoader;
 import com.game.model.GameModel;
 import com.game.model.Sprite;
 

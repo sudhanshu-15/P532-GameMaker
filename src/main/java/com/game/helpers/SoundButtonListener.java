@@ -20,13 +20,13 @@ public class SoundButtonListener implements ActionListener, Serializable {
 		String commandString = e.getActionCommand();
 		switch (commandString) {
 		case Constants.MARIOMUSIC:
-			fileName = "sound/mario.mp3";
+			fileName = "mario.mp3";
 			stopMusic();
 			playMusic(fileName);
 			backgroundMusicRbLog.info("Mario selected");
 			break;
 		case Constants.TICKTOCK:
-			fileName = "sound/Tick.mp3";
+			fileName = "Tick.mp3";
 			stopMusic();
 			playMusic(fileName);
 			backgroundMusicRbLog.info("Ticktock selected");
