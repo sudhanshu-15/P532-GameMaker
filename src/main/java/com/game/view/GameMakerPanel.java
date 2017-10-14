@@ -47,7 +47,7 @@ public class GameMakerPanel extends JPanel {
 	this.setAlignmentY(0);
 	this.cl = ResourcesLoader.class.getClassLoader();
 	
-	previewIcon = new ImageIcon(cl.getResource("resources/Questionmark.png"));
+	previewIcon = new ImageIcon(cl.getResource("Questionmark.png"));
 	Image tempImg = previewIcon.getImage();
 	tempImg = tempImg.getScaledInstance(Constants.BALL_RADIUS, Constants.BALL_RADIUS, java.awt.Image.SCALE_SMOOTH);
 	previewIcon = new ImageIcon(tempImg);
@@ -73,7 +73,7 @@ public class GameMakerPanel extends JPanel {
 public void initSpriteButtons(){
 	JLabel imageTitle = new JLabel("Select an Image");
 	this.add(imageTitle);
-	ImageIcon spriteImage = new ImageIcon(cl.getResource("resources/football.png"));
+	ImageIcon spriteImage = new ImageIcon(cl.getResource("football.png"));
 	Image tempImg = spriteImage.getImage();
 	tempImg = tempImg.getScaledInstance(Constants.BALL_RADIUS, Constants.BALL_RADIUS, java.awt.Image.SCALE_SMOOTH);
 	spriteImage = new ImageIcon(tempImg);
@@ -82,7 +82,7 @@ public void initSpriteButtons(){
 	spriteRbBall.setFocusable(false);
 	spriteRbBall.setActionCommand(Constants.FOOT);
 	
-	spriteImage = new ImageIcon(cl.getResource("resources/paddle1.png"));
+	spriteImage = new ImageIcon(cl.getResource("paddle1.png"));
 	tempImg = spriteImage.getImage();
 	tempImg = tempImg.getScaledInstance(Constants.PADDLE_WIDTH, Constants.PADDLE_HEIGHT, java.awt.Image.SCALE_SMOOTH);
 	spriteImage = new ImageIcon(tempImg);
@@ -91,7 +91,7 @@ public void initSpriteButtons(){
 	spriteRbPaddle.setFocusable(false);
 	spriteRbPaddle.setActionCommand(Constants.PADDLE);
 	
-	spriteImage = new ImageIcon(cl.getResource("resources/brick.png"));
+	spriteImage = new ImageIcon(cl.getResource("brick.png"));
 	tempImg = spriteImage.getImage();
 	tempImg = tempImg.getScaledInstance(Constants.BRICK_WIDTH, Constants.BRICK_HEIGHT, java.awt.Image.SCALE_SMOOTH);
 	spriteImage = new ImageIcon(tempImg);
@@ -100,7 +100,7 @@ public void initSpriteButtons(){
 	spriteRbBrick.setFocusable(false);
 	spriteRbBrick.setActionCommand(Constants.BRICK);
 	
-	spriteImage = new ImageIcon(cl.getResource("resources/frog.png"));
+	spriteImage = new ImageIcon(cl.getResource("frog.png"));
 	tempImg = spriteImage.getImage();
 	tempImg = tempImg.getScaledInstance(Constants.FROG_WIDTH, Constants.FROG_HEIGHT, java.awt.Image.SCALE_SMOOTH);
 	spriteImage = new ImageIcon(tempImg);
@@ -109,7 +109,7 @@ public void initSpriteButtons(){
 	spriteRbFrog.setFocusable(false);
 	spriteRbFrog.setActionCommand(Constants.FROG);
 	
-	spriteImage = new ImageIcon(cl.getResource("resources/car1.png"));
+	spriteImage = new ImageIcon(cl.getResource("car1.png"));
 	tempImg = spriteImage.getImage();
 	tempImg = tempImg.getScaledInstance(Constants.CAR_WIDTH, Constants.CAR_HEIGHT, java.awt.Image.SCALE_SMOOTH);
 	spriteImage = new ImageIcon(tempImg);
@@ -118,7 +118,7 @@ public void initSpriteButtons(){
 	spriteRbSportsCar.setFocusable(false);
 	spriteRbSportsCar.setActionCommand(Constants.SPORTSCAR);
 	
-	spriteImage = new ImageIcon(cl.getResource("resources/car2.png"));
+	spriteImage = new ImageIcon(cl.getResource("car2.png"));
 	tempImg = spriteImage.getImage();
 	tempImg = tempImg.getScaledInstance(Constants.CAR_WIDTH, Constants.CAR_HEIGHT, java.awt.Image.SCALE_SMOOTH);
 	spriteImage = new ImageIcon(tempImg);
@@ -127,7 +127,7 @@ public void initSpriteButtons(){
 	spriteRbTaxi.setFocusable(false);
 	spriteRbTaxi.setActionCommand(Constants.TAXI);
 	
-	spriteImage = new ImageIcon(cl.getResource("resources/space-invaders.png"));
+	spriteImage = new ImageIcon(cl.getResource("space-invaders.png"));
 	tempImg = spriteImage.getImage();
 	tempImg = tempImg.getScaledInstance(Constants.SPACEINVADER_WIDTH, Constants.SPACEINVADER_HEIGHT, java.awt.Image.SCALE_SMOOTH);
 	spriteImage = new ImageIcon(tempImg);
@@ -136,7 +136,7 @@ public void initSpriteButtons(){
 	spriteRbSpaceInvader.setFocusable(false);
 	spriteRbSpaceInvader.setActionCommand(Constants.SPACEINVADER);
 	
-	spriteImage = new ImageIcon(cl.getResource("resources/shooter.png"));
+	spriteImage = new ImageIcon(cl.getResource("shooter.png"));
 	tempImg = spriteImage.getImage();
 	tempImg = tempImg.getScaledInstance(Constants.SHOOTER_WIDTH, Constants.SHOOTER_HEIGHT, java.awt.Image.SCALE_SMOOTH);
 	spriteImage = new ImageIcon(tempImg);
@@ -145,7 +145,7 @@ public void initSpriteButtons(){
 	spriteRbShooter.setFocusable(false);
 	spriteRbShooter.setActionCommand(Constants.SHOOTER);
 	
-	spriteImage = new ImageIcon(cl.getResource("resources/Asteroid.png"));
+	spriteImage = new ImageIcon(cl.getResource("Asteroid.png"));
 	tempImg = spriteImage.getImage();
 	tempImg = tempImg.getScaledInstance(Constants.ASTERIOD_WIDTH, Constants.ASTERIOD_HEIGHT, java.awt.Image.SCALE_SMOOTH);
 	spriteImage = new ImageIcon(tempImg);
