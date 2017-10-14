@@ -55,7 +55,7 @@ public class GameLoad {
 		
 		ArrayList<Game> gamesList = retrieveGamesTable.temp();
 		System.out.println(" In listener"+ (gamesList.get(1)).getGameSavable());
-		return (gamesList.get(2)).getGameSavable();			
+		return (gamesList.get(7)).getGameSavable();			
 		
 	}
 }

@@ -72,12 +72,19 @@ public class GameButtonListener implements ActionListener {
 	
 	public void performSave(){
 		GameSave gameSave = new GameSave(gameModel);
-		if(gameSave.serialize()){
-			JOptionPane.showMessageDialog(null,
-					"Save Successful",
-					"Save",
-					JOptionPane.INFORMATION_MESSAGE);
-		}else{
+//		if(gameSave.serialize()){
+//			JOptionPane.showMessageDialog(null,
+//					"Save Successful",
+//					"Save",
+//					JOptionPane.INFORMATION_MESSAGE);
+//		}else{
+//			JOptionPane.showMessageDialog(null,
+//					"Error Saving File",
+//					"Save",
+//					JOptionPane.ERROR_MESSAGE);
+//		}
+		
+		if (gameSave.serialize() == false) {
 			JOptionPane.showMessageDialog(null,
 					"Error Saving File",
 					"Save",
