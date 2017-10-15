@@ -1,9 +1,23 @@
 package com.game.helpers;
 
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.util.ArrayList;
+import java.util.HashMap;
 
+import javax.swing.BorderFactory;
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.border.Border;
 
 import org.apache.log4j.Logger;
 
@@ -19,6 +33,8 @@ public class GameButtonListener implements ActionListener {
 	private GameController gameController;
 	private GameModel gameModel;
 	private GamePlayPanel gamePlayPanel;
+	
+	private String gameSelected = "";
 	
 	private static Logger buttonLog = Logger.getLogger("buttonLogger");
 	
@@ -64,20 +80,15 @@ public class GameButtonListener implements ActionListener {
 			break;
 		case Constants.LOAD:
 			buttonLog.info("Load button clicked");
-			performLoad();
+			showGames();
 			break;
 		}
 
 	}
 	
 	public void performSave(){
-		GameSave gameSave = new GameSave(gameModel);
-		if(gameSave.serialize()){
-			JOptionPane.showMessageDialog(null,
-					"Save Successful",
-					"Save",
-					JOptionPane.INFORMATION_MESSAGE);
-		}else{
+		GameSave gameSave = new GameSave(gameModel);		
+		if (gameSave.serialize() == false) {
 			JOptionPane.showMessageDialog(null,
 					"Error Saving File",
 					"Save",
@@ -85,10 +96,109 @@ public class GameButtonListener implements ActionListener {
 		}
 	}
 	
-	public void performLoad(){
+	public void showGames() {
 		GameLoad gameLoad = new GameLoad();
+				
+				
+				try {
+					ArrayList<String> gameNamesList = gameLoad.retrieveGameNames();
+					
+					loadGameDialog(gameNamesList);
+					System.out.println(" In listener"+ gameNamesList);	
+					
+				}catch(Exception e){
+					buttonLog.error("Loading Failed" + e.getLocalizedMessage());
+				}
+		
+				
+	}
+	
+	private void loadGameDialog(ArrayList<String> gameNamesList) {
+		final JDialog loadDialog = new JDialog();
+		JPanel loadGamePanel = new JPanel();
+		JLabel gameLabel = new JLabel("Select any game ");
+		//final JTextField userInput = new JTextField();
+		JButton loadGameButton = new JButton("Load");
+		loadGamePanel.setLayout(new GridLayout(0, 1));
+		//loadGamePanel.setAutoscrolls(true);
+		JScrollPane scrollPane = new JScrollPane(loadGamePanel);
+		scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
+		
+		HashMap<JLabel, String> gameNamesMap = new HashMap<JLabel, String>();
+		
+		Border border  = BorderFactory.createLineBorder(Color.BLACK, 1);
+		for(String gameName : gameNamesList){
+			final JLabel tempLabel = new JLabel(gameName);
+			tempLabel.setBorder(border);
+			tempLabel.addMouseListener(new MouseListener()	{
+				@Override
+				public void mouseReleased(MouseEvent e) {	
+				}
+				
+				@Override
+				public void mousePressed(MouseEvent e) {
+				}
+				
+				@Override
+				public void mouseExited(MouseEvent e) {
+				}
+				
+				@Override
+				public void mouseEntered(MouseEvent e) {
+				}
+				
+				@Override
+				public void mouseClicked(MouseEvent e) {
+					// TODO Auto-generated method stub
+					gameSelected = tempLabel.getText();
+					
+				}
+			});
+			loadGamePanel.add(tempLabel);
+		}
+		
+		//String gameSelected = "";
+		
+//		loadGamePanel.addMouseListener(new MouseListener() {
+//		});
+		//userInput.setPreferredSize(new Dimension(300,30));
+		loadGameButton.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				if(gameSelected != null){
+				 performLoad(gameSelected);
+				
+				loadDialog.dispose();
+					JOptionPane.showMessageDialog(null,
+							"Load Successful",
+							"Load",
+							JOptionPane.INFORMATION_MESSAGE);	
+				}
+
+			}
+		});
+		
+		loadGamePanel.add(gameLabel);
+		//loadGamePanel.add(userInput);
+		loadGamePanel.add(loadGameButton);
+
+		loadDialog.setSize(new Dimension(300,600));
+		loadDialog.add(loadGamePanel);
+		loadDialog.setVisible(true);
+	}
+
+
+	
+	public void performLoad(String selectedGameName){
+		GameLoad gameLoad = new GameLoad();
+		
+		
 		try {
-			GameSavable loadSavable = gameLoad.deserialize();
+			
+			
+			GameSavable loadSavable = (gameLoad.retrieveSelectedGame(selectedGameName)).getGameSavable();
+			System.out.println("in l"+loadSavable);
+			System.out.println(" In listener"+ loadSavable);
 			gameController.getGameModel().setSpriteList(loadSavable.spriteList);
 			gameController.getGameModel().setBackgroundImage(loadSavable.imageIcon.getImage());
 			gamePlayPanel.setBackGroundImage(loadSavable.imageIcon.getImage());
@@ -103,6 +213,14 @@ public class GameButtonListener implements ActionListener {
 			buttonLog.error("Loading Failed" + e.getLocalizedMessage());
 		}
 		
+	}
+
+	public String getGameSelected() {
+		return gameSelected;
+	}
+
+	public void setGameSelected(String gameSelected) {
+		this.gameSelected = gameSelected;
 	}
 
 }

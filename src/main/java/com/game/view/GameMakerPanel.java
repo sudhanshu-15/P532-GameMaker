@@ -309,16 +309,21 @@ public void initBackgroundMusicButtons() {
 public void initControlReadouts() {
 	JLabel readoutTitle = new JLabel("Control Readouts");
 	JRadioButton readoutClock = new JRadioButton("Clock", false);
+	JRadioButton readoutScore = new JRadioButton("Score", false);
 	
 	readoutClock.setFocusable(false);
+	readoutScore.setFocusable(false);
 	
 	readoutClock.setActionCommand(Constants.CLOCK);
+	readoutScore.setActionCommand(Constants.SCORE);
 	
 	bgReadouts = new ButtonGroup();
 	bgReadouts.add(readoutClock);
+	bgReadouts.add(readoutScore);
 	
 	this.add(readoutTitle);
 	this.add(readoutClock);
+	this.add(readoutScore);
 }
 
 public void initGameButtons(){
@@ -447,5 +452,5 @@ public JPanel getImagePanel() {
 public void setImagePanel(JPanel imagePanel) {
 	this.imagePanel = imagePanel;
 }
-}
 
+}

@@ -1,9 +1,12 @@
 package com.game.view;
 
+import java.awt.Color;
+import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.RenderingHints;
+import java.util.ArrayList;
 
 import javax.swing.JPanel;
 
@@ -11,6 +14,7 @@ import org.apache.log4j.Logger;
 
 import com.game.helpers.Constants;
 import com.game.model.GameModel;
+import com.game.model.ScoreReadout;
 import com.game.model.Sprite;
 import com.game.model.TimerReadout;
 
@@ -22,6 +26,7 @@ public class GamePlayPanel extends JPanel {
 	private static Logger gamePlayPanelLog = Logger.getLogger("gamePlayPanelLogger");
 	private Image backGroundImage;
 	private TimerReadout timerReadout;
+	private ScoreReadout tempScore;
 	
 	public GamePlayPanel(GameModel gameModel){
 		this.setSize(Constants.GAME_PANEL_DIMENSION);
@@ -30,7 +35,6 @@ public class GamePlayPanel extends JPanel {
 		this.requestFocusInWindow();
 		this.setFocusTraversalKeysEnabled(false);
 		backGroundImage = this.getBackGroundImage();
-		
 	}
 	
 	public void paintComponent(Graphics g){
@@ -39,6 +43,7 @@ public class GamePlayPanel extends JPanel {
 		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 		g2d.drawImage(backGroundImage, 0, 0, this.getWidth(), this.getHeight(), this);	
 		this.timerReadout = gameModel.getTimerReadout();
+		this.tempScore = gameModel.getScoreReadout();
 		try{
 			for(Sprite sprite : gameModel.getSpriteList()){
 				if(sprite.isVisible()){
@@ -49,6 +54,13 @@ public class GamePlayPanel extends JPanel {
 			{
 				timerReadout.draw(g);
 			}
+			
+			if(tempScore.isScoreSet) {
+				g.setColor(Color.BLUE);
+				g.setFont(new Font("TimesRoman", Font.PLAIN, 30));
+				g.drawString(tempScore.getText(), Constants.GAME_PANEL_WIDTH/2, 30);
+			}
+			
 		}catch(NullPointerException e){
 			gamePlayPanelLog.error("Failed to get array " + e.getLocalizedMessage());
 		}
@@ -64,5 +76,4 @@ public class GamePlayPanel extends JPanel {
 	}
 
 	
-
 }

@@ -8,10 +8,13 @@ import java.util.concurrent.ThreadLocalRandom;
 
 import javax.swing.ImageIcon;
 
+import com.game.command.ScoreCommand;
 import com.game.helpers.Constants;
 import com.game.helpers.ResourcesLoader;
 import com.game.model.GameModel;
 import com.game.model.Sprite;
+import com.game.model.ScoreReadout;
+import com.game.view.GamePlayPanel;
 
 public class DisappearAction implements ActionInterface, Serializable {
 	
@@ -19,10 +22,12 @@ public class DisappearAction implements ActionInterface, Serializable {
 	
 	private GameModel gameModel;
 	private Music soundEffect;
+	private ScoreReadout tempScore;
 	
 	public DisappearAction(GameModel gameModel){
 		this.gameModel = gameModel;
 		this.soundEffect = new Music();
+		this.tempScore = gameModel.getScoreReadout();
 	}
 
 	@Override
@@ -43,12 +48,15 @@ public class DisappearAction implements ActionInterface, Serializable {
 					
 					soundEffect.stop();
 					gameSprite.setVisible(false);
+					updateScore();
 					soundEffect.play(Constants.EXPLODE_SOUND);
 					if(listSprite.isProjectile()){
 						listSprite.setVisible(false);
+						updateScore();
 					}
 					if(gameSprite.isDisintegrate()){
 						createProjectiles(gameSprite);
+						updateScore();
 					}
 				}
 			}
@@ -84,5 +92,10 @@ public class DisappearAction implements ActionInterface, Serializable {
 		projectile.setActionInterface(new AutomoveAction(gameModel));
 		return projectile;
 	}
+	void updateScore(){	
+		     ScoreCommand scoreCommand = new ScoreCommand(tempScore);
+		     scoreCommand.execute();
+		     gameModel.setScoreReadout(tempScore);
+	       }
 
 }
