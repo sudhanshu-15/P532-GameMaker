@@ -5,9 +5,7 @@ import java.util.ArrayList;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
-import com.game.pojos.Game;
 import com.game.pojos.Player;
-import com.game.save.GameSavable;
 
 public class LoginHandler {
 	
@@ -23,7 +21,7 @@ public class LoginHandler {
 	   SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
 	   Session session = sessionFactory.openSession();
 		
-	   //String playerName = this;
+	   //String playerName = ;
 		
 		System.out.println( "in user registered" +playerName);
 		String sql_query = "select playerId, playerName from Player where playerName = '" + playerName + "'";

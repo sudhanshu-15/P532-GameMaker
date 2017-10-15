@@ -12,6 +12,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 import com.game.hibernate.LoginHandler;
+import com.game.hibernate.SignUpHandler;
 import com.game.view.GameFrame;
 
 
@@ -20,7 +21,7 @@ public class Main {
 	private static boolean userRegistered = false;
 
 	public static void main(String[] args) {
-		JPanel userLoginPanel = new JPanel();
+		final JPanel userLoginPanel = new JPanel();
 		final JDialog loginDialog = new JDialog();
 		final JTextField userInput = new JTextField();
 		JLabel userNameLabel = new JLabel("Enter your name: ");
@@ -44,7 +45,17 @@ public class Main {
 		signUpButton.addActionListener(new ActionListener()	{
 			@Override
 			public void actionPerformed(ActionEvent e)	{
-				
+				String input = userInput.getText();
+				SignUpHandler signUpHandler = new SignUpHandler(input);
+				if(signUpHandler.isUserNameExistsAlready()){
+					  JOptionPane.showMessageDialog(userLoginPanel, "User Name Already Exists! - Try another Name");
+				}
+				else{
+					signUpHandler.registerPlayer();
+					loginDialog.dispose();
+					userRegistered = true;
+					startGame();
+				}
 			}
 		});
 		
@@ -69,17 +80,5 @@ public class Main {
 	}
 		
 		
-	
-/*	public boolean isUserRegistered() {
-		return userRegistered;
-	}
-
-	public void setUserRegistered(boolean userRegistered) {
-		this.userRegistered = userRegistered;
-	}
-*/	
-	
-
-	
 
 }
