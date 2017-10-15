@@ -1,5 +1,42 @@
 package com.game.hibernate;
 
-public class LoginHandler {
+import java.util.ArrayList;
 
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+
+import com.game.pojos.Game;
+import com.game.pojos.Player;
+import com.game.save.GameSavable;
+
+public class LoginHandler {
+	
+	//private Player player;
+	private String playerName;
+	public LoginHandler(String username){
+		this.playerName = username;
+		
+	}
+	
+   @SuppressWarnings("unchecked")
+   public boolean isUserRegistered() {
+	   SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+	   Session session = sessionFactory.openSession();
+		
+	   //String playerName = this;
+		
+		System.out.println( "in user registered" +playerName);
+		String sql_query = "select playerId, playerName from Player where playerName = '" + playerName + "'";
+		
+		ArrayList<Player> player = (ArrayList<Player>) session.createSQLQuery(sql_query).addEntity(Player.class).list();
+		session.close();
+		System.out.println("player size"+player.size());
+		if(!player.isEmpty())
+			return true;
+		else
+		 return false;
+	}
 }
+
+
+

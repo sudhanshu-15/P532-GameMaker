@@ -11,14 +11,17 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+import com.game.hibernate.LoginHandler;
 import com.game.view.GameFrame;
 
 
 public class Main {
+	
+	private static boolean userRegistered = false;
 
 	public static void main(String[] args) {
 		JPanel userLoginPanel = new JPanel();
-		JDialog loginDialog = new JDialog();
+		final JDialog loginDialog = new JDialog();
 		final JTextField userInput = new JTextField();
 		JLabel userNameLabel = new JLabel("Enter your name: ");
 		userInput.setPreferredSize(new Dimension(300,30));
@@ -27,7 +30,14 @@ public class Main {
 		loginButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {					
-				
+				String input = userInput.getText();
+				LoginHandler loginHandler = new LoginHandler(input);
+				if(loginHandler.isUserRegistered()){
+					userRegistered = true;
+					System.out.println("userRegistered" + userRegistered);
+					loginDialog.dispose();
+					startGame();
+				}
 			}
 		});
 		
@@ -48,9 +58,26 @@ public class Main {
 		loginDialog.add(userLoginPanel);
 		loginDialog.setVisible(true);
 		
-		new GameFrame();
 	}
 	
+	public static void startGame(){
+		if(userRegistered){
+			
+			System.out.println(" in main : works if user registered-- calls new gameFrame");
+			new GameFrame();
+		}
+	}
+		
+		
+	
+/*	public boolean isUserRegistered() {
+		return userRegistered;
+	}
+
+	public void setUserRegistered(boolean userRegistered) {
+		this.userRegistered = userRegistered;
+	}
+*/	
 	
 
 	
