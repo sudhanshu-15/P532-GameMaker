@@ -231,6 +231,20 @@
 									toDir="${wwwroot}/student-files/${assignment.name}/${base.project.name}/lib" />
 								<copy file="${basedir}/target/jnlp/mysql-connector-java-5.1.22.jar" 
 									toDir="${wwwroot}/student-files/${assignment.name}/${base.project.name}/lib" />
+								<copy file="${basedir}/target/jnlp/hibernate-commons-annotations-4.0.1.Final.jar" 
+									toDir="${wwwroot}/student-files/${assignment.name}/${base.project.name}/lib" />
+								<copy file="${basedir}/target/jnlp/antlr-2.7.7.jar" 
+									toDir="${wwwroot}/student-files/${assignment.name}/${base.project.name}/lib" />
+								<copy file="${basedir}/target/jnlp/jboss-logging-3.1.0.GA.jar" 
+									toDir="${wwwroot}/student-files/${assignment.name}/${base.project.name}/lib" />
+								<copy file="${basedir}/target/jnlp/javassist-3.17.1-GA.jar" 
+									toDir="${wwwroot}/student-files/${assignment.name}/${base.project.name}/lib" />
+								<copy file="${basedir}/target/jnlp/dom4j-1.6.1.jar" 
+									toDir="${wwwroot}/student-files/${assignment.name}/${base.project.name}/lib" />
+								<copy file="${basedir}/target/jnlp/hibernate-jpa-2.0-api-1.0.1.Final.jar" 
+									toDir="${wwwroot}/student-files/${assignment.name}/${base.project.name}/lib" />
+								<copy file="${basedir}/target/jnlp/jboss-transaction-api_1.1_spec-1.0.0.Final.jar" 
+									toDir="${wwwroot}/student-files/${assignment.name}/${base.project.name}/lib" />
 							</target>
 						</configuration>
 						<goals>
