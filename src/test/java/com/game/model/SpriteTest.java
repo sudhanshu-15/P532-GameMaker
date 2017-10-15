@@ -48,8 +48,7 @@ public class SpriteTest {
 		sprite.setKeyCode(getKeyCode);
 		sprite.setShooter(isShooter);
 		sprite.setProjectile(isProjectile);
-		sprite.setDisintegrate(isDisintegrate);
-		
+		sprite.setDisintegrate(isDisintegrate);		
 	}
 	
 	@Test

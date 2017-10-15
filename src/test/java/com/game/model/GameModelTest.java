@@ -37,7 +37,6 @@ public class GameModelTest {
 		gameModel.startTimer();
 		gameModel.stopTimer();
 		gameModel.addSprite();
-
 	}
 	
 	@Test
