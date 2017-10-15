@@ -90,10 +90,8 @@ public class GameSave{
 		saveDialog.setVisible(true);
 	}
 	
-	public boolean saveGameToDatabase(String inputName){
-		
+	public boolean saveGameToDatabase(String inputName){		
 		new SaveGameToDatabase(inputName, gameSavable);
-		
 		return true;
 		
 	}
