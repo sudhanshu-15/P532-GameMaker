@@ -23,6 +23,7 @@ import org.apache.log4j.Logger;
 
 import com.game.controller.GameController;
 import com.game.model.GameModel;
+import com.game.pojos.Game;
 import com.game.save.GameLoad;
 import com.game.save.GameSavable;
 import com.game.save.GameSave;
@@ -37,6 +38,8 @@ public class GameButtonListener implements ActionListener {
 	private String gameSelected = "";
 	
 	private static Logger buttonLog = Logger.getLogger("buttonLogger");
+	
+	private int gameId = -1;
 	
 	public GameButtonListener(GameController gameController){
 		this.gameController = gameController;
@@ -195,8 +198,11 @@ public class GameButtonListener implements ActionListener {
 		
 		try {
 			
+			Game game = (Game)(gameLoad.retrieveSelectedGame(selectedGameName));
+			this.gameId = game.getGameId();
+			GameSavable loadSavable = game.getGameSavable();
 			
-			GameSavable loadSavable = (gameLoad.retrieveSelectedGame(selectedGameName)).getGameSavable();
+			System.out.println("Game Id in button Listener" + gameId);
 			System.out.println("in l"+loadSavable);
 			System.out.println(" In listener"+ loadSavable);
 			gameController.getGameModel().setSpriteList(loadSavable.spriteList);
