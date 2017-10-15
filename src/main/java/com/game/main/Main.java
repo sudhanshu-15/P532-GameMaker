@@ -1,9 +1,11 @@
 package com.game.main;
 
+import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
@@ -25,7 +27,8 @@ public class Main {
 		final JDialog loginDialog = new JDialog();
 		final JTextField userInput = new JTextField();
 		JLabel userNameLabel = new JLabel("Enter your name: ");
-		userInput.setPreferredSize(new Dimension(300,30));
+		//userLoginPanel.setLayout(new BoxLayout(userLoginPanel, BoxLayout.Y_AXIS));
+		userInput.setPreferredSize(new Dimension(200,30));
 		JButton loginButton = new JButton("Log in");
 		JButton signUpButton = new JButton("Sign up");
 		loginButton.addActionListener(new ActionListener() {
@@ -59,11 +62,12 @@ public class Main {
 			}
 		});
 		
-		
-		userLoginPanel.add(userNameLabel);
-		userLoginPanel.add(userInput);
-		userLoginPanel.add(loginButton);
-		userLoginPanel.add(signUpButton);
+		JPanel buttonPanel = new JPanel();
+		buttonPanel.add(loginButton);
+		buttonPanel.add(signUpButton);
+		userLoginPanel.add(userNameLabel, BorderLayout.NORTH);
+		userLoginPanel.add(userInput, BorderLayout.CENTER);
+		userLoginPanel.add(buttonPanel, BorderLayout.SOUTH);
 
 		loginDialog.setSize(new Dimension(300,200));
 		loginDialog.add(userLoginPanel);

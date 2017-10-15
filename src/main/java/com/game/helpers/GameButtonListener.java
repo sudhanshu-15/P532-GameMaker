@@ -130,6 +130,7 @@ public class GameButtonListener implements ActionListener {
 		for(String gameName : gameNamesList){
 			final JLabel tempLabel = new JLabel(gameName);
 			tempLabel.setBorder(border);
+			tempLabel.setOpaque(true);
 			tempLabel.addMouseListener(new MouseListener()	{
 				@Override
 				public void mouseReleased(MouseEvent e) {	
@@ -141,15 +142,18 @@ public class GameButtonListener implements ActionListener {
 				
 				@Override
 				public void mouseExited(MouseEvent e) {
+
 				}
 				
 				@Override
 				public void mouseEntered(MouseEvent e) {
+					
 				}
 				
 				@Override
 				public void mouseClicked(MouseEvent e) {
 					// TODO Auto-generated method stub
+					tempLabel.setBackground(Color.cyan);
 					gameSelected = tempLabel.getText();
 					
 				}
