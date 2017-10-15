@@ -15,7 +15,9 @@ public class GameLoad {
 	}
 	
 	public Game retrieveSelectedGame(String string){
+		System.out.println(" input --- Retrieve game: " + string);
+		String temp = string;
 		RetrieveGamesTable retrieveGamesTable = new RetrieveGamesTable();
-		return retrieveGamesTable.returnSelectedGame(string);
+		return retrieveGamesTable.returnSelectedGame(temp);
 	}
 }

@@ -12,36 +12,42 @@ import com.game.pojos.Game;
 
 public class RetrieveGamesTable {
 	
-	public RetrieveGamesTable(){
-		
+	public RetrieveGamesTable() {
+
 	}
-		public ArrayList<String> showGames(){  
-        SessionFactory sessionFactory = HibernateUtil.getSessionFactory();  
-        Session session = sessionFactory.openSession();  
-          
-        ArrayList<String> games = (ArrayList<String>)(session.createSQLQuery("SELECT gameName from Game").list());
-    
-         System.out.println(" in retrieve class size of gameNames" + games.size());
-        session.close();  
-        
-        System.out.println("Game 0 "+games.get(0));
-        return games;
+
+	public ArrayList<String> showGames() {
+		SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+		Session session = sessionFactory.openSession();
+
+		ArrayList<String> games = (ArrayList<String>) (session.createSQLQuery("SELECT gameName from Game").list());
+
+		System.out.println(" in retrieve class size of gameNames" + games.size());
+		session.close();
+
+		System.out.println("Game 0 " + games.get(0));
+		return games;
 	}
+
+	public Game returnSelectedGame(String gName) {
+		Game game;
+		SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+		Session session = sessionFactory.openSession();
+		// SQL query is not correct
+		String gameName = gName;
 		
-		public Game returnSelectedGame(String gameName){  
-	        SessionFactory sessionFactory = HibernateUtil.getSessionFactory();  
-	        Session session = sessionFactory.openSession();  
-	        
-	        String sql_query = "from Game g where s.gameName = '" + gameName + "'";
-	          
-	        Game game = (Game) session.createQuery(sql_query);
-	      
-	        System.out.println(" in retrieve game " + game);
-	        session.close();  
-	        
-	       System.out.println(game);
-	        return game;
-		}
-			
-     
+		System.out.println(gameName);
+		String sql_query = "select gameId, gameName,gameSavable from Game where gameName = '" + gameName + "'";
+		//System.out.println(session.createSQLQuery(sql_query).addEntity(Game.class).list());
+		//game = (Game) session.createSQLQuery(sql_query).addEntity(Game.class).list();
+		ArrayList<Game> games = (ArrayList<Game>) session.createSQLQuery(sql_query).addEntity(Game.class).list();
+		System.out.println(games.size());
+		System.out.println("in retrieve");
+		System.out.println(games.get(0).getGameName());
+		//System.out.println("Fetch game: " + games.getGameName());
+		session.close();
+
+		return games.get(0);
+	}
+
 }

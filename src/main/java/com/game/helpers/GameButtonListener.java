@@ -34,7 +34,7 @@ public class GameButtonListener implements ActionListener {
 	private GameModel gameModel;
 	private GamePlayPanel gamePlayPanel;
 	
-	private String gameSelected;
+	private String gameSelected = "";
 	
 	private static Logger buttonLog = Logger.getLogger("buttonLogger");
 	
@@ -128,37 +128,39 @@ public class GameButtonListener implements ActionListener {
 		
 		Border border  = BorderFactory.createLineBorder(Color.BLACK, 1);
 		for(String gameName : gameNamesList){
-			JLabel tempLabel = new JLabel(gameName);
+			final JLabel tempLabel = new JLabel(gameName);
 			tempLabel.setBorder(border);
+			tempLabel.addMouseListener(new MouseListener()	{
+				@Override
+				public void mouseReleased(MouseEvent e) {	
+				}
+				
+				@Override
+				public void mousePressed(MouseEvent e) {
+				}
+				
+				@Override
+				public void mouseExited(MouseEvent e) {
+				}
+				
+				@Override
+				public void mouseEntered(MouseEvent e) {
+				}
+				
+				@Override
+				public void mouseClicked(MouseEvent e) {
+					// TODO Auto-generated method stub
+					gameSelected = tempLabel.getText();
+					
+				}
+			});
 			loadGamePanel.add(tempLabel);
 		}
 		
 		//String gameSelected = "";
 		
-		loadGamePanel.addMouseListener(new MouseListener() {
-			
-			@Override
-			public void mouseReleased(MouseEvent e) {	
-			}
-			
-			@Override
-			public void mousePressed(MouseEvent e) {
-			}
-			
-			@Override
-			public void mouseExited(MouseEvent e) {
-			}
-			
-			@Override
-			public void mouseEntered(MouseEvent e) {
-			}
-			
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				// TODO Auto-generated method stub
-				
-			}
-		});
+//		loadGamePanel.addMouseListener(new MouseListener() {
+//		});
 		//userInput.setPreferredSize(new Dimension(300,30));
 		loadGameButton.addActionListener(new ActionListener() {
 			@Override
@@ -192,8 +194,10 @@ public class GameButtonListener implements ActionListener {
 		
 		
 		try {
-			GameSavable loadSavable = gameLoad.retrieveSelectedGame(selectedGameName).getGameSavable();
 			
+			
+			GameSavable loadSavable = (gameLoad.retrieveSelectedGame(selectedGameName)).getGameSavable();
+			System.out.println("in l"+loadSavable);
 			System.out.println(" In listener"+ loadSavable);
 			gameController.getGameModel().setSpriteList(loadSavable.spriteList);
 			gameController.getGameModel().setBackgroundImage(loadSavable.imageIcon.getImage());
