@@ -6,31 +6,27 @@ import org.hibernate.SessionFactory;
 import com.game.model.GameModel;
 import com.game.pojos.Game;
 import com.game.save.GameSavable;
-
-public class SaveGame {
+public class SaveGameToDatabase {
 	
-	public static void main(String[] args) {
+	private String gameName;
+	private GameSavable gameSavable;
+	
+	public SaveGameToDatabase(String inputName, GameSavable gameSavable2){
+		this.gameName = inputName;
+		this.gameSavable = gameSavable2;
+		saveGame();
+	}
+	
+	
+	public void saveGame() {
 		SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
 		Session session = sessionFactory.openSession();  
         session.beginTransaction();  
         
         Game game = new Game();
-        
-        
-       
-        
-        
-        //UserTest newUser = new UserTest();
-       
-        //setting a temp user name --- going forward give flexibility for the user to give a name
-        // setting the gameSavable to this gameSavable when user clicks save
-        GameSavable gameSavable = new GameSavable(new GameModel());
-        game.setGameName("temp");
+        game.setGameName(gameName);
         game.setGameSavable(gameSavable);
         
-        
-        //newUser.setName("Shuwen");
-        //newUser.setScore(100);
         
         session.save(game);
         session.getTransaction().commit();

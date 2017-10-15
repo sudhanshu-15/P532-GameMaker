@@ -23,6 +23,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
 import com.game.hibernate.HibernateUtil;
+import com.game.hibernate.SaveGameToDatabase;
 import com.game.model.GameModel;
 import com.game.model.Sprite;
 import com.game.pojos.Game;
@@ -90,37 +91,10 @@ public class GameSave{
 	}
 	
 	public boolean saveGameToDatabase(String inputName){
-		SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
-		Session session = sessionFactory.openSession();  
-        session.beginTransaction();  
-        
-        System.out.println("saveGameToDatabase called");
-        Game game = new Game(); 
-       
-        //setting a temp user name --- going forward give flexibility for the user to give a name
-        // setting the gameSavable to this gameSavable when user clicks save
-        game.setGameName(inputName);
-        game.setGameSavable(gameSavable);
-        
-        System.out.println("success : stored game in database");
-        
-        System.out.println(gameSavable);
-        
-        
-        session.save(game);
-        session.getTransaction().commit();
-        
-        // TODO Test if game name save successful
-//        ArrayList<Game> games = (ArrayList<Game>) session.createQuery("from Game").list();  
-        
-        session.close();
 		
-//        // TODO Test if game name save successful
-//        for (Game game1 : games) {  
-//            System.out.println(game1.getGameId() + "--" + game1.getGameName() + "--" + game1.getGameSavable());  
-//        } 
-        
-		return false;
+		new SaveGameToDatabase(inputName, gameSavable);
+		
+		return true;
 		
 	}
 }

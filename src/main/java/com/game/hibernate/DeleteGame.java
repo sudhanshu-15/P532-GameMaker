@@ -3,7 +3,6 @@ package com.game.hibernate;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
-import com.game.hibernate.UserTest;
 import com.game.pojos.Game;
 import com.game.hibernate.HibernateUtil;
 
