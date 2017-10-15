@@ -7,18 +7,14 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-
 @Entity
 @Table
 public class ScoreSheet implements Serializable{
 	
 	@Id
-	@GeneratedValue
-	//private static final long serialVersionUID = 11L;
-	private int gameId;
-	private String gameName;
-	private int playerId;
+	private int playerId, gameId;
 	private String playerName;
+	private String gameName;
 	private int score;
 	
 	public ScoreSheet(){

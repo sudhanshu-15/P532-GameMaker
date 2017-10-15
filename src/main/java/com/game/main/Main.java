@@ -20,6 +20,7 @@ public class Main {
 	
 	private static boolean userRegistered = false;
 	private static int playerId = -1;
+	private static String playerName = "";
 
 	public static void main(String[] args) {
 		final JPanel userLoginPanel = new JPanel();
@@ -35,11 +36,12 @@ public class Main {
 				String input = userInput.getText();
 				LoginHandler loginHandler = new LoginHandler(input);
 				
-				playerId = loginHandler.isUserRegistered();
+				setPlayerId(loginHandler.isUserRegistered());
 				
 				//System.out.println("playerId"+playerId);
-				if(playerId != -1){
+				if(getPlayerId() != -1){
 					userRegistered = true;
+					playerName += input;
 					//System.out.println("userRegistered" + userRegistered);
 					loginDialog.dispose();
 					startGame();
@@ -61,9 +63,10 @@ public class Main {
 				else{
 					signUpHandler.registerPlayer();
 					loginDialog.dispose();
-					playerId = signUpHandler.getCurrentPlayerId();
+					setPlayerId(signUpHandler.getCurrentPlayerId());
 					//System.out.println("playerId"+playerId);
 					userRegistered = true;
+					playerName += input;
 					startGame();
 				}
 			}
@@ -86,6 +89,22 @@ public class Main {
 			//System.out.println(" in main : works if user registered-- calls new gameFrame");
 			new GameFrame();
 		}
+	}
+
+	public static int getPlayerId() {
+		return playerId;
+	}
+
+	public static void setPlayerId(int playerId) {
+		Main.playerId = playerId;
+	}
+
+	public static String getPlayerName() {
+		return playerName;
+	}
+
+	public static void setPlayerName(String playerName) {
+		Main.playerName = playerName;
 	}
 		
 		
