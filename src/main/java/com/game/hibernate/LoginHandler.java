@@ -17,11 +17,9 @@ public class LoginHandler {
 	}
 	
    @SuppressWarnings("unchecked")
-   public boolean isUserRegistered() {
+   public int isUserRegistered() {
 	   SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
 	   Session session = sessionFactory.openSession();
-		
-	   //String playerName = ;
 		
 		System.out.println( "in user registered" +playerName);
 		String sql_query = "select playerId, playerName from Player where playerName = '" + playerName + "'";
@@ -30,9 +28,9 @@ public class LoginHandler {
 		session.close();
 		System.out.println("player size"+player.size());
 		if(!player.isEmpty())
-			return true;
+			return player.get(0).getPlayerId();
 		else
-		 return false;
+		 return -1;
 	}
 }
 

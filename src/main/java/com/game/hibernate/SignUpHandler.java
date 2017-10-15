@@ -51,6 +51,7 @@ public class SignUpHandler {
 		        session.close();
 		        return true;		        
 		  }
+		  
 }
 
 

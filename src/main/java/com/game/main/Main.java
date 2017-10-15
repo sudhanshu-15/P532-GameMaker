@@ -19,6 +19,7 @@ import com.game.view.GameFrame;
 public class Main {
 	
 	private static boolean userRegistered = false;
+	private static int playerId = -1;
 
 	public static void main(String[] args) {
 		final JPanel userLoginPanel = new JPanel();
@@ -33,11 +34,18 @@ public class Main {
 			public void actionPerformed(ActionEvent e) {					
 				String input = userInput.getText();
 				LoginHandler loginHandler = new LoginHandler(input);
-				if(loginHandler.isUserRegistered()){
+				
+				playerId = loginHandler.isUserRegistered();
+				
+				System.out.println("playerId"+playerId);
+				if(playerId != -1){
 					userRegistered = true;
 					System.out.println("userRegistered" + userRegistered);
 					loginDialog.dispose();
 					startGame();
+				}
+				else{
+					JOptionPane.showMessageDialog(userLoginPanel, "Signup to Login and Have fun");
 				}
 			}
 		});
