@@ -86,4 +86,12 @@ public class DragEventListener implements MouseListener, MouseMotionListener {
 
 	}
 
+	public Sprite getDragSprite() {
+		return dragSprite;
+	}
+
+	public void setDragSprite(Sprite dragSprite) {
+		this.dragSprite = dragSprite;
+	}
+
 }

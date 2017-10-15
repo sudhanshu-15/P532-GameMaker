@@ -5,6 +5,7 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 import com.game.model.GameModel;
+import com.game.view.GameFrame;
 import com.game.view.GameMakerPanel;
 import com.game.view.GamePlayPanel;
 
@@ -14,7 +15,7 @@ public class GameControllerTest {
 	private GameMakerPanel gameMakerPanel = new GameMakerPanel();
 	private GamePlayPanel gamePlayPanel = new GamePlayPanel(gameModel);
 	private GameController gameController = new GameController(gameModel, gameMakerPanel, gamePlayPanel);
-
+	
 	@Test
 	public void testGetterAndSetter() {
 	
