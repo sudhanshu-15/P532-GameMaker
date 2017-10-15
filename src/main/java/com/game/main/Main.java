@@ -37,10 +37,10 @@ public class Main {
 				
 				playerId = loginHandler.isUserRegistered();
 				
-				System.out.println("playerId"+playerId);
+				//System.out.println("playerId"+playerId);
 				if(playerId != -1){
 					userRegistered = true;
-					System.out.println("userRegistered" + userRegistered);
+					//System.out.println("userRegistered" + userRegistered);
 					loginDialog.dispose();
 					startGame();
 				}
@@ -61,6 +61,8 @@ public class Main {
 				else{
 					signUpHandler.registerPlayer();
 					loginDialog.dispose();
+					playerId = signUpHandler.getCurrentPlayerId();
+					//System.out.println("playerId"+playerId);
 					userRegistered = true;
 					startGame();
 				}
@@ -80,9 +82,8 @@ public class Main {
 	}
 	
 	public static void startGame(){
-		if(userRegistered){
-			
-			System.out.println(" in main : works if user registered-- calls new gameFrame");
+		if(userRegistered){		
+			//System.out.println(" in main : works if user registered-- calls new gameFrame");
 			new GameFrame();
 		}
 	}

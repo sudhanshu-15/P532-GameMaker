@@ -51,6 +51,16 @@ public class SignUpHandler {
 		        session.close();
 		        return true;		        
 		  }
+
+
+		public int getCurrentPlayerId() {
+				SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+			    Session session = sessionFactory.openSession();
+				String sql_query = "select playerId, playerName from Player where playerName = '" + playerName + "'";				
+				ArrayList<Player> player = (ArrayList<Player>) session.createSQLQuery(sql_query).addEntity(Player.class).list();
+				session.close();				
+				return player.get(0).getPlayerId();				
+		}
 		  
 }
 
