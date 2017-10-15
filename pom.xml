@@ -227,6 +227,10 @@
 									toDir="${wwwroot}/student-files/${assignment.name}/${base.project.name}/lib" />
 								<copy file="${basedir}/target/jnlp/jlayer-1.0.1.jar" 
 									toDir="${wwwroot}/student-files/${assignment.name}/${base.project.name}/lib" />
+								<copy file="${basedir}/target/jnlp/hibernate-core-4.1.9.Final.jar" 
+									toDir="${wwwroot}/student-files/${assignment.name}/${base.project.name}/lib" />
+								<copy file="${basedir}/target/jnlp/mysql-connector-java-5.1.22.jar" 
+									toDir="${wwwroot}/student-files/${assignment.name}/${base.project.name}/lib" />
 							</target>
 						</configuration>
 						<goals>
