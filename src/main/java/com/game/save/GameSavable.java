@@ -14,11 +14,15 @@ public class GameSavable implements Serializable {
 	public ArrayList spriteList;
 	public ImageIcon imageIcon;
 	public TimerReadout timerReadout;
+	public boolean isScoreSet = false;
 	
 	public GameSavable(GameModel gameModel) {
 		this.spriteList = gameModel.getSpriteList();
 		this.imageIcon = new ImageIcon(gameModel.getBackgroundImage());	
 		this.timerReadout = gameModel.getTimerReadout();
+		if(gameModel.getTimerReadout() != null){
+			this.isScoreSet = true;
+		}
 		
 	}
 	

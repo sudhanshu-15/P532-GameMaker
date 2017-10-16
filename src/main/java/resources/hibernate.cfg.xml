@@ -14,7 +14,8 @@
         <property name="connection.pool_size">1</property>  
           
         <mapping class="com.game.pojos.Game"></mapping> 
-        <mapping class="com.game.pojos.Player"></mapping> 
+        <mapping class="com.game.pojos.Player"></mapping>
+        <mapping class="com.game.pojos.ScoreSheet"></mapping> 
   
     </session-factory>  
 </hibernate-configuration>  

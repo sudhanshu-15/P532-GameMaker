@@ -21,6 +21,8 @@ import com.game.view.GameFrame;
 public class Main {
 	
 	private static boolean userRegistered = false;
+	private static int playerId = -1;
+	private static String playerName = "";
 
 	public static void main(String[] args) {
 		final JPanel userLoginPanel = new JPanel();
@@ -36,11 +38,19 @@ public class Main {
 			public void actionPerformed(ActionEvent e) {					
 				String input = userInput.getText();
 				LoginHandler loginHandler = new LoginHandler(input);
-				if(loginHandler.isUserRegistered()){
+				
+				setPlayerId(loginHandler.isUserRegistered());
+				
+				//System.out.println("playerId"+playerId);
+				if(getPlayerId() != -1){
 					userRegistered = true;
-					System.out.println("userRegistered" + userRegistered);
+					playerName += input;
+					//System.out.println("userRegistered" + userRegistered);
 					loginDialog.dispose();
 					startGame();
+				}
+				else{
+					JOptionPane.showMessageDialog(userLoginPanel, "Signup to Login and Have fun");
 				}
 			}
 		});
@@ -56,7 +66,10 @@ public class Main {
 				else{
 					signUpHandler.registerPlayer();
 					loginDialog.dispose();
+					setPlayerId(signUpHandler.getCurrentPlayerId());
+					//System.out.println("playerId"+playerId);
 					userRegistered = true;
+					playerName += input;
 					startGame();
 				}
 			}
@@ -76,11 +89,26 @@ public class Main {
 	}
 	
 	public static void startGame(){
-		if(userRegistered){
-			
-			System.out.println(" in main : works if user registered-- calls new gameFrame");
+		if(userRegistered){		
+			//System.out.println(" in main : works if user registered-- calls new gameFrame");
 			new GameFrame();
 		}
+	}
+
+	public static int getPlayerId() {
+		return playerId;
+	}
+
+	public static void setPlayerId(int playerId) {
+		Main.playerId = playerId;
+	}
+
+	public static String getPlayerName() {
+		return playerName;
+	}
+
+	public static void setPlayerName(String playerName) {
+		Main.playerName = playerName;
 	}
 		
 		
