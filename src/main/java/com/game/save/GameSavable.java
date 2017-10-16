@@ -20,7 +20,7 @@ public class GameSavable implements Serializable {
 		this.spriteList = gameModel.getSpriteList();
 		this.imageIcon = new ImageIcon(gameModel.getBackgroundImage());	
 		this.timerReadout = gameModel.getTimerReadout();
-		if(gameModel.getTimerReadout() != null){
+		if(gameModel.getScoreReadout() != null){
 			this.isScoreSet = true;
 		}
 		

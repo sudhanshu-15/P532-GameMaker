@@ -14,29 +14,28 @@ import com.game.model.Sprite;
 public class ShootAction implements ActionInterface, Serializable {
 	
 	private GameModel gameModel;
-	private Music soundEffect;
-	private ClassLoader cl;
-	
 	public ShootAction(GameModel gameModel){
 		this.gameModel = gameModel;
-		soundEffect = new Music();
-		this.cl = ResourcesLoader.class.getClassLoader();
+		
 	}
 
 	@Override
 	public void performAction(Sprite gameSprite) {
 		if(gameSprite.getKeyCode() == KeyEvent.VK_SPACE){
+			Music soundEffect = new Music();
+			ClassLoader cl = ResourcesLoader.class.getClassLoader();
 			soundEffect.stop();
 			Sprite projectile = createProjectile(gameSprite.getPosition_X(), gameSprite.getPosition_Y());
 			projectile.setActionInterface(new AutomoveAction(gameModel));
 			gameModel.getSpriteList().add(projectile);
 			gameSprite.setKeyCode(Constants.DEFAULT_KEY);
 			soundEffect.play(Constants.ROCKET_SOUND);
-			// TODO Decide on 2 different arrayList for Game
+			
 		}
 	}
 	
 	private Sprite createProjectile(int posX, int posY){
+		ClassLoader cl = ResourcesLoader.class.getClassLoader();
 		Sprite projectileSprite = new Sprite();
 		ImageIcon rocketIcon = new ImageIcon(cl.getResource("rocket.png"));
 		Image tempImage = rocketIcon.getImage();

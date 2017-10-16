@@ -1,10 +1,6 @@
 package com.game.model;
 
-import java.awt.Color;
-import java.awt.Font;
 import java.io.Serializable;
-
-import javax.swing.JLabel;
 
 public class ScoreReadout implements Serializable{
 		
@@ -23,7 +19,7 @@ public class ScoreReadout implements Serializable{
 	    public void setScore(int score) {
 	        this.score = score;
 	    }
-	
+	    
 	    public void reset() {
 	       this.setScore(0);
 	    }     

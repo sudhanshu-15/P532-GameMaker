@@ -52,7 +52,6 @@ public class GameButtonListener implements ActionListener {
 		this.gamePlayPanel = gameController.getGamePlayPanel();
 		this.playerId = Main.getPlayerId();
 		this.playerName = Main.getPlayerName();
-		System.out.println("In gamebutton listener "+playerId);
 	}
 
 	@Override
@@ -118,11 +117,8 @@ public class GameButtonListener implements ActionListener {
 				
 				
 				try {
-					ArrayList<String> gameNamesList = gameLoad.retrieveGameNames();
-					
-					loadGameDialog(gameNamesList);
-					System.out.println(" In listener"+ gameNamesList);	
-					
+					ArrayList<String> gameNamesList = gameLoad.retrieveGameNames();				
+					loadGameDialog(gameNamesList);						
 				}catch(Exception e){
 					buttonLog.error("Loading Failed" + e.getLocalizedMessage());
 				}
@@ -134,10 +130,8 @@ public class GameButtonListener implements ActionListener {
 		final JDialog loadDialog = new JDialog();
 		JPanel loadGamePanel = new JPanel();
 		JLabel gameLabel = new JLabel("Select any game ");
-		//final JTextField userInput = new JTextField();
 		JButton loadGameButton = new JButton("Load");
 		loadGamePanel.setLayout(new GridLayout(0, 1));
-		//loadGamePanel.setAutoscrolls(true);
 		JScrollPane scrollPane = new JScrollPane(loadGamePanel);
 		scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
 		
@@ -169,7 +163,6 @@ public class GameButtonListener implements ActionListener {
 				
 				@Override
 				public void mouseClicked(MouseEvent e) {
-					// TODO Auto-generated method stub
 					tempLabel.setBackground(Color.cyan);
 					gameSelected = tempLabel.getText();
 					
@@ -178,11 +171,6 @@ public class GameButtonListener implements ActionListener {
 			loadGamePanel.add(tempLabel);
 		}
 		
-		//String gameSelected = "";
-		
-//		loadGamePanel.addMouseListener(new MouseListener() {
-//		});
-		//userInput.setPreferredSize(new Dimension(300,30));
 		loadGameButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -200,7 +188,6 @@ public class GameButtonListener implements ActionListener {
 		});
 		
 		loadGamePanel.add(gameLabel);
-		//loadGamePanel.add(userInput);
 		loadGamePanel.add(loadGameButton);
 
 		loadDialog.setSize(new Dimension(300,600));
@@ -226,17 +213,13 @@ public class GameButtonListener implements ActionListener {
 				gamePlayPanel.getTempScore().isScoreSet = true;
 			}
 			
-			System.out.println("Game Id in button Listener" + gameId);
-			System.out.println("in l"+loadSavable);
-			System.out.println(" In listener"+ loadSavable);
 			gameController.getGameModel().setSpriteList(loadSavable.spriteList);
 			gameController.getGameModel().setBackgroundImage(loadSavable.imageIcon.getImage());
 			gamePlayPanel.setBackGroundImage(loadSavable.imageIcon.getImage());
 			
 		
-			if(loadSavable.timerReadout.isTimerSet)
-				
-			gameModel.setTimerReadout(loadSavable.timerReadout);			
+			if(loadSavable.timerReadout.isTimerSet)				
+				gameModel.setTimerReadout(loadSavable.timerReadout);			
 			gamePlayPanel.repaint();
 			
 		}catch(Exception e){

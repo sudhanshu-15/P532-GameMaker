@@ -66,7 +66,7 @@ public class GameSave{
 		final JTextField userInput = new JTextField();
 		JButton saveGameButton = new JButton("Save");
 		
-		userInput.setPreferredSize(new Dimension(200,30));
+		userInput.setPreferredSize(new Dimension(300,30));
 		saveGameButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
