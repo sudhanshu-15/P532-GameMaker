@@ -6,29 +6,16 @@ import java.io.Serializable;
 
 import javax.swing.JLabel;
 
-public class ScoreReadout extends JLabel implements Serializable{
-	
-		private String text;
+public class ScoreReadout implements Serializable{
+		
+	    private static final long serialVersionUID = 10L;
 		private int score;
 		public boolean isScoreSet = false;
-	    JLabel scoreReadout = new JLabel(" Score : 0 ");
-	    
 	
         public ScoreReadout() {
-        text = " Score : 0 ";
-      
-        
-        scoreReadout.setText("Score: " + score);
+            score = 0;
 	    }
 
-       public ScoreReadout(ScoreReadout scoreReadout) {
-    	   scoreReadout.setBounds(40, 45, 40, 40);
-           scoreReadout.setFont(new Font("Serif", Font.BOLD, 30));
-   	    scoreReadout.setForeground (Color.GREEN);
-    	  scoreReadout.setText("Score: " + score);
-	      scoreReadout.setVisible(true);
-	    }
-	
        public int getScore() {
 	      return score;
 	    }
@@ -37,16 +24,9 @@ public class ScoreReadout extends JLabel implements Serializable{
 	               this.score = score;
 	    }
 	
-	       public String getText() {
-	               return text;
-	      }
-	       
-	       public void setText(String text) {
-	               this.text = text;
-	       }
 	
-	       public void reset() {
-	               this.setText(text);
-	               this.setScore(0);
-	       }     
+       public void reset(){
+               this.setScore(0);
+       }   
+	       
 	}

@@ -12,7 +12,6 @@ public class GameModel implements Serializable{
 	
 	private Sprite gameSprite;
 	private ArrayList<Sprite> spriteList;
-	private ArrayList<ScoreReadout> scoreArray;
 	private ImageIcon backgroundImage;
 	private TimerReadout timerReadout;
 	private ScoreReadout scoreReadout;
@@ -21,7 +20,6 @@ public class GameModel implements Serializable{
 		this.gameSprite = new Sprite();
 		this.spriteList = new ArrayList<Sprite>();
 		this.timerReadout = new TimerReadout();
-		this.scoreArray = new ArrayList<ScoreReadout>() ;
 		this.scoreReadout = new ScoreReadout();
 	}
 	
@@ -78,18 +76,6 @@ public class GameModel implements Serializable{
 
 	public void setTimerReadout(TimerReadout timerReadout) {
 		this.timerReadout = timerReadout;
-	}
-
-	public ArrayList<ScoreReadout> getScoreArray() {
-		return scoreArray;
-	}
-
-	public void setScoreArray(ArrayList<ScoreReadout> scoreArray) {
-		this.scoreArray = scoreArray;
-	}
-	
-	public void addScore() {
-        scoreArray.add(new ScoreReadout());
 	}
 
 	public ScoreReadout getScoreReadout() {

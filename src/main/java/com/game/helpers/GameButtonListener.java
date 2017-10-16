@@ -85,7 +85,8 @@ public class GameButtonListener implements ActionListener {
 			}
 			
 			if(playerId != -1 && gameId != -1){
-				UpdateScore updateScore = new UpdateScore(10, playerId, playerName,gameId,gameName);
+				int score = gamePlayPanel.getScore();
+				UpdateScore updateScore = new UpdateScore(score, playerId, playerName,gameId,gameName);
 				updateScore.pushScoreToDB();
 			}
 						
