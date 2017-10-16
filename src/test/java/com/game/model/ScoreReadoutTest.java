@@ -14,13 +14,12 @@ public class ScoreReadoutTest {
 	@Before
 	public void setup() {
 		scoreReadout.setScore(score);
-		scoreReadout.setText(scoretext);
+		
 	}
 	
 	@Test
 	public void test() {
 		assertEquals("They are not equal", scoreReadout.getScore(), score);
-		assertEquals("They are not equal", scoreReadout.getText(), scoretext);
 	}
 
 }

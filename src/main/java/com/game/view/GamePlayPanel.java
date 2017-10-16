@@ -8,6 +8,7 @@ import java.awt.Image;
 import java.awt.RenderingHints;
 import java.util.ArrayList;
 
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import org.apache.log4j.Logger;
@@ -27,6 +28,8 @@ public class GamePlayPanel extends JPanel {
 	private Image backGroundImage;
 	private TimerReadout timerReadout;
 	private ScoreReadout tempScore;
+	private int score = -1;
+	private String scoreDisplay = "Score";
 	
 	public GamePlayPanel(GameModel gameModel){
 		this.setSize(Constants.GAME_PANEL_DIMENSION);
@@ -57,8 +60,9 @@ public class GamePlayPanel extends JPanel {
 			
 			if(tempScore.isScoreSet) {
 				g.setColor(Color.BLUE);
-				g.setFont(new Font("TimesRoman", Font.PLAIN, 30));
-				g.drawString(tempScore.getText(), Constants.GAME_PANEL_WIDTH/2, 30);
+				g.setFont(new Font("TimesRoman", Font.PLAIN, 30));				
+				g.drawString(scoreDisplay+" : "+tempScore.getScore(), Constants.GAME_PANEL_WIDTH/2, 30);			
+				this.score = tempScore.getScore();
 			}
 			
 		}catch(NullPointerException e){
@@ -73,6 +77,22 @@ public class GamePlayPanel extends JPanel {
 	public void setBackGroundImage(Image backGroundImage) {
 		this.backGroundImage = backGroundImage;
 		
+	}
+
+	public int getScore() {
+		return score;
+	}
+
+	public void setScore(int score) {
+		this.score = score;
+	}
+
+	public ScoreReadout getTempScore() {
+		return tempScore;
+	}
+
+	public void setTempScore(ScoreReadout tempScore) {
+		this.tempScore = tempScore;
 	}
 
 	

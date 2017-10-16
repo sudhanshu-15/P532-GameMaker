@@ -22,7 +22,10 @@ import javax.swing.border.Border;
 import org.apache.log4j.Logger;
 
 import com.game.controller.GameController;
+import com.game.hibernate.UpdateScore;
+import com.game.main.Main;
 import com.game.model.GameModel;
+import com.game.pojos.Game;
 import com.game.save.GameLoad;
 import com.game.save.GameSavable;
 import com.game.save.GameSave;
@@ -38,10 +41,18 @@ public class GameButtonListener implements ActionListener {
 	
 	private static Logger buttonLog = Logger.getLogger("buttonLogger");
 	
+	private int gameId = -1;
+	private int playerId = -1;
+	private String playerName = "";
+	private String gameName = "";
+	
 	public GameButtonListener(GameController gameController){
 		this.gameController = gameController;
 		this.gameModel = gameController.getGameModel();
 		this.gamePlayPanel = gameController.getGamePlayPanel();
+		this.playerId = Main.getPlayerId();
+		this.playerName = Main.getPlayerName();
+		System.out.println("In gamebutton listener "+playerId);
 	}
 
 	@Override
@@ -71,6 +82,12 @@ public class GameButtonListener implements ActionListener {
 			if(gameModel.getTimerReadout().isTimerSet)
 			{
 				gameModel.stopTimer();
+			}
+			
+			if(playerId != -1 && gameId != -1){
+				int score = gamePlayPanel.getScore();
+				UpdateScore updateScore = new UpdateScore(score, playerId, playerName,gameId,gameName);
+				updateScore.pushScoreToDB();
 			}
 						
 			break;
@@ -199,8 +216,17 @@ public class GameButtonListener implements ActionListener {
 		
 		try {
 			
+			Game game = (Game)(gameLoad.retrieveSelectedGame(selectedGameName));
+			this.gameId = game.getGameId();
+			this.gameName = game.getGameName();
+			GameSavable loadSavable = game.getGameSavable();
 			
-			GameSavable loadSavable = (gameLoad.retrieveSelectedGame(selectedGameName)).getGameSavable();
+			if(loadSavable.isScoreSet){
+				gamePlayPanel.getTempScore().reset();
+				gamePlayPanel.getTempScore().isScoreSet = true;
+			}
+			
+			System.out.println("Game Id in button Listener" + gameId);
 			System.out.println("in l"+loadSavable);
 			System.out.println(" In listener"+ loadSavable);
 			gameController.getGameModel().setSpriteList(loadSavable.spriteList);

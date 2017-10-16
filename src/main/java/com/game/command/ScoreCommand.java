@@ -16,9 +16,7 @@ public class ScoreCommand {
 	public void execute() {
 		currentScore = score.getScore();
 		currentScore += 5;
-		text = "Score: " + currentScore;
 		score.setScore(currentScore);
-		score.setText(text);
 	}
 	
 	public String getText() {
