@@ -87,5 +87,13 @@ public class GamePlayPanel extends JPanel {
 		this.score = score;
 	}
 
+	public ScoreReadout getTempScore() {
+		return tempScore;
+	}
+
+	public void setTempScore(ScoreReadout tempScore) {
+		this.tempScore = tempScore;
+	}
+
 	
 }

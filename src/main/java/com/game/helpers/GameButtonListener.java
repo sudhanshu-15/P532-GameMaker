@@ -217,6 +217,11 @@ public class GameButtonListener implements ActionListener {
 			this.gameName = game.getGameName();
 			GameSavable loadSavable = game.getGameSavable();
 			
+			if(loadSavable.isScoreSet){
+				gamePlayPanel.getTempScore().reset();
+				gamePlayPanel.getTempScore().isScoreSet = true;
+			}
+			
 			System.out.println("Game Id in button Listener" + gameId);
 			System.out.println("in l"+loadSavable);
 			System.out.println(" In listener"+ loadSavable);
